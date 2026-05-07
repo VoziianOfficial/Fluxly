@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+    <title>Contact Fluxly | Start Electrical Provider Matching Request</title>
+    <meta name="description"
+        content="Start a Fluxly electrical provider matching request for panel upgrades, wiring and rewiring, EV charger installation, or lighting installation.">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#mainContent">Skip to main content</a>
+
+    <div data-site-header></div>
+
+    <main id="mainContent">
+        <!-- ==================================================
+             CONTACT HERO
+             ================================================== -->
+        <section class="contact-hero-live" aria-labelledby="contactHeroTitle">
+            <div class="contact-hero-media" aria-hidden="true">
+                <img src="assets/images/hero-contact.jpg" alt="">
+                <span class="contact-hero-overlay"></span>
+                <span class="contact-hero-glow"></span>
+                <span class="circuit-bg"></span>
+
+                <span class="electric-line contact-hero-line contact-hero-line-one"></span>
+                <span class="electric-line contact-hero-line contact-hero-line-two"></span>
+                <span class="electric-line contact-hero-line contact-hero-line-three"></span>
+
+                <span class="spark-dot contact-spark contact-spark-one"></span>
+                <span class="spark-dot is-blue contact-spark contact-spark-two"></span>
+                <span class="spark-dot contact-spark contact-spark-three"></span>
+            </div>
+
+            <div class="container-wide contact-hero-layout">
+                <div class="contact-hero-copy reveal-up">
+                    <p class="kicker">⚡ Start request</p>
+
+                    <h1 id="contactHeroTitle">
+                        Send your electrical project details into the right matching path.
+                    </h1>
+
+                    <p class="lead">
+                        Share your service type, ZIP code, timing, and project notes so Fluxly can help organize your
+                        request before you compare independent local electrical provider options.
+                    </p>
+
+                    <div class="hero-actions" aria-label="Contact page actions">
+                        <a class="btn btn-primary" href="#requestForm">
+                            <span>Open request form</span>
+                            <i data-lucide="arrow-down" aria-hidden="true"></i>
+                        </a>
+
+                        <a class="btn btn-secondary" data-phone-link href="tel:+18003142218">
+                            <span data-phone-text>(800) 314-2218</span>
+                            <i data-lucide="phone-call" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <aside class="contact-live-panel reveal-scale" aria-label="Fluxly request preparation preview">
+                    <div class="contact-panel-bulb">
+                        <span aria-hidden="true"></span>
+                        <i data-lucide="lightbulb" aria-hidden="true"></i>
+                    </div>
+
+                    <div class="contact-panel-copy">
+                        <p>Request signal</p>
+                        <h2>Clear details help create a cleaner provider comparison.</h2>
+                    </div>
+
+                    <div class="contact-panel-lines" aria-label="Useful request details">
+                        <span>Service type</span>
+                        <span>ZIP code</span>
+                        <span>Project timing</span>
+                        <span>Notes and photos</span>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- ==================================================
+             CONTACT STATUS STRIP
+             ================================================== -->
+        <section class="contact-status-strip" aria-label="Request matching highlights">
+            <div class="container-wide">
+                <div class="contact-status-line reveal-up">
+                    <span>💡 Request-first form</span>
+                    <span>⚡ Electrical service paths</span>
+                    <span>📍 ZIP-based availability</span>
+                    <span>🛡️ Verify before hiring</span>
+                    <span>🔌 Independent providers</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================================================
+             REQUEST FORM + INFO PANEL
+             ================================================== -->
+        <section class="contact-request section" id="requestForm" aria-labelledby="requestFormTitle">
+            <div class="container-wide contact-request-layout">
+                <div class="request-form-shell reveal-up">
+                    <div class="request-form-head">
+                        <p class="section-kicker">Matching request</p>
+
+                        <h2 id="requestFormTitle">
+                            Prepare your electrical request.
+                        </h2>
+
+                        <p>
+                            Add the basics so your request is easier to route before comparing independent local
+                            electrical provider options.
+                        </p>
+                    </div>
+
+                    <form class="request-form" data-request-form>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="name">Name</label>
+                                <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name"
+                                    required>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="phone">Phone</label>
+                                <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="Phone number"
+                                    required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="email">Email</label>
+                                <input id="email" name="email" type="email" autocomplete="email"
+                                    placeholder="Email address" required>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="zip">ZIP code</label>
+                                <input id="zip" name="zip" type="text" inputmode="numeric" autocomplete="postal-code"
+                                    placeholder="Project ZIP code" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="serviceType">Service type</label>
+                                <select id="serviceType" name="serviceType" required>
+                                    <option value="">Select service type</option>
+                                    <option value="panel-upgrades">Panel Upgrades</option>
+                                    <option value="wiring-rewiring">Wiring & Rewiring</option>
+                                    <option value="ev-charger-installation">EV Charger Installation</option>
+                                    <option value="lighting-installation">Lighting Installation</option>
+                                </select>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="timing">Project timing</label>
+                                <select id="timing" name="timing" required>
+                                    <option value="">Select timing</option>
+                                    <option value="urgent">Urgent / as soon as possible</option>
+                                    <option value="soon">Within 1–2 weeks</option>
+                                    <option value="month">This month</option>
+                                    <option value="planning">Planning ahead</option>
+                                    <option value="flexible">Flexible timing</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="notes">Project notes</label>
+                            <textarea id="notes" name="notes"
+                                placeholder="Describe the panel, wiring route, EV charger location, lighting plan, timing, or questions you want providers to understand."
+                                required></textarea>
+                        </div>
+
+                        <div class="checkbox-field">
+                            <input id="verifyReminder" name="verifyReminder" type="checkbox" required>
+                            <label for="verifyReminder">
+                                I understand Fluxly is a matching platform and does not perform electrical work
+                                directly. I should verify provider license, insurance, permits, quote terms, and
+                                qualifications before hiring.
+                            </label>
+                        </div>
+
+                        <div class="form-message" data-form-message aria-live="polite"></div>
+
+                        <button class="btn btn-primary" type="submit">
+                            <span>Submit matching request</span>
+                            <i data-lucide="zap" aria-hidden="true"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <aside class="contact-info-panel reveal-scale" aria-label="Fluxly contact information">
+                    <div class="info-panel-light">
+                        <span aria-hidden="true"></span>
+                        <i data-lucide="phone-call" aria-hidden="true"></i>
+                    </div>
+
+                    <div class="contact-info-copy">
+                        <p>Contact circuit</p>
+                        <h2>Fluxly support and request details.</h2>
+                    </div>
+
+                    <div class="contact-info-list">
+                        <a data-phone-link href="tel:+18003142218">
+                            <i data-lucide="phone-call" aria-hidden="true"></i>
+                            <span data-phone-text>(800) 314-2218</span>
+                        </a>
+
+                        <a data-email-link href="mailto:hello@fluxlymatch.com">
+                            <i data-lucide="mail" aria-hidden="true"></i>
+                            <span data-email-text>hello@fluxlymatch.com</span>
+                        </a>
+
+                        <span>
+                            <i data-lucide="map-pin" aria-hidden="true"></i>
+                            <span data-address-text>845 W Madison St, Chicago, IL 60607, USA</span>
+                        </span>
+
+                        <span>
+                            <i data-lucide="radio-tower" aria-hidden="true"></i>
+                            <span data-service-area>USA electrical provider matching platform</span>
+                        </span>
+
+                        <span>
+                            <i data-lucide="badge-check" aria-hidden="true"></i>
+                            <span data-company-id>Fluxly Home Services Matching LLC</span>
+                        </span>
+                    </div>
+
+                    <p class="contact-info-note">
+                        Fluxly helps homeowners prepare project details and compare independent local electrical
+                        provider options. Provider availability may vary by location and service category.
+                    </p>
+                </aside>
+            </div>
+        </section>
+
+        <!-- ==================================================
+             ABSTRACT MAP VISUAL
+             ================================================== -->
+        <section class="contact-map-section section-sm" aria-labelledby="contactMapTitle">
+            <div class="container-wide contact-map-layout">
+                <div class="contact-map-copy reveal-up">
+                    <p class="section-kicker">Service area</p>
+
+                    <h2 id="contactMapTitle">
+                        A USA matching platform with ZIP-based provider availability.
+                    </h2>
+
+                    <p>
+                        Fluxly helps route electrical requests by service type and location. Independent provider
+                        options may vary by ZIP code, city, service category, timing, and provider availability.
+                    </p>
+                </div>
+
+                <div class="contact-map-visual reveal-scale" aria-label="Abstract USA service area visual">
+                    <img src="assets/images/contact-map-visual.jpg"
+                        alt="Abstract USA electrical provider matching service area visual" loading="lazy">
+
+                    <span class="map-overlay"></span>
+                    <span class="electric-line map-line map-line-one"></span>
+                    <span class="electric-line map-line map-line-two"></span>
+                    <span class="electric-line map-line map-line-three"></span>
+
+                    <span class="map-node map-node-one">
+                        <i data-lucide="zap" aria-hidden="true"></i>
+                    </span>
+
+                    <span class="map-node map-node-two">
+                        <i data-lucide="lightbulb" aria-hidden="true"></i>
+                    </span>
+
+                    <span class="map-node map-node-three">
+                        <i data-lucide="plug-zap" aria-hidden="true"></i>
+                    </span>
+
+                    <div class="map-caption">
+                        <strong>Local availability varies</strong>
+                        <span>Provider options depend on area, service category, and timing.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================================================
+             BEFORE SUBMIT CHECKLIST
+             ================================================== -->
+        <section class="contact-checklist section" aria-labelledby="contactChecklistTitle">
+            <div class="contact-checklist-bg" aria-hidden="true">
+                <img src="assets/images/wiring-detail.jpg" alt="">
+                <span></span>
+            </div>
+
+            <div class="container-wide contact-checklist-layout">
+                <div class="contact-checklist-copy reveal-up">
+                    <p class="section-kicker">Before you submit</p>
+
+                    <h2 id="contactChecklistTitle">
+                        A stronger request starts with practical details.
+                    </h2>
+
+                    <p>
+                        You do not need every technical answer before requesting provider options, but these details can
+                        make the conversation clearer.
+                    </p>
+                </div>
+
+                <div class="contact-check-stack reveal-scale" aria-label="Before you submit checklist">
+                    <div class="contact-check-item">
+                        <span>⚡</span>
+                        <strong>Service type</strong>
+                        <p>Choose panel upgrades, wiring, EV charger installation, or lighting installation.</p>
+                    </div>
+
+                    <div class="contact-check-item">
+                        <span>📍</span>
+                        <strong>ZIP code</strong>
+                        <p>Provider availability may vary by location and service type.</p>
+                    </div>
+
+                    <div class="contact-check-item">
+                        <span>🕒</span>
+                        <strong>Timeline</strong>
+                        <p>Share whether the project is urgent, soon, flexible, or planning ahead.</p>
+                    </div>
+
+                    <div class="contact-check-item">
+                        <span>🛡️</span>
+                        <strong>Verification reminder</strong>
+                        <p>Review licenses, insurance, permits, quote scope, and warranty terms before hiring.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================================================
+             CONTACT CTA / DISCLAIMER
+             ================================================== -->
+        <section class="contact-lamp-cta section-sm" aria-labelledby="contactCtaTitle">
+            <div class="container-wide">
+                <div class="contact-cta-shell reveal-up">
+                    <img src="assets/images/electrical-cta.jpg"
+                        alt="Electrical planning scene with warm light and project notes" loading="lazy">
+
+                    <span class="contact-cta-overlay"></span>
+                    <span class="contact-cta-glow"></span>
+
+                    <span class="electric-line contact-cta-line contact-cta-line-one"></span>
+                    <span class="electric-line contact-cta-line contact-cta-line-two"></span>
+                    <span class="spark-dot contact-cta-spark-one"></span>
+                    <span class="spark-dot is-blue contact-cta-spark-two"></span>
+
+                    <div class="contact-cta-content">
+                        <p class="section-kicker">Final reminder</p>
+
+                        <h2 id="contactCtaTitle">
+                            Fluxly helps with matching — independent providers discuss and perform the work.
+                        </h2>
+
+                        <p>
+                            Always verify provider credentials, quote details, permit responsibility, timing, and
+                            warranty terms directly before hiring any electrical provider.
+                        </p>
+
+                        <div class="cta-actions">
+                            <a class="btn btn-primary" href="#requestForm">
+                                <span>Return to request form</span>
+                                <i data-lucide="arrow-up" aria-hidden="true"></i>
+                            </a>
+
+                            <a class="btn btn-secondary" href="services.html">
+                                <span>Browse services</span>
+                                <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================================================
+             DISCLAIMER
+             ================================================== -->
+        <section class="contact-disclaimer" aria-label="Fluxly disclaimer">
+            <div class="container-wide">
+                <p data-disclaimer>
+                    Disclaimer: This site is a free service to assist homeowners in connecting with local service
+                    providers. All contractors/providers are independent and this site does not warrant or guarantee any
+                    work performed. It is the responsibility of the homeowner to verify that the hired contractor
+                    furnishes the necessary license and insurance required for the work being performed. All persons
+                    depicted in a photo or video are actors or models and not contractors listed on this site.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <div data-site-footer></div>
+    <div data-policy-banner></div>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+    <script src="js/config.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/contact.js" defer></script>
+</body>
+
+</html>

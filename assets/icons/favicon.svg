@@ -1,0 +1,95 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="bulbGradient" x1="18" y1="8" x2="48" y2="54" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#FFF0A8"/>
+            <stop offset="0.42" stop-color="#FFD76A"/>
+            <stop offset="0.72" stop-color="#52F1FF"/>
+            <stop offset="1" stop-color="#2F8CFF"/>
+        </linearGradient>
+
+        <linearGradient id="boltGradient" x1="25" y1="18" x2="40" y2="45" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#FFFFFF"/>
+            <stop offset="0.45" stop-color="#FFD76A"/>
+            <stop offset="1" stop-color="#52F1FF"/>
+        </linearGradient>
+
+        <filter id="softGlow" x="-18" y="-18" width="100" height="100" filterUnits="userSpaceOnUse">
+            <feGaussianBlur stdDeviation="3.5" result="blur"/>
+            <feColorMatrix in="blur" type="matrix"
+                values="0 0 0 0 0.321
+                        0 0 0 0 0.945
+                        0 0 0 0 1
+                        0 0 0 0.85 0"/>
+            <feBlend in="SourceGraphic"/>
+        </filter>
+    </defs>
+
+    <path
+        d="M32 6.5C21.8 6.5 14.4 14.1 14.4 24.2C14.4 30.7 17.6 35.2 21.2 38.8C23.6 41.2 25.1 43.5 25.6 46.8H38.4C38.9 43.5 40.4 41.2 42.8 38.8C46.4 35.2 49.6 30.7 49.6 24.2C49.6 14.1 42.2 6.5 32 6.5Z"
+        stroke="url(#bulbGradient)"
+        stroke-width="4"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        filter="url(#softGlow)"
+    />
+
+    <path
+        d="M35.7 17.6L26.8 31.2H33.1L28.9 44.2L39.1 28.9H32.5L35.7 17.6Z"
+        fill="url(#boltGradient)"
+        filter="url(#softGlow)"
+    />
+
+    <path
+        d="M25.8 47.8H38.2"
+        stroke="#FFD76A"
+        stroke-width="3.2"
+        stroke-linecap="round"
+    />
+
+    <path
+        d="M27.4 53.2H36.6"
+        stroke="#52F1FF"
+        stroke-width="3.2"
+        stroke-linecap="round"
+    />
+
+    <path
+        d="M29.4 58H34.6"
+        stroke="#F4F8FF"
+        stroke-width="3"
+        stroke-linecap="round"
+        opacity="0.9"
+    />
+
+    <path
+        d="M11.2 24.8H6.8"
+        stroke="#52F1FF"
+        stroke-width="2.6"
+        stroke-linecap="round"
+        opacity="0.9"
+    />
+
+    <path
+        d="M57.2 24.8H52.8"
+        stroke="#FFD76A"
+        stroke-width="2.6"
+        stroke-linecap="round"
+        opacity="0.9"
+    />
+
+    <path
+        d="M16.4 10.7L13.4 7.7"
+        stroke="#52F1FF"
+        stroke-width="2.4"
+        stroke-linecap="round"
+        opacity="0.72"
+    />
+
+    <path
+        d="M47.6 10.7L50.6 7.7"
+        stroke="#FFD76A"
+        stroke-width="2.4"
+        stroke-linecap="round"
+        opacity="0.72"
+    />
+</svg>

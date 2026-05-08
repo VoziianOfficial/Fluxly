@@ -1,6 +1,4 @@
-/* ==========================================================
-   HOME HERO — PHOTO CURRENT / NO SIDE CARD
-   ========================================================== */
+
 
 .hero-photo-current {
     position: relative;
@@ -179,7 +177,7 @@
     content: "";
 }
 
-/* service rail — not a card */
+
 
 .hero-service-rail {
     position: relative;
@@ -339,7 +337,7 @@
     }
 }
 
-/* responsive */
+
 
 @media (max-width: 1080px) {
     .hero-photo-current {
@@ -464,9 +462,7 @@
     }
 }
 
-/* =========================
-   HERO POWER PANEL
-   ========================= */
+
 
 .live-power-panel {
     position: relative;
@@ -686,9 +682,7 @@
     line-height: 1.55;
 }
 
-/* =========================
-   CURRENT STATUS — KEEP
-   ========================= */
+
 
 .home-current-status {
     position: relative;
@@ -752,9 +746,7 @@
         0 0 20px rgba(82, 241, 255, 0.06);
 }
 
-/* =========================
-   SERVICE LAMP WALL
-   ========================= */
+
 
 .home-lamp-wall {
     overflow: hidden;
@@ -998,9 +990,7 @@
     transform: translate(2px, -2px);
 }
 
-/* =========================
-   ELECTRICIAN SPLIT
-   ========================= */
+
 
 .home-electrician-split {
     overflow: hidden;
@@ -1205,9 +1195,7 @@
     z-index: 1;
 }
 
-/* =========================
-   LIVE SWITCHBOARD
-   ========================= */
+
 
 .home-live-switch {
     overflow: hidden;
@@ -1429,9 +1417,7 @@
     line-height: 1.45;
 }
 
-/* =========================
-   CURRENT PHOTO STRIP
-   ========================= */
+
 
 .home-current-photo {
     position: relative;
@@ -1575,9 +1561,7 @@
     line-height: 1.46;
 }
 
-/* =========================
-   PLATFORM LIGHT — KEEP
-   ========================= */
+
 
 .home-platform-light {
     overflow: hidden;
@@ -1734,9 +1718,7 @@
     }
 }
 
-/* =========================
-   FINAL LAMP CTA
-   ========================= */
+
 
 .home-lamp-cta {
     overflow: hidden;
@@ -1847,9 +1829,7 @@
     color: rgba(248, 251, 255, 0.84);
 }
 
-/* =========================
-   FAQ + DISCLAIMER
-   ========================= */
+
 
 .home-faq-premium {
     background:
@@ -1875,9 +1855,7 @@
     line-height: 1.56;
 }
 
-/* =========================
-   ANIMATIONS
-   ========================= */
+
 
 @keyframes liveSparkPulse {
 
@@ -1941,9 +1919,7 @@
     }
 }
 
-/* =========================
-   RESPONSIVE — 1440 / 1280
-   ========================= */
+
 
 @media (max-width: 1280px) {
     .live-hero-layout {
@@ -1959,9 +1935,7 @@
     }
 }
 
-/* =========================
-   RESPONSIVE — 1024 / 1080
-   ========================= */
+
 
 @media (max-width: 1080px) {
     .home-live-hero {
@@ -2024,9 +1998,7 @@
     }
 }
 
-/* =========================
-   RESPONSIVE — 900
-   ========================= */
+
 
 @media (max-width: 900px) {
     .live-hero-media img {
@@ -2072,9 +2044,7 @@
     }
 }
 
-/* =========================
-   RESPONSIVE — 768
-   ========================= */
+
 
 @media (max-width: 768px) {
     .home-live-hero {
@@ -2222,9 +2192,7 @@
     }
 }
 
-/* =========================
-   RESPONSIVE — 640
-   ========================= */
+
 
 @media (max-width: 640px) {
     .home-live-hero {
@@ -2292,9 +2260,7 @@
     }
 }
 
-/* =========================
-   RESPONSIVE — 480
-   ========================= */
+
 
 @media (max-width: 480px) {
     .home-live-hero {
@@ -2396,9 +2362,7 @@
     }
 }
 
-/* =========================
-   RESPONSIVE — 375
-   ========================= */
+
 
 @media (max-width: 375px) {
 
@@ -2423,9 +2387,7 @@
     }
 }
 
-/* ==========================================================
-   HERO PHOTO CURRENT — COMPACT HEIGHT FIX
-   ========================================================== */
+
 
 .hero-photo-current {
     min-height: clamp(540px, 70vh, 700px);
@@ -2456,7 +2418,7 @@
     min-height: 64px;
 }
 
-/* tablet */
+
 @media (max-width: 1080px) {
     .hero-photo-current {
         padding-block: 4.2rem 0.9rem;
@@ -2467,7 +2429,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 768px) {
     .hero-photo-current {
         min-height: auto;
@@ -2487,7 +2449,7 @@
     }
 }
 
-/* small mobile */
+
 @media (max-width: 480px) {
     .hero-photo-current {
         padding-block: 3.55rem 0.7rem;
@@ -2511,9 +2473,7 @@
 }
 
 
-/* ==========================================================
-   HOME PROVIDER BEAM — NO CARDS REDESIGN
-   ========================================================== */
+
 
 .home-provider-beam {
     position: relative;
@@ -2691,7 +2651,7 @@
     transform: translate(2px, -2px);
 }
 
-/* visual side without cards */
+
 
 .provider-beam-visual {
     position: relative;
@@ -2859,7 +2819,7 @@
     }
 }
 
-/* responsive */
+
 
 @media (max-width: 1080px) {
     .home-provider-beam {
@@ -2979,10 +2939,7 @@
     }
 }
 
-/* ==========================================================
-   HOME PROVIDER BEAM — REMOVE PHOTO BACKGROUND
-   Make section use body background like .home-platform-light
-   ========================================================== */
+
 
 .home-provider-beam {
     min-height: auto;
@@ -3000,17 +2957,17 @@
     display: none !important;
 }
 
-/* оставить ток, но сделать его аккуратнее на обычном body background */
+
 .provider-beam-current {
     opacity: 0.55;
 }
 
-/* чтобы текст не выглядел как hero поверх фото */
+
 .provider-beam-copy>p {
     color: var(--color-text);
 }
 
-/* можно оставить легкое свечение как в .home-platform-light */
+
 .home-provider-beam::before {
     position: absolute;
     top: 0;
@@ -3042,10 +2999,7 @@
     z-index: 2;
 }
 
-/* ==========================================================
-   PLATFORM LIGHT — TABLET/MOBILE PHOTO BACKGROUND
-   Only tablet + mobile
-   ========================================================== */
+
 
 @media (max-width: 1080px) {
     .platform-light-layout {

@@ -1,11 +1,6 @@
-/* ==========================================================
-   FLUXLY — SERVICES PAGE / PREMIUM SERVICE CIRCUIT
-   File: /css/services.css
-   ========================================================== */
 
-/* =========================
-   SERVICES HERO
-   ========================= */
+
+
 
 .services-hero-live {
     position: relative;
@@ -150,9 +145,7 @@
     color: rgba(248, 251, 255, 0.87);
 }
 
-/* =========================
-   HERO METER
-   ========================= */
+
 
 .services-live-meter {
     position: relative;
@@ -301,9 +294,7 @@
     animation-delay: 1.05s;
 }
 
-/* =========================
-   STATUS STRIP
-   ========================= */
+
 
 .services-status-strip {
     position: relative;
@@ -367,9 +358,7 @@
         0 0 20px rgba(82, 241, 255, 0.06);
 }
 
-/* =========================
-   SERVICE CIRCUIT
-   ========================= */
+
 
 .services-circuit {
     overflow: hidden;
@@ -636,9 +625,7 @@
     transform: translate(2px, -2px);
 }
 
-/* =========================
-   MATCHING FLOW
-   ========================= */
+
 
 .services-flow {
     overflow: hidden;
@@ -759,9 +746,7 @@
     line-height: 1.5;
 }
 
-/* =========================
-   CHECKLIST PHOTO SECTION
-   ========================= */
+
 
 .services-checklist {
     position: relative;
@@ -905,9 +890,7 @@
     line-height: 1.46;
 }
 
-/* =========================
-   CTA
-   ========================= */
+
 
 .services-lamp-cta {
     overflow: hidden;
@@ -1018,9 +1001,7 @@
     color: rgba(248, 251, 255, 0.84);
 }
 
-/* =========================
-   FAQ
-   ========================= */
+
 
 .services-faq {
     background:
@@ -1034,9 +1015,7 @@
     color: var(--color-muted);
 }
 
-/* =========================
-   ANIMATIONS
-   ========================= */
+
 
 @keyframes servicesSparkPulse {
 
@@ -1083,9 +1062,7 @@
     }
 }
 
-/* =========================
-   RESPONSIVE
-   ========================= */
+
 
 @media (max-width: 1280px) {
     .services-hero-layout {
@@ -1447,10 +1424,7 @@
     }
 }
 
-/* ==========================================================
-   SERVICES CIRCUIT — COPPER POWER LANES
-   More visual, less card-grid, premium electrical lanes
-   ========================================================== */
+
 
 .services-power-lanes {
     position: relative;
@@ -1506,7 +1480,7 @@
     line-height: 1.65;
 }
 
-/* stage */
+
 
 .power-lanes-stage {
     position: relative;
@@ -1550,7 +1524,7 @@
     animation: powerLaneCurrent 5.4s ease-in-out infinite;
 }
 
-/* lane */
+
 
 .power-lane {
     position: relative;
@@ -1739,7 +1713,7 @@
         transform 220ms var(--ease);
 }
 
-/* hover */
+
 
 .power-lane:hover,
 .power-lane:focus-visible,
@@ -1794,7 +1768,7 @@
     }
 }
 
-/* responsive */
+
 
 @media (max-width: 1180px) {
     .power-lanes-stage {
@@ -1884,10 +1858,7 @@
     }
 }
 
-/* ==========================================================
-   SERVICES CIRCUIT — COMPACT EQUAL SERVICE GRID
-   Final clean redesign: equal, compact, harmonic
-   ========================================================== */
+
 
 .services-equal-grid {
     position: relative;
@@ -1943,7 +1914,7 @@
     line-height: 1.62;
 }
 
-/* grid */
+
 
 .services-equal-grid-list {
     position: relative;
@@ -2128,7 +2099,7 @@
         transform 220ms var(--ease);
 }
 
-/* hover */
+
 
 .services-equal-card:hover,
 .services-equal-card:focus-visible,
@@ -2181,7 +2152,7 @@
     }
 }
 
-/* responsive */
+
 
 @media (max-width: 1180px) {
     .services-equal-grid-list {
@@ -2245,10 +2216,7 @@
     }
 }
 
-/* ==========================================================
-   MATCHING FLOW — COMPACT LIVE GRID
-   More compact, more alive, better hover color change
-   ========================================================== */
+
 
 .services-flow-compact {
     position: relative;
@@ -2311,7 +2279,7 @@
     color: var(--color-muted);
 }
 
-/* board */
+
 
 .services-flow-compact-board {
     position: relative;
@@ -2357,7 +2325,7 @@
     animation: servicesFlowBoardRun 5.6s ease-in-out infinite;
 }
 
-/* steps */
+
 
 .services-flow-step {
     position: relative;
@@ -2468,7 +2436,7 @@
     line-height: 1.5;
 }
 
-/* hover */
+
 
 .services-flow-step:hover,
 .services-flow-step:focus-within,
@@ -2530,7 +2498,7 @@
     color: rgba(248, 251, 255, 0.82);
 }
 
-/* animation */
+
 
 @keyframes servicesFlowBoardRun {
     0% {
@@ -2549,7 +2517,7 @@
     }
 }
 
-/* responsive */
+
 
 @media (max-width: 1080px) {
     .services-flow-compact-layout {
@@ -2634,10 +2602,7 @@
     }
 }
 
-/* ==========================================================
-   SERVICES FLOW — TABLET ICON/NUMBER STRETCH FIX
-   Put at the very end of services.css
-   ========================================================== */
+
 
 @media (min-width: 641px) and (max-width: 1080px) {
     body .services-flow-compact .services-flow-compact-board {
@@ -2720,10 +2685,7 @@
     }
 }
 
-/* ==========================================================
-   SERVICES FLOW — MOBILE ICON/NUMBER STRETCH FIX
-   Put at the very end of services.css
-   ========================================================== */
+
 
 @media (max-width: 640px) {
     body .services-flow-compact .services-flow-compact-board {

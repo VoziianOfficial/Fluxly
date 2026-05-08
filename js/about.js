@@ -1,9 +1,6 @@
 "use strict";
 
-/* ==========================================================
-   FLUXLY — ABOUT PAGE / PREMIUM ELECTRIC PLATFORM STORY
-   File: /js/about.js
-   ========================================================== */
+
 
 document.addEventListener("DOMContentLoaded", () => {
     initAboutHeroMotion();
@@ -20,9 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-/* =========================
-   HELPERS
-   ========================= */
+
 
 function prefersReducedMotion() {
     return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -61,9 +56,7 @@ function addElectricHover(elements, className = "is-current-active") {
     });
 }
 
-/* =========================
-   ABOUT HERO MOTION
-   ========================= */
+
 
 function initAboutHeroMotion() {
     const hero = document.querySelector(".about-hero-live");
@@ -136,9 +129,7 @@ function initAboutHeroMotion() {
     });
 }
 
-/* =========================
-   IDENTITY PANEL
-   ========================= */
+
 
 function initIdentityPanelMotion() {
     const hero = document.querySelector(".about-hero-live");
@@ -172,9 +163,7 @@ function initIdentityPanelMotion() {
     addElectricHover(lines);
 }
 
-/* =========================
-   ABOUT STATUS
-   ========================= */
+
 
 function initAboutStatus() {
     const strip = document.querySelector(".about-status-line");
@@ -195,9 +184,7 @@ function initAboutStatus() {
     });
 }
 
-/* =========================
-   STORY PHOTO MOTION
-   ========================= */
+
 
 function initStoryMotion() {
     const section = document.querySelector(".about-story");
@@ -252,9 +239,7 @@ function initStoryMotion() {
     });
 }
 
-/* =========================
-   WHAT FLUXLY DOES ROWS
-   ========================= */
+
 
 function initAboutCurrentRows() {
     const rows = document.querySelectorAll(".about-current-row");
@@ -282,9 +267,7 @@ function initAboutCurrentRows() {
     });
 }
 
-/* =========================
-   NOT CONTRACTOR SECTION
-   ========================= */
+
 
 function initNotContractorMotion() {
     const section = document.querySelector(".about-not-contractor");
@@ -320,9 +303,7 @@ function initNotContractorMotion() {
     });
 }
 
-/* =========================
-   VERIFICATION SECTION
-   ========================= */
+
 
 function initVerificationMotion() {
     const section = document.querySelector(".about-verification");
@@ -367,9 +348,7 @@ function initVerificationMotion() {
     addElectricHover(pills);
 }
 
-/* =========================
-   ABOUT CTA
-   ========================= */
+
 
 function initAboutCtaMotion() {
     const cta = document.querySelector(".about-cta-shell");

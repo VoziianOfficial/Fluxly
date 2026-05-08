@@ -1,9 +1,6 @@
 "use strict";
 
-/* ==========================================================
-   FLUXLY — LEGAL PAGES / PREMIUM LEGAL ELECTRIC STYLE
-   File: /js/legal.js
-   ========================================================== */
+
 
 document.addEventListener("DOMContentLoaded", () => {
     initLegalHeroMotion();
@@ -15,9 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-/* =========================
-   HELPERS
-   ========================= */
+
 
 function prefersReducedMotion() {
     return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -56,9 +51,7 @@ function addElectricHover(elements, className = "is-current-active") {
     });
 }
 
-/* =========================
-   LEGAL HERO MOTION
-   ========================= */
+
 
 function initLegalHeroMotion() {
     const hero = document.querySelector(".legal-hero-live");
@@ -117,9 +110,7 @@ function initLegalHeroMotion() {
     });
 }
 
-/* =========================
-   LEGAL SUMMARY PANEL
-   ========================= */
+
 
 function initLegalPanelMotion() {
     const hero = document.querySelector(".legal-hero-live");
@@ -153,9 +144,7 @@ function initLegalPanelMotion() {
     addElectricHover(lines);
 }
 
-/* =========================
-   LEGAL CONTENT
-   ========================= */
+
 
 function initLegalContentMotion() {
     const section = document.querySelector(".legal-content-section");

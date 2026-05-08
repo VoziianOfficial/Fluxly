@@ -1,11 +1,6 @@
-/* ==========================================================
-   FLUXLY — LEGAL PAGES / PREMIUM LEGAL ELECTRIC STYLE
-   File: /css/legal.css
-   ========================================================== */
 
-/* =========================
-   LEGAL HERO
-   ========================= */
+
+
 
 .legal-hero-live {
     position: relative;
@@ -132,9 +127,7 @@
     color: rgba(248, 251, 255, 0.86);
 }
 
-/* =========================
-   LEGAL SUMMARY PANEL
-   ========================= */
+
 
 .legal-summary-panel {
     position: relative;
@@ -283,9 +276,7 @@
     animation-delay: 1.05s;
 }
 
-/* =========================
-   LEGAL CONTENT
-   ========================= */
+
 
 .legal-content-section {
     position: relative;
@@ -467,9 +458,7 @@
     line-height: 1.62;
 }
 
-/* =========================
-   LEGAL DISCLAIMER
-   ========================= */
+
 
 .legal-disclaimer {
     padding-block: 1rem;
@@ -483,9 +472,7 @@
     line-height: 1.56;
 }
 
-/* =========================
-   ANIMATIONS
-   ========================= */
+
 
 @keyframes legalSparkPulse {
 
@@ -515,9 +502,7 @@
     }
 }
 
-/* =========================
-   RESPONSIVE
-   ========================= */
+
 
 @media (max-width: 1280px) {
     .legal-hero-layout {

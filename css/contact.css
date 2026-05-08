@@ -1,11 +1,6 @@
-/* ==========================================================
-   FLUXLY — CONTACT PAGE / PREMIUM REQUEST FLOW
-   File: /css/contact.css
-   ========================================================== */
 
-/* =========================
-   CONTACT HERO
-   ========================= */
+
+
 
 .contact-hero-live {
     position: relative;
@@ -150,9 +145,7 @@
     color: rgba(248, 251, 255, 0.87);
 }
 
-/* =========================
-   CONTACT HERO PANEL
-   ========================= */
+
 
 .contact-live-panel {
     position: relative;
@@ -301,9 +294,7 @@
     animation-delay: 1.05s;
 }
 
-/* =========================
-   STATUS STRIP
-   ========================= */
+
 
 .contact-status-strip {
     position: relative;
@@ -367,9 +358,7 @@
         0 0 20px rgba(82, 241, 255, 0.06);
 }
 
-/* =========================
-   REQUEST FORM SECTION
-   ========================= */
+
 
 .contact-request {
     overflow: visible;
@@ -462,9 +451,7 @@
     margin-top: 0.2rem;
 }
 
-/* =========================
-   CONTACT INFO PANEL
-   ========================= */
+
 
 .contact-info-panel {
     position: sticky;
@@ -626,9 +613,7 @@
     line-height: 1.58;
 }
 
-/* =========================
-   MAP SECTION
-   ========================= */
+
 
 .contact-map-section {
     overflow: hidden;
@@ -820,9 +805,7 @@
     border-radius: 10px;
 }
 
-/* =========================
-   CHECKLIST PHOTO SECTION
-   ========================= */
+
 
 .contact-checklist {
     position: relative;
@@ -966,9 +949,7 @@
     line-height: 1.46;
 }
 
-/* =========================
-   CTA
-   ========================= */
+
 
 .contact-lamp-cta {
     overflow: hidden;
@@ -1079,9 +1060,7 @@
     color: rgba(248, 251, 255, 0.84);
 }
 
-/* =========================
-   DISCLAIMER
-   ========================= */
+
 
 .contact-disclaimer {
     padding-block: 1rem;
@@ -1095,9 +1074,7 @@
     line-height: 1.56;
 }
 
-/* =========================
-   ANIMATIONS
-   ========================= */
+
 
 @keyframes contactSparkPulse {
 
@@ -1162,9 +1139,7 @@
     }
 }
 
-/* =========================
-   RESPONSIVE
-   ========================= */
+
 
 @media (max-width: 1280px) {
     .contact-hero-layout {
@@ -1473,11 +1448,7 @@
     }
 }
 
-/* ==========================================================
-   CONTACT REQUEST SPLIT — LIKE REFERENCE IMAGE
-   Dark electric split layout + compact form
-   Put at the very end of /css/contact.css
-   ========================================================== */
+
 
 body .contact-request-split {
     position: relative;
@@ -1517,7 +1488,7 @@ body .contact-request-split::after {
     pointer-events: none;
 }
 
-/* lines */
+
 
 body .request-split-lines {
     position: absolute;
@@ -1567,7 +1538,7 @@ body .request-line-three {
     transform: rotate(-6deg);
 }
 
-/* layout */
+
 
 body .request-split-layout {
     position: relative;
@@ -1579,7 +1550,7 @@ body .request-split-layout {
     align-items: center;
 }
 
-/* left text */
+
 
 body .request-split-copy {
     grid-area: copy;
@@ -1651,7 +1622,7 @@ body .request-split-note {
     line-height: 1.45;
 }
 
-/* form card */
+
 
 body .request-split-form-card {
     position: relative;
@@ -1694,7 +1665,7 @@ body .request-card-tab {
     pointer-events: none;
 }
 
-/* form header */
+
 
 body .request-card-head {
     display: grid;
@@ -1739,7 +1710,7 @@ body .request-card-head p {
     line-height: 1.25;
 }
 
-/* form */
+
 
 body .request-split-form {
     display: grid;
@@ -1830,7 +1801,7 @@ body .request-split-form textarea:focus {
         0 0 20px rgba(255, 215, 106, 0.08) !important;
 }
 
-/* checkbox */
+
 
 body .request-split-check {
     display: grid;
@@ -1875,7 +1846,7 @@ body .request-split-check span {
     line-height: 1.35;
 }
 
-/* message + submit */
+
 
 body .request-split-form .form-message {
     padding: 0.7rem 0.8rem !important;
@@ -1926,9 +1897,7 @@ body .request-split-submit i {
     stroke-width: 2.8;
 }
 
-/* =========================
-   RESPONSIVE
-   ========================= */
+
 
 @media (max-width: 1180px) {
     body .request-split-layout {
@@ -2150,10 +2119,7 @@ body .contact-request-split::after {
         radial-gradient(circle at 70% 70%, rgba(224, 161, 94, 0.055), transparent 26rem) !important;
 }
 
-/* ==========================================================
-   CONTACT REQUEST SPLIT — TABLET CENTER ALIGN FIX
-   Put at the very end of /css/contact.css
-   ========================================================== */
+
 
 @media (min-width: 641px) and (max-width: 1080px) {
     body .contact-request-split {

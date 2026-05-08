@@ -7,10 +7,7 @@
 @import url("./service-page.css");
 @import url("./legal.css");
 
-/* ==========================================================
-   FLUXLY — GLOBAL STYLE / PREMIUM ELECTRIC ROUTE REBUILD
-   File: /css/style.css
-   ========================================================== */
+
 
 :root {
     --font-body: "Inter", sans-serif;
@@ -74,9 +71,7 @@
     --ease-soft: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* =========================
-   RESET
-   ========================= */
+
 
 *,
 *::before,
@@ -208,9 +203,7 @@ main {
     color: var(--color-white);
 }
 
-/* =========================
-   ACCESSIBILITY
-   ========================= */
+
 
 .skip-link {
     position: fixed;
@@ -237,9 +230,7 @@ main {
     outline-offset: 4px;
 }
 
-/* =========================
-   LAYOUT
-   ========================= */
+
 
 .container {
     width: min(100% - 2rem, var(--container));
@@ -295,9 +286,7 @@ main {
     gap: clamp(0.9rem, 2vw, 1.25rem);
 }
 
-/* =========================
-   TYPOGRAPHY
-   ========================= */
+
 
 h1,
 h2,
@@ -364,9 +353,7 @@ p {
     content: "";
 }
 
-/* =========================
-   ELECTRIC GLOBAL DETAILS
-   ========================= */
+
 
 .electric-line {
     position: absolute;
@@ -428,9 +415,7 @@ p {
     pointer-events: none;
 }
 
-/* =========================
-   BUTTONS
-   ========================= */
+
 
 .btn {
     position: relative;
@@ -565,9 +550,7 @@ p {
     align-items: center;
 }
 
-/* =========================
-   LOGO
-   ========================= */
+
 
 .logo-link {
     position: relative;
@@ -692,9 +675,7 @@ p {
         0 0 20px rgba(82, 241, 255, 0.13);
 }
 
-/* =========================
-   HEADER
-   ========================= */
+
 
 [data-site-header] {
     position: sticky;
@@ -776,9 +757,7 @@ p {
     align-items: center;
 }
 
-/* =========================
-   DESKTOP ELECTRIC NAV
-   ========================= */
+
 
 .primary-nav {
     display: flex;
@@ -1126,9 +1105,7 @@ p {
     height: 0.95rem;
 }
 
-/* =========================
-   HEADER ACTIONS
-   ========================= */
+
 
 .header-actions {
     display: inline-flex;
@@ -1234,9 +1211,7 @@ p {
     color: var(--color-bulb);
 }
 
-/* =========================
-   MOBILE MENU
-   ========================= */
+
 
 .mobile-menu {
     position: fixed;
@@ -1479,9 +1454,7 @@ p {
     line-height: 1.55;
 }
 
-/* =========================
-   CARDS / PANELS
-   ========================= */
+
 
 .card,
 .faq-item,
@@ -1556,9 +1529,7 @@ p {
     height: 1rem;
 }
 
-/* =========================
-   SERVICE CARD FALLBACK
-   ========================= */
+
 
 .service-card {
     position: relative;
@@ -1695,9 +1666,7 @@ p {
     color: var(--color-bulb);
 }
 
-/* =========================
-   FAQ
-   ========================= */
+
 
 .faq-list {
     display: grid;
@@ -1761,9 +1730,7 @@ p {
     transform: rotate(45deg);
 }
 
-/* =========================
-   FORMS
-   ========================= */
+
 
 .form-grid {
     display: grid;
@@ -1910,9 +1877,7 @@ p {
     color: #ffe1e1;
 }
 
-/* =========================
-   COOKIE BANNER
-   ========================= */
+
 
 .policy-banner {
     position: fixed;
@@ -1962,9 +1927,7 @@ p {
     color: var(--color-bulb);
 }
 
-/* =========================
-   FOOTER
-   ========================= */
+
 
 .site-footer {
     position: relative;
@@ -2097,9 +2060,7 @@ p {
     line-height: 1.58;
 }
 
-/* =========================
-   REVEALS
-   ========================= */
+
 
 .reveal-up,
 .reveal-fade,
@@ -2130,9 +2091,7 @@ p {
     transform: none;
 }
 
-/* =========================
-   ANIMATIONS
-   ========================= */
+
 
 @keyframes electricFlow {
     0% {
@@ -2195,9 +2154,7 @@ p {
     }
 }
 
-/* =========================
-   RESPONSIVE
-   ========================= */
+
 
 @media (max-width: 1240px) {
     .nav-link {
@@ -2417,10 +2374,7 @@ p {
         transition-duration: 0.001ms !important;
     }
 }
-/* ==========================================================
-   HEADER NAV ALIGNMENT FIX
-   Fix primary-nav / electric-route-nav vertical alignment
-   ========================================================== */
+
 
 .header-shell {
     align-items: center;
@@ -2517,10 +2471,7 @@ p {
     flex: 0 0 auto;
 }
 
-/* ==========================================================
-   GLOBAL BODY BACKGROUND — GRAPHITE + COPPER
-   Без синевы, только тёмная база и медные линии
-   ========================================================== */
+
 
 :root {
     --color-copper: #c9833f;
@@ -2531,7 +2482,7 @@ p {
     --color-copper-glow: rgba(224, 161, 94, 0.12);
 }
 
-/* base body */
+
 body {
     background:
         radial-gradient(circle at 12% -4%, rgba(224, 161, 94, 0.08), transparent 26rem),
@@ -2540,7 +2491,7 @@ body {
         linear-gradient(180deg, #050505 0%, #0b0b0c 38%, #111214 70%, #070707 100%);
 }
 
-/* subtle copper grid */
+
 body::before {
     position: fixed;
     inset: 0;
@@ -2557,7 +2508,7 @@ body::before {
         linear-gradient(180deg, black, transparent 94%);
 }
 
-/* copper wire traces */
+
 body::after {
     position: fixed;
     inset: 0;
@@ -2588,7 +2539,7 @@ body::after {
     opacity: 0.82;
 }
 
-/* sections that should merge into body */
+
 .home-platform-light,
 .home-provider-beam {
     background:
@@ -2596,7 +2547,7 @@ body::after {
         radial-gradient(circle at 82% 20%, rgba(201, 131, 63, 0.03), transparent 24rem) !important;
 }
 
-/* photo overlays — black/copper only */
+
 .hero-photo-bg::before,
 .provider-beam-bg::before,
 .live-switch-bg::before,
@@ -2610,7 +2561,7 @@ body::after {
         linear-gradient(180deg, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.9)) !important;
 }
 
-/* panels/cards — darker and warmer, no blue cast */
+
 .card,
 .faq-item,
 .policy-banner,
@@ -2628,7 +2579,7 @@ body::after {
         rgba(14, 14, 15, 0.82) !important;
 }
 
-/* all electric lines more copper, no cyan */
+
 .electric-line,
 .hero-current,
 .provider-beam-current span,
@@ -2662,7 +2613,7 @@ body::after {
         0 0 14px rgba(224, 161, 94, 0.18) !important;
 }
 
-/* sparks / glowing dots — warm only */
+
 .spark-dot,
 .spark-dot.is-blue {
     background: var(--color-copper-strong) !important;
@@ -2671,7 +2622,7 @@ body::after {
         0 0 28px rgba(201, 131, 63, 0.18) !important;
 }
 
-/* icons/glows */
+
 .icon-pill,
 .nav-service-icon,
 .lamp-route-icon,
@@ -2681,7 +2632,7 @@ body::after {
         0 0 18px rgba(224, 161, 94, 0.08) !important;
 }
 
-/* mobile softer */
+
 @media (max-width: 768px) {
     body::before {
         background-size: 58px 58px;
@@ -2703,10 +2654,7 @@ body::after {
     }
 }
 
-/* ==========================================================
-   RESPONSIVE SECTION HEADINGS CENTER ALIGN FIX
-   Tablet + mobile section heading/copy alignment consistency
-   ========================================================== */
+
 
 @media (max-width: 1080px) {
     body :is(

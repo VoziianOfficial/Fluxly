@@ -1,9 +1,6 @@
 "use strict";
 
-/* ==========================================================
-   FLUXLY — HOME PAGE / PREMIUM ELECTRIC LAMP REBUILD
-   File: /js/home.js
-   ========================================================== */
+
 
 document.addEventListener("DOMContentLoaded", () => {
     initLiveHeroMotion();
@@ -21,9 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-/* =========================
-   HELPERS
-   ========================= */
+
 
 function prefersReducedMotion() {
     return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -62,9 +57,7 @@ function addElectricHover(elements, className = "is-current-active") {
     });
 }
 
-/* =========================
-   LIVE HERO MOTION
-   ========================= */
+
 
 function initLiveHeroMotion() {
     const hero = document.querySelector(".home-live-hero");
@@ -151,9 +144,7 @@ function initLiveHeroMotion() {
     });
 }
 
-/* =========================
-   HERO POWER PANEL
-   ========================= */
+
 
 function initPowerPanelMotion() {
     const hero = document.querySelector(".home-live-hero");
@@ -187,9 +178,7 @@ function initPowerPanelMotion() {
     addElectricHover(nodes);
 }
 
-/* =========================
-   CURRENT STATUS
-   ========================= */
+
 
 function initCurrentStatus() {
     const strip = document.querySelector(".current-status-line");
@@ -210,9 +199,7 @@ function initCurrentStatus() {
     });
 }
 
-/* =========================
-   SERVICE LAMP WALL
-   ========================= */
+
 
 function initLampWallMotion() {
     const wall = document.querySelector(".lamp-wall");
@@ -251,9 +238,7 @@ function initLampWallMotion() {
     });
 }
 
-/* =========================
-   ELECTRICIAN SPLIT
-   ========================= */
+
 
 function initElectricianSplitMotion() {
     const section = document.querySelector(".home-electrician-split");
@@ -311,9 +296,7 @@ function initElectricianSplitMotion() {
     addElectricHover(chips);
 }
 
-/* =========================
-   LIVE SWITCHBOARD
-   ========================= */
+
 
 function initLiveSwitchboard() {
     const section = document.querySelector(".home-live-switch");
@@ -369,9 +352,7 @@ function initLiveSwitchboard() {
     });
 }
 
-/* =========================
-   CURRENT PHOTO STRIP
-   ========================= */
+
 
 function initCurrentPhotoMotion() {
     const section = document.querySelector(".home-current-photo");
@@ -407,9 +388,7 @@ function initCurrentPhotoMotion() {
     addElectricHover(items);
 }
 
-/* =========================
-   PLATFORM LIGHT
-   ========================= */
+
 
 function initPlatformLightMotion() {
     const section = document.querySelector(".home-platform-light");
@@ -454,9 +433,7 @@ function initPlatformLightMotion() {
     addElectricHover(statements);
 }
 
-/* =========================
-   FINAL LAMP CTA
-   ========================= */
+
 
 function initLampCtaMotion() {
     const cta = document.querySelector(".lamp-cta-shell");

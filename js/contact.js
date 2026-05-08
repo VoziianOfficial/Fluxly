@@ -1,9 +1,6 @@
 "use strict";
 
-/* ==========================================================
-   FLUXLY — CONTACT PAGE / PREMIUM REQUEST FLOW
-   File: /js/contact.js
-   ========================================================== */
+
 
 document.addEventListener("DOMContentLoaded", () => {
     initContactHeroMotion();
@@ -20,9 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-/* =========================
-   HELPERS
-   ========================= */
+
 
 function prefersReducedMotion() {
     return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -61,9 +56,7 @@ function addElectricHover(elements, className = "is-current-active") {
     });
 }
 
-/* =========================
-   CONTACT HERO MOTION
-   ========================= */
+
 
 function initContactHeroMotion() {
     const hero = document.querySelector(".contact-hero-live");
@@ -136,9 +129,7 @@ function initContactHeroMotion() {
     });
 }
 
-/* =========================
-   CONTACT HERO PANEL
-   ========================= */
+
 
 function initContactPanelMotion() {
     const hero = document.querySelector(".contact-hero-live");
@@ -172,9 +163,7 @@ function initContactPanelMotion() {
     addElectricHover(lines);
 }
 
-/* =========================
-   CONTACT STATUS
-   ========================= */
+
 
 function initContactStatus() {
     const strip = document.querySelector(".contact-status-line");
@@ -195,9 +184,7 @@ function initContactStatus() {
     });
 }
 
-/* =========================
-   REQUEST SECTION
-   ========================= */
+
 
 function initRequestSectionMotion() {
     const section = document.querySelector(".contact-request");
@@ -242,9 +229,7 @@ function initRequestSectionMotion() {
     });
 }
 
-/* =========================
-   CONTACT INFO PANEL
-   ========================= */
+
 
 function initContactInfoPanel() {
     const panel = document.querySelector(".contact-info-panel");
@@ -275,9 +260,7 @@ function initContactInfoPanel() {
     addElectricHover(items);
 }
 
-/* =========================
-   MAP VISUAL
-   ========================= */
+
 
 function initContactMapMotion() {
     const section = document.querySelector(".contact-map-section");
@@ -357,9 +340,7 @@ function initContactMapMotion() {
     });
 }
 
-/* =========================
-   CHECKLIST SECTION
-   ========================= */
+
 
 function initContactChecklistMotion() {
     const section = document.querySelector(".contact-checklist");
@@ -395,9 +376,7 @@ function initContactChecklistMotion() {
     });
 }
 
-/* =========================
-   CONTACT CTA
-   ========================= */
+
 
 function initContactCtaMotion() {
     const cta = document.querySelector(".contact-cta-shell");

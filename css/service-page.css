@@ -1,11 +1,6 @@
-/* ==========================================================
-   FLUXLY — SERVICE DETAIL PAGES / PREMIUM ELECTRIC PATH
-   File: /css/service-page.css
-   ========================================================== */
 
-/* =========================
-   SERVICE HERO
-   ========================= */
+
+
 
 .service-hero-live {
     position: relative;
@@ -150,9 +145,7 @@
     color: rgba(248, 251, 255, 0.87);
 }
 
-/* =========================
-   HERO DETAIL PANEL
-   ========================= */
+
 
 .service-live-panel {
     position: relative;
@@ -301,9 +294,7 @@
     animation-delay: 1.05s;
 }
 
-/* =========================
-   STATUS STRIP
-   ========================= */
+
 
 .service-status-strip {
     position: relative;
@@ -367,9 +358,7 @@
         0 0 20px rgba(82, 241, 255, 0.06);
 }
 
-/* =========================
-   CONTEXT SPLIT
-   ========================= */
+
 
 .service-context {
     overflow: hidden;
@@ -546,9 +535,7 @@
     line-height: 1.45;
 }
 
-/* =========================
-   PROVIDER EVALUATION
-   ========================= */
+
 
 .service-evaluation {
     overflow: hidden;
@@ -713,9 +700,7 @@
     line-height: 1.45;
 }
 
-/* =========================
-   PROJECT PREPARATION
-   ========================= */
+
 
 .service-preparation {
     position: relative;
@@ -859,9 +844,7 @@
     line-height: 1.46;
 }
 
-/* =========================
-   MATCHING FLOW
-   ========================= */
+
 
 .service-matching-flow {
     overflow: hidden;
@@ -982,9 +965,7 @@
     line-height: 1.5;
 }
 
-/* =========================
-   SERVICE CTA
-   ========================= */
+
 
 .service-lamp-cta {
     overflow: hidden;
@@ -1095,9 +1076,7 @@
     color: rgba(248, 251, 255, 0.84);
 }
 
-/* =========================
-   FAQ + DISCLAIMER
-   ========================= */
+
 
 .service-faq {
     background:
@@ -1123,9 +1102,7 @@
     line-height: 1.56;
 }
 
-/* =========================
-   ANIMATIONS
-   ========================= */
+
 
 @keyframes serviceSparkPulse {
 
@@ -1172,9 +1149,7 @@
     }
 }
 
-/* =========================
-   RESPONSIVE
-   ========================= */
+
 
 @media (max-width: 1280px) {
     .service-hero-layout {
@@ -1497,10 +1472,7 @@
     }
 }
 
-/* ==========================================================
-   SERVICE MATCHING FLOW — CLEAN EVEN CARDS REDESIGN
-   Put at the very end of /css/service-page.css
-   ========================================================== */
+
 
 .service-matching-flow {
     position: relative;
@@ -1564,7 +1536,7 @@
     line-height: 1.66;
 }
 
-/* board */
+
 .service-flow-rail {
     position: relative;
     isolation: isolate;
@@ -1584,7 +1556,7 @@
     display: none !important;
 }
 
-/* cards */
+
 .service-flow-step {
     position: relative;
     isolation: isolate;
@@ -1664,7 +1636,7 @@
     transform: scaleX(1);
 }
 
-/* number */
+
 .service-flow-step>span {
     grid-column: 1;
     grid-row: 1;
@@ -1684,7 +1656,7 @@
     line-height: 1 !important;
 }
 
-/* icon */
+
 .service-flow-step svg,
 .service-flow-step i {
     grid-column: 2;
@@ -1722,7 +1694,7 @@
         drop-shadow(0 0 12px rgba(255, 215, 106, 0.20)) drop-shadow(0 0 14px rgba(82, 241, 255, 0.18)) !important;
 }
 
-/* title/text */
+
 .service-flow-step strong {
     grid-column: 1 / -1;
     grid-row: 2;
@@ -1742,7 +1714,7 @@
     line-height: 1.52 !important;
 }
 
-/* tablet */
+
 @media (max-width: 1080px) {
     .service-flow-layout {
         grid-template-columns: 1fr !important;
@@ -1779,7 +1751,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 700px) {
     .service-matching-flow {
         padding-block: 2.6rem !important;
@@ -1808,7 +1780,7 @@
     }
 }
 
-/* small mobile */
+
 @media (max-width: 420px) {
     .service-flow-step {
         padding: 0.82rem !important;

@@ -1,9 +1,6 @@
 "use strict";
 
-/* ==========================================================
-   FLUXLY — MAIN SCRIPT / PREMIUM ELECTRIC NAV REBUILD
-   File: /js/main.js
-   ========================================================== */
+
 
 (function () {
     const config = window.SITE_CONFIG;
@@ -56,9 +53,7 @@
         replaceStaticBrandText(document.body);
     }
 
-    /* =========================
-       HELPERS
-       ========================= */
+    
 
     function getCurrentFilename() {
         const path = window.location.pathname;
@@ -267,9 +262,7 @@
         document.body.classList.toggle("menu-open", shouldLock);
     }
 
-    /* =========================
-       CONFIG INJECTION
-       ========================= */
+    
 
     window.injectConfigValues = injectConfigValues;
 
@@ -298,9 +291,7 @@
         );
     }
 
-    /* =========================
-       PAGE META
-       ========================= */
+    
 
     window.applyPageMeta = applyPageMeta;
 
@@ -328,9 +319,7 @@
         description.setAttribute("content", meta.description || "");
     }
 
-    /* =========================
-       LOGO — ICON + NAME ONLY
-       ========================= */
+    
 
     function createLogo() {
         const logo = document.createElement("a");
@@ -364,9 +353,7 @@
         return logo;
     }
 
-    /* =========================
-       HEADER
-       ========================= */
+    
 
     window.renderHeader = renderHeader;
 
@@ -548,9 +535,7 @@
         return nav;
     }
 
-    /* =========================
-       MENU OVERLAY
-       ========================= */
+    
 
     function createMobileMenu() {
         const menu = document.createElement("div");
@@ -779,9 +764,7 @@
         });
     }
 
-    /* =========================
-       FOOTER
-       ========================= */
+    
 
     window.renderFooter = renderFooter;
 
@@ -940,9 +923,7 @@
         return col;
     }
 
-    /* =========================
-       SERVICE CARDS
-       ========================= */
+    
 
     window.renderServiceCards = renderServiceCards;
 
@@ -1082,9 +1063,7 @@
         });
     }
 
-    /* =========================
-       SOCIAL PROOF
-       ========================= */
+    
 
     function renderSocialProof() {
         document.querySelectorAll("[data-social-proof]").forEach((mount) => {
@@ -1106,9 +1085,7 @@
         });
     }
 
-    /* =========================
-       COMPARISON FACTORS
-       ========================= */
+    
 
     function getComparisonIcon(label) {
         const text = String(label || "").toLowerCase();
@@ -1156,9 +1133,7 @@
         refreshIcons();
     }
 
-    /* =========================
-       SERVICE RAILS
-       ========================= */
+    
 
     function renderServiceRails() {
         document.querySelectorAll("[data-service-rail]").forEach((mount) => {
@@ -1186,9 +1161,7 @@
         refreshIcons();
     }
 
-    /* =========================
-       MATCHING STEPS
-       ========================= */
+    
 
     function renderMatchingSteps() {
         document.querySelectorAll("[data-matching-steps]").forEach((mount) => {
@@ -1231,9 +1204,7 @@
         refreshIcons();
     }
 
-    /* =========================
-       REQUEST FORM COPY
-       ========================= */
+    
 
     function applyRequestFormCopy() {
         const formCopy = config.forms && config.forms.request ? config.forms.request : null;
@@ -1319,9 +1290,7 @@
         });
     }
 
-    /* =========================
-       FAQ
-       ========================= */
+    
 
     window.renderFaq = renderFaq;
 
@@ -1417,9 +1386,7 @@
         schemaMount.appendChild(script);
     }
 
-    /* =========================
-       STICKY HEADER
-       ========================= */
+    
 
     window.initStickyHeader = initStickyHeader;
 
@@ -1438,9 +1405,7 @@
         });
     }
 
-    /* =========================
-       COOKIE BANNER
-       ========================= */
+    
 
     window.initCookieBanner = initCookieBanner;
 
@@ -1513,9 +1478,7 @@
         mount.replaceChildren(banner);
     }
 
-    /* =========================
-       FORM VALIDATION
-       ========================= */
+    
 
     window.initFormValidation = initFormValidation;
 
@@ -1606,9 +1569,7 @@
         }
     }
 
-    /* =========================
-       REVEAL
-       ========================= */
+    
 
     window.initRevealAnimations = initRevealAnimations;
 
@@ -1643,9 +1604,7 @@
         });
     }
 
-    /* =========================
-       ELECTRIC HOVER STATES
-       ========================= */
+    
 
     function initElectricHoverStates() {
         const hoverItems = document.querySelectorAll(
@@ -1663,9 +1622,7 @@
         });
     }
 
-    /* =========================
-       ACTIVE NAVIGATION
-       ========================= */
+    
 
     window.setActiveNavigation = setActiveNavigation;
 
@@ -1691,9 +1648,7 @@
         });
     }
 
-    /* =========================
-       GLOBAL ACCESS
-       ========================= */
+    
 
     window.FLUXLY = Object.assign(window.FLUXLY || {}, {
         getCurrentFilename,

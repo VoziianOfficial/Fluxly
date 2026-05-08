@@ -1,9 +1,6 @@
 "use strict";
 
-/* ==========================================================
-   FLUXLY — SERVICE DETAIL PAGES / PREMIUM ELECTRIC PATH
-   File: /js/service-page.js
-   ========================================================== */
+
 
 document.addEventListener("DOMContentLoaded", () => {
     applyServicePageConfig();
@@ -22,9 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-/* =========================
-   HELPERS
-   ========================= */
+
 
 function getCurrentFilename() {
     try {
@@ -277,9 +272,7 @@ function addElectricHover(elements, className = "is-current-active") {
     });
 }
 
-/* =========================
-   SERVICE HERO
-   ========================= */
+
 
 function initServiceHeroMotion() {
     const hero = document.querySelector(".service-hero-live");
@@ -352,9 +345,7 @@ function initServiceHeroMotion() {
     });
 }
 
-/* =========================
-   SERVICE HERO PANEL
-   ========================= */
+
 
 function initServicePanelMotion() {
     const hero = document.querySelector(".service-hero-live");
@@ -388,9 +379,7 @@ function initServicePanelMotion() {
     addElectricHover(lines);
 }
 
-/* =========================
-   SERVICE STATUS
-   ========================= */
+
 
 function initServiceStatus() {
     const strip = document.querySelector(".service-status-line");
@@ -411,9 +400,7 @@ function initServiceStatus() {
     });
 }
 
-/* =========================
-   SERVICE CONTEXT
-   ========================= */
+
 
 function initServiceContextMotion() {
     const section = document.querySelector(".service-context");
@@ -468,9 +455,7 @@ function initServiceContextMotion() {
     });
 }
 
-/* =========================
-   PROVIDER EVALUATION
-   ========================= */
+
 
 function initServiceEvaluationMotion() {
     const section = document.querySelector(".service-evaluation");
@@ -526,9 +511,7 @@ function initServiceEvaluationMotion() {
     });
 }
 
-/* =========================
-   PREPARATION SECTION
-   ========================= */
+
 
 function initServicePreparationMotion() {
     const section = document.querySelector(".service-preparation");
@@ -564,9 +547,7 @@ function initServicePreparationMotion() {
     });
 }
 
-/* =========================
-   MATCHING FLOW
-   ========================= */
+
 
 function initServiceFlowMotion() {
     const section = document.querySelector(".service-matching-flow");
@@ -600,9 +581,7 @@ function initServiceFlowMotion() {
     });
 }
 
-/* =========================
-   SERVICE CTA
-   ========================= */
+
 
 function initServiceCtaMotion() {
     const cta = document.querySelector(".service-cta-shell");

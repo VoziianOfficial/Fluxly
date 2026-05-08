@@ -1,9 +1,6 @@
 "use strict";
 
-/* ==========================================================
-   FLUXLY — GLOBAL CONFIG
-   File: /js/config.js
-   ========================================================== */
+
 
 window.SITE_CONFIG = {
     companyName: "Fluxly",

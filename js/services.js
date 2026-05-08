@@ -1,9 +1,6 @@
 "use strict";
 
-/* ==========================================================
-   FLUXLY — SERVICES PAGE / PREMIUM SERVICE CIRCUIT
-   File: /js/services.js
-   ========================================================== */
+
 
 document.addEventListener("DOMContentLoaded", () => {
     initServicesHeroMotion();
@@ -19,9 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-/* =========================
-   HELPERS
-   ========================= */
+
 
 function prefersReducedMotion() {
     return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -60,9 +55,7 @@ function addElectricHover(elements, className = "is-current-active") {
     });
 }
 
-/* =========================
-   HERO MOTION
-   ========================= */
+
 
 function initServicesHeroMotion() {
     const hero = document.querySelector(".services-hero-live");
@@ -135,9 +128,7 @@ function initServicesHeroMotion() {
     });
 }
 
-/* =========================
-   HERO METER
-   ========================= */
+
 
 function initServicesMeterMotion() {
     const hero = document.querySelector(".services-hero-live");
@@ -171,9 +162,7 @@ function initServicesMeterMotion() {
     addElectricHover(lines);
 }
 
-/* =========================
-   STATUS STRIP
-   ========================= */
+
 
 function initServicesStatus() {
     const strip = document.querySelector(".services-status-line");
@@ -194,9 +183,7 @@ function initServicesStatus() {
     });
 }
 
-/* =========================
-   SERVICE CIRCUIT ROUTES
-   ========================= */
+
 
 function initServiceCircuitMotion() {
     const board = document.querySelector(".service-circuit-board");
@@ -238,9 +225,7 @@ function initServiceCircuitMotion() {
     });
 }
 
-/* =========================
-   FLOW RAIL
-   ========================= */
+
 
 function initServicesFlowRail() {
     const section = document.querySelector(".services-flow");
@@ -274,9 +259,7 @@ function initServicesFlowRail() {
     });
 }
 
-/* =========================
-   CHECKLIST PHOTO SECTION
-   ========================= */
+
 
 function initServicesChecklistMotion() {
     const section = document.querySelector(".services-checklist");
@@ -312,9 +295,7 @@ function initServicesChecklistMotion() {
     });
 }
 
-/* =========================
-   CTA MOTION
-   ========================= */
+
 
 function initServicesCtaMotion() {
     const cta = document.querySelector(".services-cta-shell");

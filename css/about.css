@@ -1,11 +1,6 @@
-/* ==========================================================
-   FLUXLY — ABOUT PAGE / PREMIUM ELECTRIC PLATFORM STORY
-   File: /css/about.css
-   ========================================================== */
 
-/* =========================
-   ABOUT HERO
-   ========================= */
+
+
 
 .about-hero-live {
     position: relative;
@@ -149,9 +144,7 @@
     color: rgba(248, 251, 255, 0.87);
 }
 
-/* =========================
-   IDENTITY PANEL
-   ========================= */
+
 
 .about-identity-panel {
     position: relative;
@@ -300,9 +293,7 @@
     animation-delay: 1.05s;
 }
 
-/* =========================
-   STATUS STRIP
-   ========================= */
+
 
 .about-status-strip {
     position: relative;
@@ -366,9 +357,7 @@
         0 0 20px rgba(82, 241, 255, 0.06);
 }
 
-/* =========================
-   STORY
-   ========================= */
+
 
 .about-story {
     overflow: hidden;
@@ -514,9 +503,7 @@
     line-height: 1.45;
 }
 
-/* =========================
-   WHAT FLUXLY DOES
-   ========================= */
+
 
 .about-does {
     overflow: hidden;
@@ -672,9 +659,7 @@
     line-height: 1.58;
 }
 
-/* =========================
-   NOT CONTRACTOR
-   ========================= */
+
 
 .about-not-contractor {
     position: relative;
@@ -818,9 +803,7 @@
     line-height: 1.46;
 }
 
-/* =========================
-   VERIFICATION
-   ========================= */
+
 
 .about-verification {
     overflow: hidden;
@@ -947,9 +930,7 @@
         0 0 22px rgba(82, 241, 255, 0.05);
 }
 
-/* =========================
-   CTA
-   ========================= */
+
 
 .about-lamp-cta {
     overflow: hidden;
@@ -1060,9 +1041,7 @@
     color: rgba(248, 251, 255, 0.84);
 }
 
-/* =========================
-   DISCLAIMER
-   ========================= */
+
 
 .about-disclaimer {
     padding-block: 1rem;
@@ -1076,9 +1055,7 @@
     line-height: 1.56;
 }
 
-/* =========================
-   ANIMATIONS
-   ========================= */
+
 
 @keyframes aboutSparkPulse {
 
@@ -1125,9 +1102,7 @@
     }
 }
 
-/* =========================
-   RESPONSIVE
-   ========================= */
+
 
 @media (max-width: 1280px) {
     .about-hero-layout {
@@ -1522,10 +1497,7 @@
     }
 }
 
-/* ==========================================================
-   ABOUT HERO — OPEN PHOTO / NO SIDE CARD REDESIGN
-   Put at the very end of /css/about.css
-   ========================================================== */
+
 
 .about-hero-open {
     min-height: clamp(560px, 72vh, 720px);
@@ -1589,7 +1561,7 @@
     color: rgba(248, 251, 255, 0.87);
 }
 
-/* remove old right-card layout if any old class remains */
+
 .about-hero-open .about-hero-layout,
 .about-hero-open-layout {
     grid-template-columns: 1fr !important;
@@ -1599,7 +1571,7 @@
     display: none !important;
 }
 
-/* bottom identity strip — not a card */
+
 .about-hero-signal-strip {
     position: relative;
     display: grid;
@@ -1722,7 +1694,7 @@
     }
 }
 
-/* tablet */
+
 @media (max-width: 1080px) {
     .about-hero-open {
         min-height: auto;
@@ -1757,7 +1729,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 768px) {
     .about-hero-open {
         padding-block: 4.2rem 0.9rem;
@@ -1797,7 +1769,7 @@
     }
 }
 
-/* small mobile */
+
 @media (max-width: 560px) {
     .about-hero-open {
         padding-block: 4rem 0.75rem;
@@ -1831,17 +1803,14 @@
     }
 }
 
-/* ==========================================================
-   ABOUT HERO — FORCE PHOTO CROP POSITION
-   Put at the very end of about.css
-   ========================================================== */
+
 
 body .about-hero-open .about-hero-media img,
 body .about-hero-live .about-hero-media img {
     object-position: center 12% !important;
 }
 
-/* tablet */
+
 @media (max-width: 1080px) {
 
     body .about-hero-open .about-hero-media img,
@@ -1850,7 +1819,7 @@ body .about-hero-live .about-hero-media img {
     }
 }
 
-/* mobile */
+
 @media (max-width: 768px) {
 
     body .about-hero-open .about-hero-media img,
@@ -1859,7 +1828,7 @@ body .about-hero-live .about-hero-media img {
     }
 }
 
-/* small mobile */
+
 @media (max-width: 480px) {
 
     body .about-hero-open .about-hero-media img,
@@ -1868,10 +1837,7 @@ body .about-hero-live .about-hero-media img {
     }
 }
 
-/* ==========================================================
-   ABOUT HERO — REMOVE PHOTO HOVER JUMP / JITTER
-   Put at the very end of about.css
-   ========================================================== */
+
 
 body .about-hero-open .about-hero-media img,
 body .about-hero-live .about-hero-media img {
@@ -1880,7 +1846,7 @@ body .about-hero-live .about-hero-media img {
     will-change: auto !important;
 }
 
-/* если дергаются декоративные линии/искры при hover */
+
 body .about-hero-open:hover .about-hero-line,
 body .about-hero-live:hover .about-hero-line,
 body .about-hero-open:hover .about-spark,
@@ -1888,10 +1854,7 @@ body .about-hero-live:hover .about-spark {
     transform: none !important;
 }
 
-/* ==========================================================
-   ABOUT VERIFICATION — MAKE TABLET/MOBILE LIKE HOME PLATFORM LIGHT
-   Only tablet + mobile
-   ========================================================== */
+
 
 @media (max-width: 1080px) {
     body .about-verification {
@@ -1987,7 +1950,7 @@ body .about-hero-live:hover .about-spark {
     }
 }
 
-/* tablet closer layout */
+
 @media (min-width: 769px) and (max-width: 1080px) {
     body .about-verification .verification-layout {
         grid-template-columns: minmax(220px, 300px) minmax(0, 1fr) !important;
@@ -2003,7 +1966,7 @@ body .about-hero-live:hover .about-spark {
     }
 }
 
-/* mobile: same idea, but stacked */
+
 @media (max-width: 768px) {
     body .about-verification .verification-layout {
         grid-template-columns: 1fr !important;
@@ -2051,7 +2014,7 @@ body .about-hero-live:hover .about-spark {
     }
 }
 
-/* small mobile */
+
 @media (max-width: 480px) {
     body .about-verification .verification-layout {
         padding: 1rem !important;

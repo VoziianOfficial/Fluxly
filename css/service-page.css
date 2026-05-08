@@ -147,11 +147,18 @@
 
 .service-hero-live .hero-actions {
     width: 100%;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
-.service-hero-live .hero-actions .btn {
-    flex: 0 1 240px;
+@media (max-width: 1080px) {
+    .service-hero-live .hero-actions {
+        justify-content: center;
+    }
+
+    .service-hero-live .hero-actions .btn {
+        flex: 1 1 220px;
+        max-width: 280px;
+    }
 }
 
 

@@ -656,3 +656,76 @@
         height: 60px;
     }
 }
+
+body .legal-hero-live,
+body .legal-hero-live *,
+body .legal-hero-live *::before,
+body .legal-hero-live *::after {
+    transition-property: opacity, color, background, filter !important;
+}
+
+body .legal-hero-live:hover *,
+body .legal-hero-live *:hover,
+body .legal-hero-live .is-electric-hover,
+body .legal-hero-live .is-current-active {
+    transform: none !important;
+    outline: 0 !important;
+}
+
+body .legal-hero-live .legal-summary-panel,
+body .legal-hero-live .legal-summary-panel:hover,
+body .legal-hero-live:hover .legal-summary-panel,
+body .legal-hero-live .legal-summary-panel.is-electric-hover,
+body .legal-hero-live .legal-summary-panel.is-current-active {
+    border: 1px solid rgba(255, 255, 255, 0.11) !important;
+    box-shadow:
+        0 30px 78px rgba(0, 0, 0, 0.32),
+        0 0 38px rgba(255, 215, 106, 0.07),
+        0 0 40px rgba(82, 241, 255, 0.06) !important;
+    transform: none !important;
+}
+
+body .legal-hero-live .legal-summary-panel::before,
+body .legal-hero-live .legal-summary-panel::after,
+body .legal-hero-live .legal-summary-panel:hover::before,
+body .legal-hero-live .legal-summary-panel:hover::after,
+body .legal-hero-live:hover .legal-summary-panel::before,
+body .legal-hero-live:hover .legal-summary-panel::after {
+    display: none !important;
+    opacity: 0 !important;
+    content: none !important;
+}
+
+body .legal-hero-live .legal-panel-lines span,
+body .legal-hero-live .legal-panel-lines span:hover,
+body .legal-hero-live:hover .legal-panel-lines span,
+body .legal-hero-live .legal-panel-lines span.is-electric-hover,
+body .legal-hero-live .legal-panel-lines span.is-current-active {
+    border: 0 !important;
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+body .legal-hero-live .legal-panel-lines span::after,
+body .legal-hero-live .legal-panel-lines span:hover::after,
+body .legal-hero-live:hover .legal-panel-lines span::after {
+    opacity: 0 !important;
+    display: none !important;
+    content: none !important;
+}
+
+body .legal-hero-live .legal-panel-icon,
+body .legal-hero-live .legal-panel-icon:hover,
+body .legal-hero-live:hover .legal-panel-icon,
+body .legal-hero-live .legal-panel-icon.is-electric-hover {
+    border: 1px solid rgba(255, 215, 106, 0.22) !important;
+    box-shadow:
+        inset 0 0 0 1px rgba(255, 255, 255, 0.03),
+        0 0 30px rgba(255, 215, 106, 0.16) !important;
+    transform: none !important;
+}
+
+body .legal-hero-live .legal-hero-media img,
+body .legal-hero-live:hover .legal-hero-media img {
+    transform: scale(1.02) !important;
+}

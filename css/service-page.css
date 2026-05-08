@@ -145,6 +145,15 @@
     color: rgba(248, 251, 255, 0.87);
 }
 
+.service-hero-live .hero-actions {
+    width: 100%;
+    justify-content: center;
+}
+
+.service-hero-live .hero-actions .btn {
+    flex: 0 1 240px;
+}
+
 
 
 .service-live-panel {
@@ -1795,5 +1804,87 @@
 
     .service-flow-step p {
         font-size: 0.8rem !important;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1080px) {
+    body .service-context.section .service-context-points {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    body .service-context.section .service-context-copy {
+        width: 100% !important;
+        max-width: 100% !important;
+        justify-items: stretch !important;
+    }
+
+    body .service-context.section .service-context-points {
+        display: grid !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        gap: 0.56rem !important;
+        margin: 0.2rem 0 0 !important;
+        padding: 0 !important;
+        list-style: none !important;
+        box-sizing: border-box !important;
+    }
+
+    body .service-context.section .service-context-points li {
+        position: relative !important;
+        display: grid !important;
+        grid-template-columns: 10px minmax(0, 1fr) !important;
+        gap: 0.7rem !important;
+        align-items: start !important;
+        width: 100% !important;
+        min-height: 46px !important;
+        padding: 0.72rem 0.82rem !important;
+        border: 1px solid rgba(255, 255, 255, 0.075) !important;
+        border-radius: 16px !important;
+        background:
+            radial-gradient(circle at 10% 0%, rgba(255, 215, 106, 0.055), transparent 70%),
+            rgba(255, 255, 255, 0.018) !important;
+        color: var(--color-muted) !important;
+        font-size: 0.86rem !important;
+        line-height: 1.45 !important;
+        text-align: left !important;
+        box-sizing: border-box !important;
+        padding-left: 0.82rem !important;
+    }
+
+    body .service-context.section .service-context-points li::before {
+        position: static !important;
+        display: block !important;
+        width: 8px !important;
+        height: 8px !important;
+        margin-top: 0.42rem !important;
+        border-radius: 50% !important;
+        background: linear-gradient(135deg, var(--color-bulb), var(--color-electric)) !important;
+        box-shadow:
+            0 0 12px rgba(255, 215, 106, 0.20),
+            0 0 14px rgba(82, 241, 255, 0.14) !important;
+        content: "" !important;
+    }
+}
+
+@media (max-width: 480px) {
+    body .service-context.section .service-context-points {
+        gap: 0.5rem !important;
+    }
+
+    body .service-context.section .service-context-points li {
+        min-height: 44px !important;
+        padding: 0.68rem 0.74rem !important;
+        grid-template-columns: 9px minmax(0, 1fr) !important;
+        gap: 0.62rem !important;
+        border-radius: 14px !important;
+        font-size: 0.82rem !important;
+    }
+
+    body .service-context.section .service-context-points li::before {
+        width: 7px !important;
+        height: 7px !important;
+        margin-top: 0.42rem !important;
     }
 }

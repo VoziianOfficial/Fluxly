@@ -1815,6 +1815,9 @@ body .request-split-check {
 }
 
 body .request-split-check input[type="checkbox"] {
+    position: relative;
+    display: grid;
+    place-items: center;
     width: 19px !important;
     min-width: 19px !important;
     height: 19px !important;
@@ -1826,13 +1829,20 @@ body .request-split-check input[type="checkbox"] {
     appearance: none;
 }
 
+body .request-split-check input[type="checkbox"]::after {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    line-height: 1;
+    content: "";
+}
+
 body .request-split-check input[type="checkbox"]:checked {
     background: var(--color-bulb, #ffd76a) !important;
 }
 
 body .request-split-check input[type="checkbox"]:checked::after {
-    display: grid;
-    place-items: center;
     color: #050607;
     font-size: 0.72rem;
     font-weight: 950;

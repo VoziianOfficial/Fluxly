@@ -9,6 +9,18 @@ window.SITE_CONFIG = {
     companyName: "Fluxly",
     companyId: "Fluxly Electrical Matching LLC",
 
+    legacyBrand: {
+        companyName: "Fluxly",
+        companyId: "Fluxly Electrical Matching LLC",
+        shortName: "Fluxly",
+        logoLabel: "Fluxly electrical provider matching platform",
+        phone: "(800) 314-2218",
+        phoneHref: "tel:+18003142218",
+        email: "hello@fluxlymatch.com",
+        addressFull: "845 W Madison St, Chicago, IL 60607, USA",
+        serviceArea: "USA electrical provider matching platform"
+    },
+
     brand: {
         shortName: "Fluxly",
         tagline: "Smarter electrical provider matching.",

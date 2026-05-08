@@ -8,6 +8,10 @@
 (function () {
     const config = window.SITE_CONFIG;
 
+    if (config) {
+        normalizeConfigText(config);
+    }
+
     window.FLUXLY = window.FLUXLY || {};
 
     window.applySiteConfig = applySiteConfig;
@@ -48,6 +52,8 @@
         renderComparisonFactors();
         renderMatchingSteps();
         applyRequestFormCopy();
+        
+        replaceStaticBrandText(document.body);
     }
 
     /* =========================
@@ -71,6 +77,104 @@
 
     function safeText(value) {
         return value || "";
+    }
+
+
+    function escapeRegExp(value) {
+        return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    }
+
+    function getReplacementPairs() {
+        const legacy = config.legacyBrand || {};
+
+        return [
+            [legacy.companyId || "Fluxly Electrical Matching LLC", config.companyId],
+            [legacy.logoLabel || "Fluxly electrical provider matching platform", config.brand?.logoLabel],
+            [legacy.serviceArea || "USA electrical provider matching platform", config.serviceArea],
+            [legacy.addressFull || "845 W Madison St, Chicago, IL 60607, USA", config.address?.full],
+            [legacy.phoneHref || "tel:+18003142218", config.phoneHref],
+            [legacy.phone || "(800) 314-2218", config.phone],
+            [legacy.email || "hello@fluxlymatch.com", config.email],
+            [legacy.shortName || "Fluxly", config.brand?.shortName || config.companyName],
+            [legacy.companyName || "Fluxly", config.companyName]
+        ]
+            .filter(([from, to]) => from && to && from !== to)
+            .sort((a, b) => b[0].length - a[0].length);
+    }
+
+    function replaceBrandText(value) {
+        if (typeof value !== "string") return value;
+
+        return getReplacementPairs().reduce((text, [from, to]) => {
+            return text.replace(new RegExp(escapeRegExp(from), "g"), to);
+        }, value);
+    }
+
+    function normalizeConfigText(target, seen = new WeakSet()) {
+        if (!target || typeof target !== "object" || seen.has(target)) return;
+
+        seen.add(target);
+
+        Object.keys(target).forEach((key) => {
+            if (key === "legacyBrand" || key === "storageKey") return;
+
+            const value = target[key];
+
+            if (typeof value === "string") {
+                target[key] = replaceBrandText(value);
+                return;
+            }
+
+            if (value && typeof value === "object") {
+                normalizeConfigText(value, seen);
+            }
+        });
+    }
+
+    function replaceStaticBrandText(root = document.body) {
+        if (!root) return;
+
+        const skipTags = new Set(["SCRIPT", "STYLE", "NOSCRIPT", "TEXTAREA"]);
+
+        const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+            acceptNode(node) {
+                const parent = node.parentElement;
+
+                if (!parent || skipTags.has(parent.tagName)) {
+                    return NodeFilter.FILTER_REJECT;
+                }
+
+                return NodeFilter.FILTER_ACCEPT;
+            }
+        });
+
+        const textNodes = [];
+
+        while (walker.nextNode()) {
+            textNodes.push(walker.currentNode);
+        }
+
+        textNodes.forEach((node) => {
+            const nextValue = replaceBrandText(node.nodeValue);
+
+            if (nextValue !== node.nodeValue) {
+                node.nodeValue = nextValue;
+            }
+        });
+
+        root.querySelectorAll("[aria-label], [title], [alt], [placeholder]").forEach((element) => {
+            ["aria-label", "title", "alt", "placeholder"].forEach((attr) => {
+                const value = element.getAttribute(attr);
+
+                if (!value) return;
+
+                const nextValue = replaceBrandText(value);
+
+                if (nextValue !== value) {
+                    element.setAttribute(attr, nextValue);
+                }
+            });
+        });
     }
 
     function refreshIcons() {
@@ -1591,13 +1695,16 @@
        GLOBAL ACCESS
        ========================= */
 
-    window.FLUXLY = {
+    window.FLUXLY = Object.assign(window.FLUXLY || {}, {
         getCurrentFilename,
         getServiceById,
         getActiveService,
         refreshIcons,
         injectConfigValues,
         renderServiceCards,
-        renderFaq
-    };
+        renderFaq,
+        applySiteConfig,
+        renderHeader,
+        renderFooter
+    });
 })();

@@ -18,87 +18,74 @@
     <div data-site-header></div>
 
     <main id="mainContent">
-        <!-- ==================================================
-             ABOUT HERO
-             ================================================== -->
-        <section class="about-hero-live" aria-labelledby="aboutHeroTitle">
-            <div class="about-hero-media" aria-hidden="true">
-                <img src="assets/images/hero-about.jpg" alt="">
-                <span class="about-hero-overlay"></span>
-                <span class="about-hero-glow"></span>
-                <span class="circuit-bg"></span>
-
-                <span class="electric-line about-hero-line about-hero-line-one"></span>
-                <span class="electric-line about-hero-line about-hero-line-two"></span>
-                <span class="electric-line about-hero-line about-hero-line-three"></span>
-
-                <span class="spark-dot about-spark about-spark-one"></span>
-                <span class="spark-dot is-blue about-spark about-spark-two"></span>
-                <span class="spark-dot about-spark about-spark-three"></span>
-            </div>
-
-            <div class="container-wide about-hero-layout">
-                <div class="about-hero-copy reveal-up">
-                    <p class="kicker">⚡ About Fluxly</p>
-
-                    <h1 id="aboutHeroTitle">
-                        A brighter way to organize electrical provider comparison.
-                    </h1>
-
-                    <p class="lead">
-                        Fluxly is an independent electrical provider matching platform. It helps homeowners prepare
-                        project details and compare local provider options — without presenting itself as an electrical
-                        contractor.
-                    </p>
-
-                    <div class="hero-actions" aria-label="About page actions">
-                        <a class="btn btn-primary" href="contact.html">
-                            <span>Start matching request</span>
-                            <i data-lucide="zap" aria-hidden="true"></i>
-                        </a>
-
-                        <a class="btn btn-secondary" href="services.html">
-                            <span>View service paths</span>
-                            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <aside class="about-identity-panel reveal-scale" aria-label="Fluxly platform identity">
-                    <div class="identity-bulb">
-                        <span aria-hidden="true"></span>
-                        <i data-lucide="lightbulb" aria-hidden="true"></i>
-                    </div>
-
-                    <div class="identity-copy">
-                        <p>Platform signal</p>
-                        <h2>Fluxly organizes the request. Providers discuss the work.</h2>
-                    </div>
-
-                    <div class="identity-lines" aria-label="Fluxly model summary">
-                        <span>Independent matching platform</span>
-                        <span>Electrical categories only</span>
-                        <span>Provider availability may vary</span>
-                        <span>Homeowners verify before hiring</span>
-                    </div>
-                </aside>
-            </div>
-        </section>
-
-        <!-- ==================================================
-             ABOUT STATUS STRIP
-             ================================================== -->
-        <section class="about-status-strip" aria-label="Fluxly platform highlights">
-            <div class="container-wide">
-                <div class="about-status-line reveal-up">
-                    <span>💡 Request-first platform</span>
-                    <span>⚡ Independent provider options</span>
-                    <span>🔌 Electrical service categories</span>
-                    <span>🛡️ Verification reminders</span>
-                    <span>📍 USA service area</span>
+    <!-- ==================================================
+         ABOUT HERO — OPEN PHOTO / NO SIDE CARD
+         ================================================== -->
+    <section class="about-hero-live about-hero-open" aria-labelledby="aboutHeroTitle">
+        <div class="about-hero-media" aria-hidden="true">
+            <img src="assets/images/hero-about.jpg" alt="">
+            <span class="about-hero-overlay"></span>
+            <span class="about-hero-glow"></span>
+            <span class="circuit-bg"></span>
+    
+            <span class="electric-line about-hero-line about-hero-line-one"></span>
+            <span class="electric-line about-hero-line about-hero-line-two"></span>
+            <span class="electric-line about-hero-line about-hero-line-three"></span>
+    
+            <span class="spark-dot about-spark about-spark-one"></span>
+            <span class="spark-dot about-spark about-spark-two"></span>
+            <span class="spark-dot about-spark about-spark-three"></span>
+        </div>
+    
+        <div class="container-wide about-hero-open-layout">
+            <div class="about-hero-copy about-hero-open-copy reveal-up">
+                <p class="kicker">⚡ About Fluxly</p>
+    
+                <h1 id="aboutHeroTitle">
+                    A clearer platform for electrical provider comparison.
+                </h1>
+    
+                <p class="lead">
+                    Fluxly helps homeowners organize electrical project details and compare independent local provider
+                    options — without presenting itself as an electrical contractor.
+                </p>
+    
+                <div class="hero-actions" aria-label="About page actions">
+                    <a class="btn btn-primary" href="contact.html">
+                        <span>Start matching request</span>
+                        <i data-lucide="zap" aria-hidden="true"></i>
+                    </a>
+    
+                    <a class="btn btn-secondary" href="services.html">
+                        <span>View service paths</span>
+                        <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                    </a>
                 </div>
             </div>
-        </section>
+    
+            <div class="about-hero-signal-strip reveal-scale" aria-label="Fluxly platform identity">
+                <span>
+                    <i data-lucide="lightbulb" aria-hidden="true"></i>
+                    Independent matching platform
+                </span>
+    
+                <span>
+                    <i data-lucide="workflow" aria-hidden="true"></i>
+                    Request-first process
+                </span>
+    
+                <span>
+                    <i data-lucide="map-pin" aria-hidden="true"></i>
+                    Availability may vary
+                </span>
+    
+                <span>
+                    <i data-lucide="shield-check" aria-hidden="true"></i>
+                    Verify before hiring
+                </span>
+            </div>
+        </div>
+    </section>
 
         <!-- ==================================================
              COMPANY STORY
@@ -120,8 +107,7 @@
 
                     <p>
                         The platform focuses on practical project details such as service category, ZIP code, timing,
-                        photos, and expectations. That cleaner request can make conversations with independent providers
-                        easier to compare.
+                        photos, and expectations. 
                     </p>
                 </div>
 
@@ -144,6 +130,21 @@
                 </div>
             </div>
         </section>
+
+                <!-- ==================================================
+                             ABOUT STATUS STRIP
+                             ================================================== -->
+                <section class="about-status-strip" aria-label="Fluxly platform highlights">
+                    <div class="container-wide">
+                        <div class="about-status-line reveal-up">
+                            <span>💡 Request-first platform</span>
+                            <span>⚡ Independent provider options</span>
+                            <span>🔌 Electrical service categories</span>
+                            <span>🛡️ Verification reminders</span>
+                            <span>📍 USA service area</span>
+                        </div>
+                    </div>
+                </section>
 
         <!-- ==================================================
              WHAT FLUXLY DOES
@@ -270,6 +271,8 @@
             </div>
         </section>
 
+        
+
         <!-- ==================================================
              VERIFICATION LIGHTBOARD
              ================================================== -->
@@ -352,20 +355,7 @@
             </div>
         </section>
 
-        <!-- ==================================================
-             DISCLAIMER
-             ================================================== -->
-        <section class="about-disclaimer" aria-label="Fluxly disclaimer">
-            <div class="container-wide">
-                <p data-disclaimer>
-                    Disclaimer: This site is a free service to assist homeowners in connecting with local service
-                    providers. All contractors/providers are independent and this site does not warrant or guarantee any
-                    work performed. It is the responsibility of the homeowner to verify that the hired contractor
-                    furnishes the necessary license and insurance required for the work being performed. All persons
-                    depicted in a photo or video are actors or models and not contractors listed on this site.
-                </p>
-            </div>
-        </section>
+    
     </main>
 
     <div data-site-footer></div>

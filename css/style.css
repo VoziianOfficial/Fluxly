@@ -2702,3 +2702,240 @@ body::after {
         opacity: 0.44;
     }
 }
+
+/* ==========================================================
+   RESPONSIVE SECTION HEADINGS CENTER ALIGN FIX
+   Tablet + mobile section heading/copy alignment consistency
+   ========================================================== */
+
+@media (max-width: 1080px) {
+    body :is(
+        .section-head,
+        .hero-photo-copy,
+        .provider-beam-copy,
+        .live-switch-copy,
+        .platform-light-copy,
+        .services-hero-copy,
+        .services-flow-compact-copy,
+        .services-checklist-copy,
+        .service-hero-copy,
+        .service-context-copy,
+        .service-evaluation-copy,
+        .service-preparation-copy,
+        .service-flow-copy,
+        .contact-hero-copy,
+        .request-split-copy,
+        .contact-map-copy,
+        .contact-checklist-copy,
+        .about-hero-copy,
+        .about-story-copy,
+        .about-does-head,
+        .about-not-copy,
+        .verification-copy,
+        .legal-hero-copy,
+        .lamp-cta-content,
+        .services-cta-content,
+        .service-cta-content,
+        .about-cta-content,
+        .contact-cta-content,
+        .request-form-head,
+        .services-circuit-head,
+        .lamp-wall-head
+    ) {
+        width: min(100%, 820px);
+        margin-inline: auto;
+        text-align: center;
+        justify-self: center;
+    }
+
+    body :is(
+        .section-head,
+        .hero-photo-copy,
+        .provider-beam-copy,
+        .live-switch-copy,
+        .platform-light-copy,
+        .services-hero-copy,
+        .services-flow-compact-copy,
+        .services-checklist-copy,
+        .service-hero-copy,
+        .service-context-copy,
+        .service-evaluation-copy,
+        .service-preparation-copy,
+        .service-flow-copy,
+        .contact-hero-copy,
+        .request-split-copy,
+        .contact-map-copy,
+        .contact-checklist-copy,
+        .about-hero-copy,
+        .about-story-copy,
+        .about-does-head,
+        .about-not-copy,
+        .verification-copy,
+        .legal-hero-copy,
+        .lamp-cta-content,
+        .services-cta-content,
+        .service-cta-content,
+        .about-cta-content,
+        .contact-cta-content,
+        .request-form-head,
+        .services-circuit-head,
+        .lamp-wall-head
+    ) :is(
+        .section-kicker,
+        .kicker,
+        .eyebrow,
+        .request-split-kicker
+    ) {
+        width: fit-content;
+        margin-inline: auto;
+        justify-content: center;
+        text-align: center;
+    }
+
+    body :is(
+        .section-head,
+        .hero-photo-copy,
+        .provider-beam-copy,
+        .live-switch-copy,
+        .platform-light-copy,
+        .services-hero-copy,
+        .services-flow-compact-copy,
+        .services-checklist-copy,
+        .service-hero-copy,
+        .service-context-copy,
+        .service-evaluation-copy,
+        .service-preparation-copy,
+        .service-flow-copy,
+        .contact-hero-copy,
+        .request-split-copy,
+        .contact-map-copy,
+        .contact-checklist-copy,
+        .about-hero-copy,
+        .about-story-copy,
+        .about-does-head,
+        .about-not-copy,
+        .verification-copy,
+        .legal-hero-copy,
+        .lamp-cta-content,
+        .services-cta-content,
+        .service-cta-content,
+        .about-cta-content,
+        .contact-cta-content,
+        .request-form-head,
+        .services-circuit-head,
+        .lamp-wall-head
+    ) :is(h1, h2, h3, .lead, p:not(.section-kicker)) {
+        margin-inline: auto;
+        max-width: 72ch;
+    }
+
+    body :is(
+        .section-head,
+        .hero-photo-copy,
+        .provider-beam-copy,
+        .live-switch-copy,
+        .platform-light-copy,
+        .services-hero-copy,
+        .services-flow-compact-copy,
+        .services-checklist-copy,
+        .service-hero-copy,
+        .service-context-copy,
+        .service-evaluation-copy,
+        .service-preparation-copy,
+        .service-flow-copy,
+        .contact-hero-copy,
+        .request-split-copy,
+        .contact-map-copy,
+        .contact-checklist-copy,
+        .about-hero-copy,
+        .about-story-copy,
+        .about-does-head,
+        .about-not-copy,
+        .verification-copy,
+        .legal-hero-copy,
+        .lamp-cta-content,
+        .services-cta-content,
+        .service-cta-content,
+        .about-cta-content,
+        .contact-cta-content,
+        .request-form-head,
+        .services-circuit-head,
+        .lamp-wall-head
+    ) :is(.hero-actions, .cta-actions, .model-actions) {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 640px) {
+    body :is(
+        .section-head,
+        .hero-photo-copy,
+        .provider-beam-copy,
+        .live-switch-copy,
+        .platform-light-copy,
+        .services-hero-copy,
+        .services-flow-compact-copy,
+        .services-checklist-copy,
+        .service-hero-copy,
+        .service-context-copy,
+        .service-evaluation-copy,
+        .service-preparation-copy,
+        .service-flow-copy,
+        .contact-hero-copy,
+        .request-split-copy,
+        .contact-map-copy,
+        .contact-checklist-copy,
+        .about-hero-copy,
+        .about-story-copy,
+        .about-does-head,
+        .about-not-copy,
+        .verification-copy,
+        .legal-hero-copy,
+        .lamp-cta-content,
+        .services-cta-content,
+        .service-cta-content,
+        .about-cta-content,
+        .contact-cta-content,
+        .request-form-head,
+        .services-circuit-head,
+        .lamp-wall-head
+    ) {
+        width: min(100%, 680px);
+    }
+
+    body :is(
+        .section-head,
+        .hero-photo-copy,
+        .provider-beam-copy,
+        .live-switch-copy,
+        .platform-light-copy,
+        .services-hero-copy,
+        .services-flow-compact-copy,
+        .services-checklist-copy,
+        .service-hero-copy,
+        .service-context-copy,
+        .service-evaluation-copy,
+        .service-preparation-copy,
+        .service-flow-copy,
+        .contact-hero-copy,
+        .request-split-copy,
+        .contact-map-copy,
+        .contact-checklist-copy,
+        .about-hero-copy,
+        .about-story-copy,
+        .about-does-head,
+        .about-not-copy,
+        .verification-copy,
+        .legal-hero-copy,
+        .lamp-cta-content,
+        .services-cta-content,
+        .service-cta-content,
+        .about-cta-content,
+        .contact-cta-content,
+        .request-form-head,
+        .services-circuit-head,
+        .lamp-wall-head
+    ) :is(h1, h2, h3) {
+        max-width: 32ch;
+    }
+}

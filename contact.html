@@ -99,149 +99,126 @@
             </div>
         </section>
 
-        <!-- ==================================================
-             REQUEST FORM + INFO PANEL
-             ================================================== -->
-        <section class="contact-request section" id="requestForm" aria-labelledby="requestFormTitle">
-            <div class="container-wide contact-request-layout">
-                <div class="request-form-shell reveal-up">
-                    <div class="request-form-head">
-                        <p class="section-kicker">Matching request</p>
+<!-- ==================================================
+     REQUEST FORM — SPLIT ELECTRIC FORM LIKE REFERENCE
+     ================================================== -->
+<section class="contact-request-split" id="requestForm" aria-labelledby="requestFormTitle">
+    <div class="request-split-lines" aria-hidden="true">
+        <span class="request-line request-line-one"></span>
+        <span class="request-line request-line-two"></span>
+        <span class="request-line request-line-three"></span>
+    </div>
 
-                        <h2 id="requestFormTitle">
-                            Prepare your electrical request.
-                        </h2>
+    <div class="container-wide request-split-layout">
+        <div class="request-split-copy reveal-up">
+            <p class="request-split-kicker">
+                <i data-lucide="lightbulb" aria-hidden="true"></i>
+                Start request
+            </p>
 
-                        <p>
-                            Add the basics so your request is easier to route before comparing independent local
-                            electrical provider options.
-                        </p>
-                    </div>
+            <h2 id="requestFormTitle">
+                Prepare the request.
+                <span>Then compare electrical providers.</span>
+            </h2>
 
-                    <form class="request-form" data-request-form>
-                        <div class="form-row">
-                            <div class="form-field">
-                                <label for="name">Name</label>
-                                <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name"
-                                    required>
-                            </div>
+            <p>
+                Share only the key details: service type, ZIP code, timing, and a short project note.
+                Fluxly helps organize the request before homeowners compare independent local electrical provider
+                options.
+            </p>
 
-                            <div class="form-field">
-                                <label for="phone">Phone</label>
-                                <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="Phone number"
-                                    required>
-                            </div>
-                        </div>
+            <div class="request-split-note">
+                Fluxly does not perform electrical work directly. Providers are independent.
+            </div>
+        </div>
 
-                        <div class="form-row">
-                            <div class="form-field">
-                                <label for="email">Email</label>
-                                <input id="email" name="email" type="email" autocomplete="email"
-                                    placeholder="Email address" required>
-                            </div>
+        <div class="request-split-form-card reveal-scale">
+            <span class="request-card-tab" aria-hidden="true"></span>
 
-                            <div class="form-field">
-                                <label for="zip">ZIP code</label>
-                                <input id="zip" name="zip" type="text" inputmode="numeric" autocomplete="postal-code"
-                                    placeholder="Project ZIP code" required>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-field">
-                                <label for="serviceType">Service type</label>
-                                <select id="serviceType" name="serviceType" required>
-                                    <option value="">Select service type</option>
-                                    <option value="panel-upgrades">Panel Upgrades</option>
-                                    <option value="wiring-rewiring">Wiring & Rewiring</option>
-                                    <option value="ev-charger-installation">EV Charger Installation</option>
-                                    <option value="lighting-installation">Lighting Installation</option>
-                                </select>
-                            </div>
-
-                            <div class="form-field">
-                                <label for="timing">Project timing</label>
-                                <select id="timing" name="timing" required>
-                                    <option value="">Select timing</option>
-                                    <option value="urgent">Urgent / as soon as possible</option>
-                                    <option value="soon">Within 1–2 weeks</option>
-                                    <option value="month">This month</option>
-                                    <option value="planning">Planning ahead</option>
-                                    <option value="flexible">Flexible timing</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="form-field">
-                            <label for="notes">Project notes</label>
-                            <textarea id="notes" name="notes"
-                                placeholder="Describe the panel, wiring route, EV charger location, lighting plan, timing, or questions you want providers to understand."
-                                required></textarea>
-                        </div>
-
-                        <div class="checkbox-field">
-                            <input id="verifyReminder" name="verifyReminder" type="checkbox" required>
-                            <label for="verifyReminder">
-                                I understand Fluxly is a matching platform and does not perform electrical work
-                                directly. I should verify provider license, insurance, permits, quote terms, and
-                                qualifications before hiring.
-                            </label>
-                        </div>
-
-                        <div class="form-message" data-form-message aria-live="polite"></div>
-
-                        <button class="btn btn-primary" type="submit">
-                            <span>Submit matching request</span>
-                            <i data-lucide="zap" aria-hidden="true"></i>
-                        </button>
-                    </form>
+            <div class="request-card-head">
+                <div class="request-card-icon">
+                    <i data-lucide="lightbulb" aria-hidden="true"></i>
                 </div>
 
-                <aside class="contact-info-panel reveal-scale" aria-label="Fluxly contact information">
-                    <div class="info-panel-light">
-                        <span aria-hidden="true"></span>
-                        <i data-lucide="phone-call" aria-hidden="true"></i>
-                    </div>
-
-                    <div class="contact-info-copy">
-                        <p>Contact circuit</p>
-                        <h2>Fluxly support and request details.</h2>
-                    </div>
-
-                    <div class="contact-info-list">
-                        <a data-phone-link href="tel:+18003142218">
-                            <i data-lucide="phone-call" aria-hidden="true"></i>
-                            <span data-phone-text>(800) 314-2218</span>
-                        </a>
-
-                        <a data-email-link href="mailto:hello@fluxlymatch.com">
-                            <i data-lucide="mail" aria-hidden="true"></i>
-                            <span data-email-text>hello@fluxlymatch.com</span>
-                        </a>
-
-                        <span>
-                            <i data-lucide="map-pin" aria-hidden="true"></i>
-                            <span data-address-text>845 W Madison St, Chicago, IL 60607, USA</span>
-                        </span>
-
-                        <span>
-                            <i data-lucide="radio-tower" aria-hidden="true"></i>
-                            <span data-service-area>USA electrical provider matching platform</span>
-                        </span>
-
-                        <span>
-                            <i data-lucide="badge-check" aria-hidden="true"></i>
-                            <span data-company-id>Fluxly Home Services Matching LLC</span>
-                        </span>
-                    </div>
-
-                    <p class="contact-info-note">
-                        Fluxly helps homeowners prepare project details and compare independent local electrical
-                        provider options. Provider availability may vary by location and service category.
-                    </p>
-                </aside>
+                <div>
+                    <h3>Request details</h3>
+                    <p>Compact provider matching form</p>
+                </div>
             </div>
-        </section>
+
+            <form class="request-split-form" data-request-form>
+                <div class="request-split-grid">
+                    <div class="form-field">
+                        <label for="name">Name</label>
+                        <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="phone">Phone</label>
+                        <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="(555) 000-0000"
+                            required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com"
+                            required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="zip">ZIP</label>
+                        <input id="zip" name="zip" type="text" inputmode="numeric" autocomplete="postal-code"
+                            placeholder="ZIP code" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="serviceType">Service</label>
+                        <select id="serviceType" name="serviceType" required>
+                            <option value="">Choose service</option>
+                            <option value="panel-upgrades">Panel Upgrades</option>
+                            <option value="wiring-rewiring">Wiring & Rewiring</option>
+                            <option value="ev-charger-installation">EV Charger Installation</option>
+                            <option value="lighting-installation">Lighting Installation</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="timing">Timing</label>
+                        <select id="timing" name="timing" required>
+                            <option value="">Choose timing</option>
+                            <option value="urgent">Urgent / as soon as possible</option>
+                            <option value="soon">Within 1–2 weeks</option>
+                            <option value="month">This month</option>
+                            <option value="planning">Planning ahead</option>
+                            <option value="flexible">Flexible timing</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field request-notes-field">
+                        <label for="notes">Project notes</label>
+                        <textarea id="notes" name="notes"
+                            placeholder="Short project note, access details, location, or provider questions."
+                            required></textarea>
+                    </div>
+                </div>
+
+                <label class="request-split-check" for="verifyReminder">
+                    <input id="verifyReminder" name="verifyReminder" type="checkbox" required>
+                    <span>
+                        I understand Fluxly does not perform electrical work directly.
+                    </span>
+                </label>
+
+                <div class="form-message" data-form-message aria-live="polite"></div>
+
+                <button class="request-split-submit" type="submit">
+                    <span>Submit</span>
+                    <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
 
         <!-- ==================================================
              ABSTRACT MAP VISUAL
@@ -262,7 +239,7 @@
                 </div>
 
                 <div class="contact-map-visual reveal-scale" aria-label="Abstract USA service area visual">
-                    <img src="assets/images/contact-map-visual.jpg"
+                    <img src="assets/images/provider-network.jpg"
                         alt="Abstract USA electrical provider matching service area visual" loading="lazy">
 
                     <span class="map-overlay"></span>
@@ -285,6 +262,10 @@
                     <div class="map-caption">
                         <strong>Local availability varies</strong>
                         <span>Provider options depend on area, service category, and timing.</span>
+                        <a class="map-caption-link" data-map-link href="https://www.google.com/maps/search/?api=1&query=845%20W%20Madison%20St%2C%20Chicago%2C%20IL%2060607%2C%20USA" target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="map-pin" aria-hidden="true"></i>
+                            <span data-address-text>845 W Madison St, Chicago, IL 60607, USA</span>
+                        </a>
                     </div>
                 </div>
             </div>

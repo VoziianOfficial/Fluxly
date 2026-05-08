@@ -1682,21 +1682,23 @@
     flex-wrap: wrap;
     gap: 0.62rem;
     margin-top: 1.25rem;
+    justify-content: center;
 }
 
 .platform-light-statements span {
     display: inline-flex;
-    min-height: 40px;
+    min-height: 24px;
     align-items: center;
-    padding: 0.58rem 0.8rem;
+    padding: 0.26rem 0.42rem;
     border: 1px solid rgba(255, 255, 255, 0.09);
     border-radius: var(--radius-pill);
     background:
         radial-gradient(circle at 18% 0%, rgba(255, 215, 106, 0.08), transparent 65%),
         rgba(255, 255, 255, 0.026);
     color: rgba(248, 251, 255, 0.84);
-    font-size: 0.84rem;
+    font-size: 0.7rem;
     font-weight: 850;
+    width: fit-content;
     transition:
         transform 220ms var(--ease),
         border-color 220ms var(--ease),
@@ -1710,6 +1712,26 @@
     box-shadow:
         0 0 20px rgba(255, 215, 106, 0.06),
         0 0 22px rgba(82, 241, 255, 0.05);
+}
+
+@media (max-width: 1080px) and (min-width: 769px) {
+    .platform-light-statements {
+        flex-wrap: nowrap;
+        gap: 0.5rem;
+    }
+
+    .platform-light-statements span {
+        flex: 1 1 0;
+        min-width: 0;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 1080px) {
+    .platform-light-statements {
+        display: none !important;
+    }
 }
 
 /* =========================
@@ -2183,6 +2205,7 @@
 
     .platform-light-statements {
         display: grid;
+        justify-items: center;
     }
 
     .lamp-cta-content {

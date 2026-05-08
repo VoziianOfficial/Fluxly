@@ -789,6 +789,37 @@
     line-height: 1.45;
 }
 
+.map-caption-link {
+    display: inline-flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: flex-start;
+    color: rgba(248, 251, 255, 0.84);
+    font-size: 0.84rem;
+    line-height: 1.45;
+    text-decoration: none;
+    width: fit-content;
+}
+
+.map-caption-link svg,
+.map-caption-link i {
+    width: 1rem;
+    height: 1rem;
+    color: var(--color-bulb);
+    flex: 0 0 auto;
+}
+
+.map-caption-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.map-caption-link:focus-visible {
+    outline: 2px solid rgba(255, 215, 106, 0.4);
+    outline-offset: 4px;
+    border-radius: 10px;
+}
+
 /* =========================
    CHECKLIST PHOTO SECTION
    ========================= */
@@ -1162,7 +1193,7 @@
     }
 
     .contact-live-panel {
-        max-width: 780px;
+        display: none !important;
     }
 
     .contact-status-strip {
@@ -1439,5 +1470,746 @@
     .info-panel-light {
         width: 62px;
         height: 62px;
+    }
+}
+
+/* ==========================================================
+   CONTACT REQUEST SPLIT — LIKE REFERENCE IMAGE
+   Dark electric split layout + compact form
+   Put at the very end of /css/contact.css
+   ========================================================== */
+
+body .contact-request-split {
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    min-height: clamp(640px, 82vh, 780px);
+    align-items: center;
+    overflow: hidden;
+    padding-block: clamp(5.6rem, 7vw, 7rem) clamp(3.4rem, 5vw, 5rem);
+    background:
+        radial-gradient(circle at 74% 32%, rgba(224, 161, 94, 0.08), transparent 28rem),
+        radial-gradient(circle at 18% 74%, rgba(255, 215, 106, 0.045), transparent 22rem),
+        linear-gradient(180deg, #050607 0%, #07090b 52%, #030405 100%) !important;
+}
+
+body .contact-request-split::before {
+    position: absolute;
+    inset: 0;
+    z-index: -4;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.024) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+    background-size: 70px 70px;
+    opacity: 0.34;
+    content: "";
+    pointer-events: none;
+}
+
+body .contact-request-split::after {
+    position: absolute;
+    inset: 0;
+    z-index: -3;
+    background:
+        linear-gradient(90deg, rgba(0, 0, 0, 0.24), transparent 36%, rgba(224, 161, 94, 0.035) 72%, transparent),
+        radial-gradient(circle at 88% 20%, rgba(224, 161, 94, 0.075), transparent 18rem);
+    content: "";
+    pointer-events: none;
+}
+
+/* lines */
+
+body .request-split-lines {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+body .request-line {
+    position: absolute;
+    height: 2px;
+    border-radius: 999px;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 215, 106, 0.22),
+            rgba(255, 232, 135, 0.88),
+            rgba(125, 225, 180, 0.44),
+            rgba(64, 201, 194, 0.20),
+            transparent);
+    box-shadow:
+        0 0 16px rgba(255, 215, 106, 0.22),
+        0 0 22px rgba(224, 161, 94, 0.12);
+    opacity: 0.72;
+}
+
+body .request-line-one {
+    top: 51%;
+    left: -8%;
+    width: 116%;
+    transform: rotate(-3deg);
+}
+
+body .request-line-two {
+    right: 8%;
+    bottom: 16%;
+    width: 72%;
+    opacity: 0.28;
+    transform: rotate(5deg);
+}
+
+body .request-line-three {
+    top: 39%;
+    right: -6%;
+    width: 48%;
+    opacity: 0.2;
+    transform: rotate(-6deg);
+}
+
+/* layout */
+
+body .request-split-layout {
+    position: relative;
+    z-index: 4;
+    display: grid;
+    grid-template-columns: minmax(440px, 0.72fr) minmax(0, 1fr);
+    grid-template-areas: "form copy";
+    gap: clamp(2rem, 6vw, 5.5rem);
+    align-items: center;
+}
+
+/* left text */
+
+body .request-split-copy {
+    grid-area: copy;
+    display: grid;
+    justify-items: start;
+    max-width: 760px;
+}
+
+body .request-split-form-card {
+    grid-area: form;
+}
+
+body .request-split-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: clamp(1.6rem, 3vw, 2.5rem);
+    color: var(--color-bulb, #ffd76a);
+    font-size: 0.9rem;
+    font-weight: 950;
+    letter-spacing: 0.18em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+body .request-split-kicker::before {
+    display: none !important;
+}
+
+body .request-split-kicker svg,
+body .request-split-kicker i {
+    width: 1.35rem;
+    height: 1.35rem;
+    fill: currentColor;
+    filter: drop-shadow(0 0 12px rgba(255, 215, 106, 0.36));
+}
+
+body .request-split-copy h2 {
+    max-width: 760px;
+    margin: 0 0 1.35rem;
+    color: #ffffff;
+    font-family: var(--font-display, "Outfit", sans-serif);
+    font-size: clamp(3.1rem, 5.6vw, 5.4rem);
+    font-weight: 600;
+    letter-spacing: -0.065em;
+    line-height: 0.97;
+}
+
+body .request-split-copy h2 span {
+    display: block;
+}
+
+body .request-split-copy>p {
+    max-width: 710px;
+    margin: 0;
+    color: rgba(235, 240, 248, 0.88);
+    font-size: clamp(1.02rem, 1.55vw, 1.35rem);
+    line-height: 1.52;
+}
+
+body .request-split-note {
+    width: min(100%, 690px);
+    margin-top: 1.9rem;
+    padding: 0.9rem 1rem;
+    border: 1px solid rgba(224, 161, 94, 0.28);
+    background: rgba(224, 161, 94, 0.045);
+    color: rgba(201, 216, 238, 0.76);
+    font-size: 0.94rem;
+    line-height: 1.45;
+}
+
+/* form card */
+
+body .request-split-form-card {
+    position: relative;
+    isolation: isolate;
+    width: min(100%, 560px);
+    justify-self: end;
+    padding: clamp(1.15rem, 2vw, 1.55rem);
+    border: 1px solid rgba(224, 161, 94, 0.34);
+    border-radius: 20px;
+    background:
+        radial-gradient(circle at 100% 0%, rgba(224, 161, 94, 0.15), transparent 20rem),
+        linear-gradient(180deg, rgba(7, 9, 10, 0.94), rgba(4, 5, 6, 0.88));
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.36),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.025);
+    backdrop-filter: blur(16px);
+}
+
+body .request-split-form-card::before {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+        linear-gradient(90deg, transparent, rgba(224, 161, 94, 0.18), transparent) top / 100% 1px no-repeat,
+        linear-gradient(180deg, transparent, rgba(224, 161, 94, 0.11), transparent) right / 1px 100% no-repeat;
+    content: "";
+    pointer-events: none;
+}
+
+body .request-card-tab {
+    position: absolute;
+    top: -4.1rem;
+    right: 5.6rem;
+    width: 4.4rem;
+    height: 4.1rem;
+    transform: skewX(-16deg);
+    background: linear-gradient(180deg, rgba(255, 215, 106, 0.58), rgba(224, 161, 94, 0.18));
+    opacity: 0.82;
+    content: "";
+    pointer-events: none;
+}
+
+/* form header */
+
+body .request-card-head {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.95rem;
+    align-items: center;
+    padding-bottom: 1rem;
+    margin-bottom: 0.9rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+body .request-card-icon {
+    display: grid;
+    width: 42px;
+    height: 52px;
+    place-items: center;
+    color: var(--color-bulb, #ffd76a);
+}
+
+body .request-card-icon svg,
+body .request-card-icon i {
+    width: 2.35rem;
+    height: 2.35rem;
+    fill: currentColor;
+    filter: drop-shadow(0 0 14px rgba(255, 215, 106, 0.28));
+}
+
+body .request-card-head h3 {
+    margin: 0 0 0.22rem;
+    color: #ffffff;
+    font-family: var(--font-display, "Outfit", sans-serif);
+    font-size: 1.28rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+}
+
+body .request-card-head p {
+    margin: 0;
+    color: rgba(137, 162, 195, 0.9);
+    font-size: 0.94rem;
+    line-height: 1.25;
+}
+
+/* form */
+
+body .request-split-form {
+    display: grid;
+    gap: 0.75rem;
+}
+
+body .request-split-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.72rem 0.78rem;
+}
+
+body .request-split-grid .form-field {
+    display: grid;
+    gap: 0.32rem;
+}
+
+body .request-notes-field {
+    grid-column: 1 / -1;
+}
+
+body .request-split-form label {
+    color: #ffffff;
+    font-size: 0.92rem !important;
+    font-weight: 850;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+}
+
+body .request-split-form input,
+body .request-split-form select,
+body .request-split-form textarea {
+    width: 100%;
+    min-height: 46px !important;
+    padding: 0.72rem 0.82rem !important;
+    border: 1px solid rgba(255, 255, 255, 0.13) !important;
+    border-radius: 0 !important;
+    background:
+        linear-gradient(90deg, rgba(255, 215, 106, 0.025), transparent 45%, rgba(64, 201, 194, 0.03)),
+        rgba(0, 0, 0, 0.42) !important;
+    color: #ffffff !important;
+    font-size: 0.92rem !important;
+    line-height: 1.35 !important;
+    outline: none !important;
+    box-shadow: none !important;
+    transition:
+        border-color 180ms var(--ease),
+        background-color 180ms var(--ease),
+        box-shadow 180ms var(--ease);
+}
+
+body .request-split-form input::placeholder,
+body .request-split-form textarea::placeholder {
+    color: rgba(137, 162, 195, 0.72);
+}
+
+body .request-split-form select {
+    color: #ffffff !important;
+    appearance: none;
+    padding-right: 2.4rem !important;
+    background-image:
+        linear-gradient(45deg, transparent 50%, var(--color-bulb, #ffd76a) 50%),
+        linear-gradient(135deg, var(--color-bulb, #ffd76a) 50%, transparent 50%),
+        linear-gradient(90deg, rgba(255, 215, 106, 0.025), transparent 45%, rgba(64, 201, 194, 0.03)) !important;
+    background-position:
+        calc(100% - 18px) calc(50% - 3px),
+        calc(100% - 12px) calc(50% - 3px),
+        0 0 !important;
+    background-size:
+        6px 6px,
+        6px 6px,
+        100% 100% !important;
+    background-repeat: no-repeat !important;
+}
+
+body .request-split-form textarea {
+    min-height: 82px !important;
+    max-height: 105px !important;
+    resize: none !important;
+}
+
+body .request-split-form input:focus,
+body .request-split-form select:focus,
+body .request-split-form textarea:focus {
+    border-color: rgba(255, 215, 106, 0.56) !important;
+    box-shadow:
+        0 0 0 1px rgba(255, 215, 106, 0.14),
+        0 0 20px rgba(255, 215, 106, 0.08) !important;
+}
+
+/* checkbox */
+
+body .request-split-check {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.62rem;
+    align-items: center;
+    padding: 0.72rem 0.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: rgba(137, 162, 195, 0.075);
+    cursor: pointer;
+}
+
+body .request-split-check input[type="checkbox"] {
+    width: 19px !important;
+    min-width: 19px !important;
+    height: 19px !important;
+    min-height: 19px !important;
+    margin: 0 !important;
+    border: 1px solid rgba(255, 215, 106, 0.55) !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    appearance: none;
+}
+
+body .request-split-check input[type="checkbox"]:checked {
+    background: var(--color-bulb, #ffd76a) !important;
+}
+
+body .request-split-check input[type="checkbox"]:checked::after {
+    display: grid;
+    place-items: center;
+    color: #050607;
+    font-size: 0.72rem;
+    font-weight: 950;
+    content: "✓";
+}
+
+body .request-split-check span {
+    color: rgba(201, 216, 238, 0.82);
+    font-size: 0.76rem;
+    font-weight: 780;
+    line-height: 1.35;
+}
+
+/* message + submit */
+
+body .request-split-form .form-message {
+    padding: 0.7rem 0.8rem !important;
+    border-radius: 0 !important;
+    font-size: 0.82rem !important;
+    line-height: 1.45 !important;
+}
+
+body .request-split-submit {
+    display: inline-flex;
+    width: 100%;
+    min-height: 58px;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    border: 1px solid rgba(255, 215, 106, 0.88);
+    background:
+        linear-gradient(135deg, #ffd25d 0%, #ffb237 42%, #df8314 100%);
+    color: #070707;
+    font-family: var(--font-display, "Outfit", sans-serif);
+    font-size: 1rem;
+    font-weight: 900;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow:
+        0 16px 36px rgba(224, 161, 94, 0.16),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.24);
+    transition:
+        transform 180ms var(--ease),
+        box-shadow 180ms var(--ease),
+        filter 180ms var(--ease);
+}
+
+body .request-split-submit:hover,
+body .request-split-submit:focus-visible {
+    transform: translateY(-1px);
+    filter: brightness(1.05);
+    box-shadow:
+        0 20px 42px rgba(224, 161, 94, 0.24),
+        0 0 28px rgba(255, 215, 106, 0.14),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.32);
+}
+
+body .request-split-submit svg,
+body .request-split-submit i {
+    width: 1.05rem;
+    height: 1.05rem;
+    stroke-width: 2.8;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 1180px) {
+    body .request-split-layout {
+        grid-template-columns: minmax(410px, 0.75fr) minmax(0, 0.9fr);
+        grid-template-areas: "form copy";
+        gap: clamp(1.6rem, 4vw, 3rem);
+    }
+
+    body .request-split-copy h2 {
+        font-size: clamp(2.75rem, 5vw, 4.4rem);
+    }
+
+    body .request-split-form-card {
+        width: min(100%, 520px);
+    }
+}
+
+@media (max-width: 980px) {
+    body .contact-request-split {
+        min-height: auto;
+        padding-block: 5rem 3rem;
+    }
+
+    body .request-split-layout {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "copy"
+            "form";
+        gap: 2.2rem;
+    }
+
+    body .request-split-copy {
+        max-width: 760px;
+    }
+
+    body .request-split-copy h2 {
+        max-width: 720px;
+    }
+
+    body .request-split-form-card {
+        justify-self: start;
+        width: min(100%, 620px);
+    }
+
+    body .request-card-tab {
+        right: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body .contact-request-split {
+        padding-block: 4.5rem 2.5rem;
+    }
+
+    body .request-split-layout {
+        gap: 1.6rem;
+    }
+
+    body .request-split-kicker {
+        margin-bottom: 1.2rem;
+        font-size: 0.78rem;
+    }
+
+    body .request-split-copy h2 {
+        margin-bottom: 1rem;
+        font-size: clamp(2.25rem, 10vw, 3.4rem);
+        letter-spacing: -0.055em;
+    }
+
+    body .request-split-copy>p {
+        font-size: 0.98rem;
+        line-height: 1.55;
+    }
+
+    body .request-split-note {
+        margin-top: 1.2rem;
+        padding: 0.75rem 0.8rem;
+        font-size: 0.82rem;
+    }
+
+    body .request-split-form-card {
+        padding: 1rem;
+    }
+
+    body .request-card-tab {
+        display: none;
+    }
+
+    body .request-card-head {
+        gap: 0.75rem;
+        padding-bottom: 0.85rem;
+    }
+
+    body .request-card-icon {
+        width: 34px;
+        height: 42px;
+    }
+
+    body .request-card-icon svg,
+    body .request-card-icon i {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    body .request-card-head h3 {
+        font-size: 1.08rem;
+    }
+
+    body .request-card-head p {
+        font-size: 0.82rem;
+    }
+
+    body .request-split-grid {
+        gap: 0.62rem;
+    }
+
+    body .request-split-form label {
+        font-size: 0.82rem !important;
+    }
+
+    body .request-split-form input,
+    body .request-split-form select,
+    body .request-split-form textarea {
+        min-height: 42px !important;
+        padding: 0.64rem 0.72rem !important;
+        font-size: 0.84rem !important;
+    }
+
+    body .request-split-form textarea {
+        min-height: 78px !important;
+    }
+
+    body .request-split-submit {
+        min-height: 52px;
+    }
+}
+
+@media (max-width: 560px) {
+    body .contact-request-split {
+        padding-block: 4.1rem 2rem;
+    }
+
+    body .request-split-copy h2 {
+        font-size: clamp(2.05rem, 12vw, 2.8rem);
+    }
+
+    body .request-split-grid {
+        grid-template-columns: 1fr;
+    }
+
+    body .request-split-form-card {
+        padding: 0.85rem;
+    }
+
+    body .request-card-head {
+        align-items: start;
+    }
+
+    body .request-split-check {
+        align-items: start;
+        padding: 0.65rem;
+    }
+
+    body .request-split-check span {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 390px) {
+    body .request-split-copy h2 {
+        font-size: 1.95rem;
+    }
+
+    body .request-split-copy>p {
+        font-size: 0.9rem;
+    }
+
+    body .request-split-form-card {
+        padding: 0.72rem;
+    }
+
+    body .request-split-submit {
+        min-height: 48px;
+        font-size: 0.92rem;
+    }
+}
+
+.request-card-icon,
+.request-split-kicker i {
+    color: var(--color-bulb, #ffd76a);
+}
+
+.request-card-icon {
+    display: grid;
+    width: 48px;
+    height: 48px;
+    place-items: center;
+    border: 1px solid rgba(255, 215, 106, 0.22);
+    border-radius: 14px;
+    background: radial-gradient(circle at 50% 35%, rgba(255, 215, 106, 0.16), transparent 65%), rgba(255, 255, 255, 0.02);
+    box-shadow: 0 0 18px rgba(255, 215, 106, 0.10);
+}
+
+.request-card-icon svg,
+.request-card-icon i,
+.request-split-kicker svg,
+.request-split-kicker i {
+    width: 1.15rem;
+    height: 1.15rem;
+    filter: drop-shadow(0 0 10px rgba(255, 215, 106, 0.25));
+}
+body .contact-request-split .request-card-tab {
+    display: none !important;
+}
+
+body .contact-request-split::after {
+    background:
+        radial-gradient(circle at 82% 34%, rgba(255, 215, 106, 0.10), transparent 22rem),
+        radial-gradient(circle at 70% 70%, rgba(224, 161, 94, 0.055), transparent 26rem) !important;
+}
+
+/* ==========================================================
+   CONTACT REQUEST SPLIT — TABLET CENTER ALIGN FIX
+   Put at the very end of /css/contact.css
+   ========================================================== */
+
+@media (min-width: 641px) and (max-width: 1080px) {
+    body .contact-request-split {
+        min-height: auto !important;
+        padding-block: 4.8rem 3.2rem !important;
+        align-items: center !important;
+    }
+
+    body .contact-request-split .request-split-layout {
+        width: min(100% - 2rem, 820px) !important;
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+        align-items: center !important;
+        justify-items: center !important;
+        margin-inline: auto !important;
+    }
+
+    body .contact-request-split .request-split-copy {
+        width: 100% !important;
+        max-width: 760px !important;
+        justify-items: center !important;
+        text-align: center !important;
+        margin-inline: auto !important;
+    }
+
+    body .contact-request-split .request-split-kicker {
+        margin-inline: auto !important;
+        justify-content: center !important;
+    }
+
+    body .contact-request-split .request-split-copy h2 {
+        max-width: 760px !important;
+        margin-inline: auto !important;
+        text-align: center !important;
+        font-size: clamp(2.7rem, 7vw, 4.25rem) !important;
+    }
+
+    body .contact-request-split .request-split-copy>p {
+        max-width: 680px !important;
+        margin-inline: auto !important;
+        text-align: center !important;
+    }
+
+    body .contact-request-split .request-split-note {
+        width: min(100%, 620px) !important;
+        margin-inline: auto !important;
+        text-align: center !important;
+    }
+
+    body .contact-request-split .request-split-form-card {
+        width: min(100%, 620px) !important;
+        justify-self: center !important;
+        margin-inline: auto !important;
+    }
+
+    body .contact-request-split .request-card-tab {
+        right: 4rem !important;
     }
 }

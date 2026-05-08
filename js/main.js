@@ -156,6 +156,13 @@
 
         setLink("[data-phone-link]", config.phoneHref, config.phoneLabel);
         setLink("[data-email-link]", `mailto:${config.email}`, `Email ${config.companyName}`);
+
+        const mapsQuery = config.address && config.address.full ? encodeURIComponent(config.address.full) : "";
+        setLink(
+            "[data-map-link]",
+            mapsQuery ? `https://www.google.com/maps/search/?api=1&query=${mapsQuery}` : "",
+            mapsQuery ? `Open ${config.address.full} in Maps` : ""
+        );
     }
 
     /* =========================

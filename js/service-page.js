@@ -6,6 +6,8 @@
    ========================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
+    applyServicePageConfig();
+
     initServiceHeroMotion();
     initServicePanelMotion();
     initServiceStatus();
@@ -23,6 +25,220 @@ document.addEventListener("DOMContentLoaded", () => {
 /* =========================
    HELPERS
    ========================= */
+
+function getCurrentFilename() {
+    try {
+        const path = window.location.pathname || "";
+        const filename = path.split("/").filter(Boolean).pop();
+        return filename || "index.html";
+    } catch (error) {
+        return "index.html";
+    }
+}
+
+function applyServicePageConfig() {
+    const config = window.SITE_CONFIG;
+    if (!config || !Array.isArray(config.services)) {
+        console.warn("Missing SITE_CONFIG.services for service page rendering.");
+        return;
+    }
+
+    const filename = getCurrentFilename();
+    const service = config.services.find((entry) => entry && entry.href === filename) ||
+        config.services.find((entry) => entry && `${entry.id}.html` === filename);
+
+    if (!service) {
+        console.warn(`Missing service config for ${filename}`);
+        return;
+    }
+
+    applyServiceHero(service);
+    applyServiceContext(service);
+    applyServiceEvaluation(service);
+    applyServicePreparation(service);
+    applyServiceFlow(service);
+    applyServiceCta(service);
+}
+
+function setText(target, text) {
+    if (!target) return;
+    target.textContent = text == null ? "" : String(text);
+}
+
+function applyServiceHero(service) {
+    const kicker = document.querySelector("[data-service-hero-kicker]") || document.querySelector(".service-hero-copy .kicker");
+    if (kicker) {
+        const kickerText = service.heroKicker || (service.kicker ? `⚡ ${service.kicker}` : "⚡ Service matching");
+        kicker.textContent = kickerText;
+    }
+
+    setText(document.querySelector("[data-service-hero-title]") || document.getElementById("serviceHeroTitle"), service.heroTitle);
+    setText(
+        document.querySelector("[data-service-hero-text]") || document.querySelector(".service-hero-copy .lead"),
+        service.heroText || service.pageIntro
+    );
+
+    const heroImg = document.querySelector("[data-service-hero-image]") || document.querySelector(".service-hero-media img");
+    if (heroImg && service.image) {
+        heroImg.src = service.image;
+        heroImg.alt = service.title ? `${service.title} hero image` : "";
+    }
+
+    const heroIcon = document.querySelector("[data-service-hero-icon]") || document.querySelector(".service-panel-icon i[data-lucide]");
+    if (heroIcon && service.icon) {
+        heroIcon.setAttribute("data-lucide", service.icon);
+    }
+}
+
+function applyServiceContext(service) {
+    setText(document.querySelector("[data-service-context-title]") || document.getElementById("serviceContextTitle"), service.contextTitle);
+    setText(document.querySelector("[data-service-context-text]"), service.contextText);
+
+    const pointsMount = document.querySelector("[data-service-context-points]");
+    if (pointsMount) {
+        const points = Array.isArray(service.contextPoints) ? service.contextPoints : [];
+        pointsMount.innerHTML = points
+            .map((point) => (typeof point === "string" ? point : point && point.text))
+            .filter(Boolean)
+            .map((point) => `<li>${escapeHtml(point)}</li>`)
+            .join("");
+    }
+
+    const detailImg = document.querySelector("[data-service-detail-image]") || document.querySelector(".service-context-photo img");
+    if (detailImg && service.detailImage) {
+        detailImg.src = service.detailImage;
+        detailImg.alt = service.title ? `${service.title} detail image` : detailImg.alt;
+    }
+}
+
+function applyServiceEvaluation(service) {
+    setText(document.querySelector("[data-service-evaluation-title]") || document.getElementById("serviceEvaluationTitle"), service.evaluationTitle);
+    setText(document.querySelector("[data-service-evaluation-intro]"), service.evaluationIntro);
+
+    const mount = document.querySelector("[data-service-evaluation-items]");
+    if (!mount) return;
+
+    mount.querySelectorAll(".evaluation-item").forEach((node) => node.remove());
+
+    const items = Array.isArray(service.evaluationPoints) ? service.evaluationPoints : [];
+    const html = items
+        .map((item, index) => {
+            if (typeof item === "string") {
+                return `
+                    <button class="evaluation-item${index % 2 === 0 ? " is-on" : ""}" type="button">
+                        <span class="evaluation-light"></span>
+                        <strong>${escapeHtml(item)}</strong>
+                        <em>Confirm this detail directly with each provider.</em>
+                    </button>
+                `;
+            }
+
+            const title = item && item.title ? item.title : "";
+            const text = item && item.text ? item.text : "";
+            const isOn = item && typeof item.isOn === "boolean" ? item.isOn : index % 2 === 0;
+
+            return `
+                <button class="evaluation-item${isOn ? " is-on" : ""}" type="button">
+                    <span class="evaluation-light"></span>
+                    <strong>${escapeHtml(title)}</strong>
+                    <em>${escapeHtml(text)}</em>
+                </button>
+            `;
+        })
+        .join("");
+
+    mount.insertAdjacentHTML("beforeend", html);
+}
+
+function applyServicePreparation(service) {
+    setText(document.querySelector("[data-service-prep-title]") || document.getElementById("servicePreparationTitle"), service.prepTitle);
+    setText(document.querySelector("[data-service-prep-intro]"), service.prepIntro);
+
+    const mount = document.querySelector("[data-service-prep-items]");
+    if (!mount) return;
+
+    const items = Array.isArray(service.prepItems) ? service.prepItems : [];
+    mount.innerHTML = items
+        .map((item) => {
+            if (typeof item === "string") {
+                return `
+                    <div class="prep-item">
+                        <span>⚡</span>
+                        <strong>${escapeHtml(item)}</strong>
+                        <p></p>
+                    </div>
+                `;
+            }
+
+            const icon = item && item.icon ? item.icon : "⚡";
+            const title = item && item.title ? item.title : "";
+            const text = item && item.text ? item.text : "";
+
+            return `
+                <div class="prep-item">
+                    <span>${escapeHtml(icon)}</span>
+                    <strong>${escapeHtml(title)}</strong>
+                    <p>${escapeHtml(text)}</p>
+                </div>
+            `;
+        })
+        .join("");
+}
+
+function applyServiceFlow(service) {
+    setText(document.querySelector("[data-service-flow-title]") || document.getElementById("serviceFlowTitle"), service.flowTitle);
+    setText(document.querySelector("[data-service-flow-intro]"), service.flowIntro);
+
+    const mount = document.querySelector("[data-service-flow-steps]");
+    if (!mount) return;
+
+    mount.querySelectorAll(".service-flow-step").forEach((node) => node.remove());
+
+    const steps = Array.isArray(service.flowSteps) ? service.flowSteps : [];
+    const html = steps
+        .map((step, index) => {
+            if (typeof step === "string") {
+                return `
+                    <article class="service-flow-step">
+                        <span>${String(index + 1).padStart(2, "0")}</span>
+                        <i data-lucide="workflow" aria-hidden="true"></i>
+                        <strong>${escapeHtml(step)}</strong>
+                        <p></p>
+                    </article>
+                `;
+            }
+
+            const icon = step && step.icon ? step.icon : "workflow";
+            const title = step && step.title ? step.title : "";
+            const text = step && step.text ? step.text : "";
+
+            return `
+                <article class="service-flow-step">
+                    <span>${String(index + 1).padStart(2, "0")}</span>
+                    <i data-lucide="${escapeHtml(icon)}" aria-hidden="true"></i>
+                    <strong>${escapeHtml(title)}</strong>
+                    <p>${escapeHtml(text)}</p>
+                </article>
+            `;
+        })
+        .join("");
+
+    mount.insertAdjacentHTML("beforeend", html);
+}
+
+function applyServiceCta(service) {
+    setText(document.querySelector("[data-service-cta-title]") || document.getElementById("serviceCtaTitle"), service.ctaTitle);
+    setText(document.querySelector("[data-service-cta-text]"), service.ctaText);
+}
+
+function escapeHtml(value) {
+    return String(value || "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#39;");
+}
 
 function prefersReducedMotion() {
     return window.matchMedia("(prefers-reduced-motion: reduce)").matches;

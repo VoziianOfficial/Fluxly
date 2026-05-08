@@ -88,6 +88,7 @@ window.SITE_CONFIG = {
             image: "assets/images/panel-upgrades.jpg",
             detailImage: "assets/images/electrical-panel-detail.jpg",
             kicker: "Panel capacity matching",
+            heroKicker: "⚡ Panel upgrade matching",
             summary:
                 "Compare independent provider options for electrical panel upgrade requests, capacity concerns, breaker issues, or planned home improvements.",
             cardText:
@@ -111,26 +112,81 @@ window.SITE_CONFIG = {
             evaluationIntro:
                 "Electrical panel work can involve permits, local code requirements, utility coordination, and careful scope review. Homeowners should verify details directly with each provider.",
             evaluationPoints: [
-                "License and insurance information",
-                "Permit and inspection responsibilities",
-                "Panel size, brand, and scope clarity",
-                "Utility coordination expectations",
-                "Quote detail, timing, and warranty terms"
+                {
+                    title: "License and insurance",
+                    text: "Verify credentials directly with each provider before hiring.",
+                    isOn: true
+                },
+                {
+                    title: "Permit responsibility",
+                    text: "Ask who handles local permits, utility steps, and inspection scheduling.",
+                    isOn: false
+                },
+                {
+                    title: "Panel scope",
+                    text: "Compare panel size, breakers, labeling, grounding, and included materials.",
+                    isOn: true
+                },
+                {
+                    title: "Timeline and access",
+                    text: "Review availability, power shutoff expectations, and access requirements.",
+                    isOn: false
+                },
+                {
+                    title: "Quote terms",
+                    text: "Clarify exclusions, cleanup, payment schedule, warranty, and follow-up steps.",
+                    isOn: true
+                }
             ],
             prepTitle: "Helpful details to include in your request",
+            prepIntro:
+                "You do not need to know every technical answer before submitting a request, but clear notes can help providers understand the situation faster.",
             prepItems: [
-                "Current panel size if known",
-                "Reason for the upgrade request",
-                "Photos of the panel area if available",
-                "ZIP code and property type",
-                "Preferred timing and quote expectations"
+                {
+                    icon: "⚡",
+                    title: "Current panel notes",
+                    text: "Share panel age, visible amperage if known, breaker issues, or photos of the panel area."
+                },
+                {
+                    icon: "🔌",
+                    title: "New electrical load",
+                    text: "Mention EV chargers, appliances, HVAC changes, additions, remodels, or workshop equipment."
+                },
+                {
+                    icon: "📍",
+                    title: "Location and access",
+                    text: "Add ZIP code, indoor or outdoor panel location, access limits, and preferred timing."
+                },
+                {
+                    icon: "📋",
+                    title: "Quote questions",
+                    text: "Ask about permits, inspections, utility coordination, materials, warranty, and exclusions."
+                }
             ],
-            flowTitle: "How Fluxly supports the matching flow",
+            flowTitle: "How Fluxly routes panel upgrade requests.",
+            flowIntro:
+                "Fluxly helps organize the request around panel upgrade details, location, timing, and comparison reminders. Independent providers discuss the work, quote terms, and project requirements directly with the homeowner.",
             flowSteps: [
-                "Share your panel-related project details.",
-                "Choose the closest electrical service category.",
-                "Review independent local provider options when available.",
-                "Continue directly with providers to discuss quotes and next steps."
+                {
+                    icon: "clipboard-check",
+                    title: "Prepare details",
+                    text: "Add panel notes, ZIP code, timing, and upgrade reason."
+                },
+                {
+                    icon: "workflow",
+                    title: "Route the request",
+                    text: "Fluxly keeps the request focused on panel upgrade comparison."
+                },
+                {
+                    icon: "radio-tower",
+                    title: "Review options",
+                    text: "Compare independent provider options when available in the area."
+                },
+                {
+                    icon: "shield-check",
+                    title: "Verify before hiring",
+                    text: "Confirm license, insurance, permits, scope, timing, and terms directly."
+                }
             ],
             faq: [
                 {
@@ -168,6 +224,7 @@ window.SITE_CONFIG = {
             image: "assets/images/wiring-rewiring.jpg",
             detailImage: "assets/images/wiring-detail.jpg",
             kicker: "Wiring project matching",
+            heroKicker: "⚡ Wiring route matching",
             summary:
                 "Explore provider options for wiring and rewiring requests related to renovations, older homes, room additions, or electrical updates.",
             cardText:
@@ -191,26 +248,81 @@ window.SITE_CONFIG = {
             evaluationIntro:
                 "Wiring work can require careful review of access, walls, circuits, permits, and safety requirements. Homeowners should confirm all technical details directly with providers.",
             evaluationPoints: [
-                "License and insurance information",
-                "Permit and inspection expectations",
-                "Scope of rooms, circuits, and access points",
-                "Wall access, cleanup, and repair responsibilities",
-                "Quote clarity, timing, and warranty details"
+                {
+                    title: "License and insurance",
+                    text: "Confirm provider credentials directly before hiring.",
+                    isOn: true
+                },
+                {
+                    title: "Access assumptions",
+                    text: "Ask how wall, attic, crawlspace, ceiling, or panel access affects the quote.",
+                    isOn: false
+                },
+                {
+                    title: "Materials and route",
+                    text: "Compare wire type, circuit path, outlet or switch locations, and included hardware.",
+                    isOn: true
+                },
+                {
+                    title: "Permit and inspection steps",
+                    text: "Clarify whether permits or inspections apply and who coordinates them.",
+                    isOn: false
+                },
+                {
+                    title: "Finish expectations",
+                    text: "Review cleanup, patching responsibilities, exclusions, timing, and warranty details.",
+                    isOn: true
+                }
             ],
             prepTitle: "Useful request details",
+            prepIntro:
+                "Good request details help providers understand the wiring route, access conditions, and project expectations before discussing quotes.",
             prepItems: [
-                "Rooms or areas involved",
-                "Renovation plans or wiring concerns",
-                "Property age if known",
-                "Photos or notes about existing electrical areas",
-                "Preferred schedule and communication method"
+                {
+                    icon: "🏠",
+                    title: "Rooms and areas",
+                    text: "List the rooms, exterior areas, garage, basement, attic, or addition connected to the request."
+                },
+                {
+                    icon: "🔌",
+                    title: "Outlets, switches, or circuits",
+                    text: "Mention new outlets, dedicated circuits, lighting controls, appliance circuits, or panel connections."
+                },
+                {
+                    icon: "📸",
+                    title: "Photos and access",
+                    text: "Add photos of the panel, rooms, wall areas, attic or crawlspace access, and any visible wiring concerns."
+                },
+                {
+                    icon: "📋",
+                    title: "Scope questions",
+                    text: "Ask about permits, inspection steps, patching, cleanup, materials, timing, and warranty terms."
+                }
             ],
-            flowTitle: "A cleaner way to compare wiring provider options",
+            flowTitle: "How Fluxly routes wiring and rewiring requests.",
+            flowIntro:
+                "Fluxly helps organize the request around wiring scope, access conditions, location, timing, and verification reminders. Independent providers discuss the work, quote terms, and project requirements directly with the homeowner.",
             flowSteps: [
-                "Describe the wiring or rewiring need.",
-                "Add project area, property, and timing details.",
-                "Review provider options where available.",
-                "Discuss quotes, credentials, and next steps with providers."
+                {
+                    icon: "clipboard-check",
+                    title: "Prepare details",
+                    text: "Add rooms, wiring concerns, ZIP code, access notes, and timing."
+                },
+                {
+                    icon: "workflow",
+                    title: "Route the request",
+                    text: "Fluxly keeps the request focused on wiring and rewiring comparison."
+                },
+                {
+                    icon: "radio-tower",
+                    title: "Review options",
+                    text: "Compare independent provider options when available in the area."
+                },
+                {
+                    icon: "shield-check",
+                    title: "Verify before hiring",
+                    text: "Confirm license, insurance, permits, scope, timing, and terms directly."
+                }
             ],
             faq: [
                 {
@@ -248,6 +360,7 @@ window.SITE_CONFIG = {
             image: "assets/images/ev-charger.jpg",
             detailImage: "assets/images/ev-charger-detail.jpg",
             kicker: "EV charging match flow",
+            heroKicker: "⚡ EV charger matching",
             summary:
                 "Compare provider options for home EV charger installation requests, including panel capacity, charger location, and circuit planning.",
             cardText:
@@ -271,26 +384,81 @@ window.SITE_CONFIG = {
             evaluationIntro:
                 "EV charger installation can involve load calculations, permits, wiring routes, charger compatibility, and installation location details.",
             evaluationPoints: [
-                "Provider license and insurance details",
-                "Experience with EV charger installation requests",
-                "Panel capacity and circuit requirements",
-                "Permit and inspection handling",
-                "Quote scope, charger compatibility, and warranty terms"
+                {
+                    title: "License and insurance",
+                    text: "Confirm provider credentials directly before hiring.",
+                    isOn: true
+                },
+                {
+                    title: "Panel capacity",
+                    text: "Ask whether the existing panel can support the charger or if upgrades may be needed.",
+                    isOn: false
+                },
+                {
+                    title: "Charger and circuit scope",
+                    text: "Compare breaker, wiring, conduit, charger mounting, disconnects, and included materials.",
+                    isOn: true
+                },
+                {
+                    title: "Location and route",
+                    text: "Review garage, driveway, exterior wall, trenching, distance from panel, and access requirements.",
+                    isOn: false
+                },
+                {
+                    title: "Permit and quote terms",
+                    text: "Clarify permits, inspections, exclusions, payment, timing, cleanup, and warranty details.",
+                    isOn: true
+                }
             ],
             prepTitle: "Details to prepare before requesting provider options",
+            prepIntro:
+                "Clear charger notes can help providers understand the installation route, parking conditions, panel distance, and likely project questions before discussing quotes.",
             prepItems: [
-                "EV make or charger model if known",
-                "Preferred charger location",
-                "Distance from panel to parking area",
-                "Current panel size if available",
-                "Installation timeline and ZIP code"
+                {
+                    icon: "🚗",
+                    title: "Parking and charger location",
+                    text: "Mention garage, driveway, carport, exterior wall, preferred charger position, and vehicle parking direction."
+                },
+                {
+                    icon: "⚡",
+                    title: "Panel location and capacity notes",
+                    text: "Share photos of the panel if available, approximate distance to the charger area, and any known panel concerns."
+                },
+                {
+                    icon: "🔌",
+                    title: "Charger type",
+                    text: "Include charger brand or model if known, hardwired or plug-in preference, and charging speed expectations."
+                },
+                {
+                    icon: "📋",
+                    title: "Scope questions",
+                    text: "Ask about permits, inspections, conduit, trenching, outdoor rating, cleanup, timing, and warranty terms."
+                }
             ],
-            flowTitle: "How the EV charger matching flow works",
+            flowTitle: "How Fluxly routes EV charger installation requests.",
+            flowIntro:
+                "Fluxly helps organize the request around charger placement, panel distance, parking setup, location, timing, and verification reminders. Independent providers discuss the work, quote terms, and project requirements directly with the homeowner.",
             flowSteps: [
-                "Share charger, location, and property details.",
-                "Fluxly organizes the request by service type.",
-                "Review available independent provider options.",
-                "Continue with providers to discuss quote details and installation requirements."
+                {
+                    icon: "clipboard-check",
+                    title: "Prepare details",
+                    text: "Add charger location, panel notes, ZIP code, timing, and parking setup."
+                },
+                {
+                    icon: "workflow",
+                    title: "Route the request",
+                    text: "Fluxly keeps the request focused on EV charger provider comparison."
+                },
+                {
+                    icon: "radio-tower",
+                    title: "Review options",
+                    text: "Compare independent provider options when available in the area."
+                },
+                {
+                    icon: "shield-check",
+                    title: "Verify before hiring",
+                    text: "Confirm license, insurance, permits, scope, timing, and terms directly."
+                }
             ],
             faq: [
                 {
@@ -328,6 +496,7 @@ window.SITE_CONFIG = {
             image: "assets/images/lighting-installation.jpg",
             detailImage: "assets/images/lighting-detail.jpg",
             kicker: "Lighting provider matching",
+            heroKicker: "💡 Lighting matching",
             summary:
                 "Explore provider options for indoor, outdoor, recessed, accent, and fixture-related lighting installation requests.",
             cardText:
@@ -351,26 +520,81 @@ window.SITE_CONFIG = {
             evaluationIntro:
                 "Lighting projects may involve fixture compatibility, switch placement, dimmer requirements, wiring routes, and local electrical code considerations.",
             evaluationPoints: [
-                "License and insurance information",
-                "Fixture and wiring scope clarity",
-                "Indoor or outdoor installation experience",
-                "Permit or code considerations where applicable",
-                "Quote detail, timing, and warranty terms"
+                {
+                    title: "License and insurance",
+                    text: "Confirm provider credentials directly before hiring.",
+                    isOn: true
+                },
+                {
+                    title: "Fixture and placement scope",
+                    text: "Compare fixture type, quantity, mounting, support, and exact placement expectations.",
+                    isOn: false
+                },
+                {
+                    title: "Switches and controls",
+                    text: "Ask about dimmers, smart controls, three-way switches, sensors, and compatibility.",
+                    isOn: true
+                },
+                {
+                    title: "Access and finish work",
+                    text: "Review ceiling, attic, wall, drywall, patching, cleanup, and access assumptions.",
+                    isOn: false
+                },
+                {
+                    title: "Quote and warranty terms",
+                    text: "Clarify exclusions, materials, timing, payment, warranty, and follow-up details.",
+                    isOn: true
+                }
             ],
             prepTitle: "Helpful lighting request details",
+            prepIntro:
+                "Clear lighting notes can help providers understand fixture placement, access conditions, controls, and likely project questions before discussing quotes.",
             prepItems: [
-                "Fixture type or lighting goal",
-                "Room, ceiling, or outdoor area involved",
-                "Photos of the current setup if available",
-                "Dimmer, switch, or smart lighting preferences",
-                "ZIP code and preferred project timing"
+                {
+                    icon: "💡",
+                    title: "Fixture type and quantity",
+                    text: "Mention recessed lights, pendants, sconces, ceiling fixtures, exterior fixtures, or specialty lighting."
+                },
+                {
+                    icon: "🏠",
+                    title: "Room or exterior area",
+                    text: "Share the room, hallway, kitchen, bathroom, garage, patio, entry, pathway, or exterior wall area."
+                },
+                {
+                    icon: "🎛️",
+                    title: "Controls and switching",
+                    text: "Add notes about dimmers, smart switches, sensors, multi-location controls, or existing switch positions."
+                },
+                {
+                    icon: "📸",
+                    title: "Photos and access",
+                    text: "Include photos of the ceiling, wall, fixture location, panel if relevant, and any access concerns."
+                }
             ],
-            flowTitle: "How Fluxly helps structure the request",
+            flowTitle: "How Fluxly routes lighting installation requests.",
+            flowIntro:
+                "Fluxly helps organize the request around fixture type, placement, controls, location, timing, and verification reminders. Independent providers discuss the work, quote terms, and project requirements directly with the homeowner.",
             flowSteps: [
-                "Choose the lighting installation category.",
-                "Add fixture, location, and timing details.",
-                "Review available independent provider options.",
-                "Continue with providers to compare quote details."
+                {
+                    icon: "clipboard-check",
+                    title: "Prepare details",
+                    text: "Add fixture type, room, placement notes, ZIP code, and timing."
+                },
+                {
+                    icon: "workflow",
+                    title: "Route the request",
+                    text: "Fluxly keeps the request focused on lighting installation comparison."
+                },
+                {
+                    icon: "radio-tower",
+                    title: "Review options",
+                    text: "Compare independent provider options when available in the area."
+                },
+                {
+                    icon: "shield-check",
+                    title: "Verify before hiring",
+                    text: "Confirm license, insurance, permits, scope, timing, and terms directly."
+                }
             ],
             faq: [
                 {

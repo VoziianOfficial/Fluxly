@@ -409,6 +409,37 @@
     max-width: 680px;
 }
 
+.service-context-points {
+    display: grid;
+    gap: 0.55rem;
+    max-width: 680px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.service-context-points li {
+    position: relative;
+    padding-left: 1.6rem;
+    color: var(--color-muted);
+    font-size: 0.94rem;
+    line-height: 1.58;
+}
+
+.service-context-points li::before {
+    position: absolute;
+    top: 0.62rem;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-bulb), var(--color-electric));
+    box-shadow:
+        0 0 14px rgba(255, 215, 106, 0.18),
+        0 0 16px rgba(82, 241, 255, 0.14);
+    content: "";
+}
+
 .service-context-photo {
     position: relative;
     isolation: isolate;

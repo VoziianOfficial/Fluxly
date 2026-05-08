@@ -8,18 +8,19 @@
 (function () {
     const config = window.SITE_CONFIG;
 
+    window.FLUXLY = window.FLUXLY || {};
+
+    window.applySiteConfig = applySiteConfig;
+    window.FLUXLY.applySiteConfig = applySiteConfig;
+    window.FLUXLY.refreshIcons = refreshIcons;
+
     if (!config) {
         console.warn("SITE_CONFIG is missing. Make sure /js/config.js is loaded before /js/main.js.");
-        return;
     }
 
     document.addEventListener("DOMContentLoaded", () => {
-        applyPageMeta();
-        renderHeader();
-        renderFooter();
-        injectConfigValues();
-        renderServiceCards();
-        renderFaq();
+        applySiteConfig();
+
         initMobileMenu();
         initStickyHeader();
         initCookieBanner();
@@ -29,6 +30,25 @@
         setActiveNavigation();
         refreshIcons();
     });
+
+    function applySiteConfig() {
+        if (!config) {
+            console.warn("applySiteConfig skipped because SITE_CONFIG is missing.");
+            return;
+        }
+
+        applyPageMeta();
+        renderHeader();
+        renderFooter();
+        injectConfigValues();
+        renderServiceCards();
+        renderServiceRails();
+        renderFaq();
+        renderSocialProof();
+        renderComparisonFactors();
+        renderMatchingSteps();
+        applyRequestFormCopy();
+    }
 
     /* =========================
        HELPERS
@@ -120,6 +140,12 @@
         });
     }
 
+    function setElementHTML(selector, value) {
+        document.querySelectorAll(selector).forEach((element) => {
+            element.innerHTML = value || "";
+        });
+    }
+
     function setLink(selector, href, label) {
         document.querySelectorAll(selector).forEach((element) => {
             if (href) {
@@ -146,6 +172,9 @@
     function injectConfigValues() {
         setElementText("[data-company-name]", config.companyName);
         setElementText("[data-company-id]", config.companyId);
+        setElementText("[data-brand-short-name]", config.brand && config.brand.shortName ? config.brand.shortName : "");
+        setElementText("[data-brand-tagline]", config.brand && config.brand.tagline ? config.brand.tagline : "");
+        setElementText("[data-brand-logo-label]", config.brand && config.brand.logoLabel ? config.brand.logoLabel : "");
         setElementText("[data-phone-text]", config.phone);
         setElementText("[data-email-text]", config.email);
         setElementText("[data-address-text]", config.address.full);
@@ -457,7 +486,7 @@
         intro.className = "mobile-menu-intro";
         intro.innerHTML = `
             <span>⚡ Electrical matching</span>
-            <strong>Route your project through Fluxly.</strong>
+            <strong>Route your project through ${safeText(config.companyName || "our platform")}.</strong>
             <p>Prepare project details, compare independent provider options, and verify credentials before hiring.</p>
         `;
 
@@ -533,7 +562,7 @@
 
         const note = document.createElement("p");
         note.className = "mobile-menu-note";
-        note.textContent = "Fluxly is a matching platform and does not perform electrical work directly.";
+        note.textContent = `${config.companyName || "This site"} is a matching platform and does not perform electrical work directly.`;
 
         contactCard.appendChild(phone);
         contactCard.appendChild(email);
@@ -817,8 +846,14 @@
         document.querySelectorAll("[data-service-cards]").forEach((mount) => {
             const limit = Number(mount.dataset.limit || config.services.length);
             const services = config.services.slice(0, limit);
+            const variant = mount.dataset.variant || "default";
 
             mount.replaceChildren();
+
+            if (variant === "services-equal") {
+                renderServicesEqualCards(mount, services);
+                return;
+            }
 
             services.forEach((service, index) => {
                 const card = document.createElement("a");
@@ -883,6 +918,301 @@
         });
 
         refreshIcons();
+    }
+
+    function renderServicesEqualCards(mount, services) {
+        services.forEach((service, index) => {
+            const card = document.createElement("a");
+            card.className = "services-equal-card reveal-up";
+            card.href = service.href;
+            card.setAttribute("aria-label", `View ${service.title}`);
+
+            const img = document.createElement("img");
+            img.src = service.image;
+            img.alt = `${service.title} matching path`;
+            img.loading = "lazy";
+
+            const overlay = document.createElement("span");
+            overlay.className = "services-equal-overlay";
+
+            const current = document.createElement("span");
+            current.className = "services-equal-current";
+            current.setAttribute("aria-hidden", "true");
+
+            const top = document.createElement("span");
+            top.className = "services-equal-top";
+
+            const number = document.createElement("span");
+            number.textContent = String(index + 1).padStart(2, "0");
+
+            const icon = createIcon(getServiceIcon(service));
+
+            top.appendChild(number);
+            top.appendChild(icon);
+
+            const copy = document.createElement("span");
+            copy.className = "services-equal-copy";
+
+            const strong = document.createElement("strong");
+            strong.textContent = service.title;
+
+            const em = document.createElement("em");
+            em.textContent = service.cardText || service.summary || "";
+
+            copy.appendChild(strong);
+            copy.appendChild(em);
+
+            const link = document.createElement("span");
+            link.className = "services-equal-link";
+            link.appendChild(document.createTextNode("View path"));
+            link.appendChild(createIcon("arrow-up-right"));
+
+            card.appendChild(img);
+            card.appendChild(overlay);
+            card.appendChild(current);
+            card.appendChild(top);
+            card.appendChild(copy);
+            card.appendChild(link);
+
+            mount.appendChild(card);
+        });
+    }
+
+    /* =========================
+       SOCIAL PROOF
+       ========================= */
+
+    function renderSocialProof() {
+        document.querySelectorAll("[data-social-proof]").forEach((mount) => {
+            const proof = config.socialProof;
+            if (!proof || !Array.isArray(proof.items)) return;
+
+            mount.replaceChildren();
+
+            const prefixes = ["⚡", "📍", "🛡️"];
+
+            proof.items.forEach((item, index) => {
+                const line = document.createElement("span");
+                const prefix = prefixes[index] || "⚡";
+                const left = safeText(item.label);
+                const right = safeText(item.value);
+                line.textContent = `${prefix} ${left} ${right}`.trim();
+                mount.appendChild(line);
+            });
+        });
+    }
+
+    /* =========================
+       COMPARISON FACTORS
+       ========================= */
+
+    function getComparisonIcon(label) {
+        const text = String(label || "").toLowerCase();
+
+        if (text.includes("license")) return "badge-check";
+        if (text.includes("insurance")) return "shield-check";
+        if (text.includes("permit")) return "file-check";
+        if (text.includes("inspection")) return "clipboard-check";
+        if (text.includes("timeline") || text.includes("timing") || text.includes("schedule")) return "clock-3";
+        if (text.includes("warranty")) return "list-checks";
+        if (text.includes("scope")) return "list-checks";
+        if (text.includes("quote")) return "receipt";
+
+        return "check";
+    }
+
+    function renderComparisonFactors() {
+        document.querySelectorAll("[data-comparison-factors]").forEach((mount) => {
+            const factors = config.comparisonFactors;
+            if (!Array.isArray(factors) || !factors.length) return;
+
+            mount.replaceChildren();
+
+            const isList = mount.tagName === "UL" || mount.tagName === "OL";
+
+            factors.forEach((factor) => {
+                if (isList) {
+                    const item = document.createElement("li");
+                    item.appendChild(createIcon(getComparisonIcon(factor)));
+
+                    const text = document.createElement("span");
+                    text.textContent = factor;
+
+                    item.appendChild(text);
+                    mount.appendChild(item);
+                    return;
+                }
+
+                const pill = document.createElement("span");
+                pill.appendChild(document.createTextNode(factor));
+                mount.appendChild(pill);
+            });
+        });
+
+        refreshIcons();
+    }
+
+    /* =========================
+       SERVICE RAILS
+       ========================= */
+
+    function renderServiceRails() {
+        document.querySelectorAll("[data-service-rail]").forEach((mount) => {
+            mount.replaceChildren();
+
+            config.services.forEach((service) => {
+                const link = document.createElement("a");
+                link.href = service.href;
+
+                link.appendChild(createIcon(getServiceIcon(service)));
+
+                const label = document.createElement("span");
+                label.textContent = service.shortTitle || service.title;
+                link.appendChild(label);
+
+                if (isCurrentHref(service.href)) {
+                    link.classList.add("is-active");
+                    link.setAttribute("aria-current", "page");
+                }
+
+                mount.appendChild(link);
+            });
+        });
+
+        refreshIcons();
+    }
+
+    /* =========================
+       MATCHING STEPS
+       ========================= */
+
+    function renderMatchingSteps() {
+        document.querySelectorAll("[data-matching-steps]").forEach((mount) => {
+            const steps = config.matchingSteps;
+            if (!Array.isArray(steps) || !steps.length) return;
+
+            const preserved = Array.from(mount.children).filter((child) => {
+                return child.classList && child.classList.contains("services-flow-board-line");
+            });
+
+            mount.replaceChildren(...preserved);
+
+            steps.forEach((step, index) => {
+                const article = document.createElement("article");
+                article.className = "services-flow-step";
+
+                const number = document.createElement("span");
+                number.className = "services-flow-step-number";
+                number.textContent = String(index + 1).padStart(2, "0");
+
+                const iconWrap = document.createElement("span");
+                iconWrap.className = "services-flow-step-icon";
+                iconWrap.appendChild(createIcon(step.icon || "zap"));
+
+                const title = document.createElement("strong");
+                title.textContent = step.title || "";
+
+                const text = document.createElement("p");
+                text.textContent = step.text || "";
+
+                article.appendChild(number);
+                article.appendChild(iconWrap);
+                article.appendChild(title);
+                article.appendChild(text);
+
+                mount.appendChild(article);
+            });
+        });
+
+        refreshIcons();
+    }
+
+    /* =========================
+       REQUEST FORM COPY
+       ========================= */
+
+    function applyRequestFormCopy() {
+        const formCopy = config.forms && config.forms.request ? config.forms.request : null;
+        if (!formCopy) return;
+
+        document.querySelectorAll("[data-request-form-copy]").forEach((section) => {
+            const title = section.querySelector("[data-request-form-title]");
+            if (title) title.textContent = formCopy.title || "";
+
+            const subtitle = section.querySelector("[data-request-form-subtitle]");
+            if (subtitle) subtitle.textContent = formCopy.subtitle || "";
+        });
+
+        document.querySelectorAll("[data-request-form]").forEach((form) => {
+            const labelName = form.querySelector('label[for="name"]');
+            const inputName = form.querySelector("#name");
+            if (labelName) labelName.textContent = formCopy.nameLabel || labelName.textContent;
+            if (inputName) inputName.setAttribute("placeholder", formCopy.namePlaceholder || inputName.getAttribute("placeholder") || "");
+
+            const labelPhone = form.querySelector('label[for="phone"]');
+            const inputPhone = form.querySelector("#phone");
+            if (labelPhone) labelPhone.textContent = formCopy.phoneLabel || labelPhone.textContent;
+            if (inputPhone) inputPhone.setAttribute("placeholder", formCopy.phonePlaceholder || inputPhone.getAttribute("placeholder") || "");
+
+            const labelEmail = form.querySelector('label[for="email"]');
+            const inputEmail = form.querySelector("#email");
+            if (labelEmail) labelEmail.textContent = formCopy.emailLabel || labelEmail.textContent;
+            if (inputEmail) inputEmail.setAttribute("placeholder", formCopy.emailPlaceholder || inputEmail.getAttribute("placeholder") || "");
+
+            const labelZip = form.querySelector('label[for="zip"]');
+            const inputZip = form.querySelector("#zip");
+            if (labelZip) labelZip.textContent = formCopy.zipLabel || labelZip.textContent;
+            if (inputZip) inputZip.setAttribute("placeholder", formCopy.zipPlaceholder || inputZip.getAttribute("placeholder") || "");
+
+            const labelService = form.querySelector('label[for="serviceType"]');
+            const selectService = form.querySelector("#serviceType");
+            if (labelService) labelService.textContent = formCopy.serviceLabel || labelService.textContent;
+            if (selectService && Array.isArray(formCopy.serviceOptions)) {
+                selectService.replaceChildren();
+
+                const placeholder = document.createElement("option");
+                placeholder.value = "";
+                placeholder.textContent = formCopy.servicePlaceholder || "Select service type";
+                selectService.appendChild(placeholder);
+
+                formCopy.serviceOptions.forEach((option) => {
+                    const opt = document.createElement("option");
+                    opt.value = option.value;
+                    opt.textContent = option.label;
+                    selectService.appendChild(opt);
+                });
+            }
+
+            const labelTiming = form.querySelector('label[for="timing"]');
+            const selectTiming = form.querySelector("#timing");
+            if (labelTiming) labelTiming.textContent = formCopy.timingLabel || labelTiming.textContent;
+            if (selectTiming && Array.isArray(formCopy.timingOptions)) {
+                selectTiming.replaceChildren();
+
+                const placeholder = document.createElement("option");
+                placeholder.value = "";
+                placeholder.textContent = formCopy.timingPlaceholder || "Select timing";
+                selectTiming.appendChild(placeholder);
+
+                formCopy.timingOptions.forEach((option) => {
+                    const opt = document.createElement("option");
+                    opt.value = option.value;
+                    opt.textContent = option.label;
+                    selectTiming.appendChild(opt);
+                });
+            }
+
+            const labelNotes = form.querySelector('label[for="notes"]');
+            const notes = form.querySelector("#notes");
+            if (labelNotes) labelNotes.textContent = formCopy.notesLabel || labelNotes.textContent;
+            if (notes) notes.setAttribute("placeholder", formCopy.notesPlaceholder || notes.getAttribute("placeholder") || "");
+
+            const checkboxText = form.querySelector(".request-split-check span");
+            if (checkboxText) checkboxText.textContent = formCopy.checkboxText || checkboxText.textContent;
+
+            const submitText = form.querySelector(".request-split-submit span");
+            if (submitText) submitText.textContent = formCopy.submitText || submitText.textContent;
+        });
     }
 
     /* =========================
@@ -1011,7 +1341,7 @@
     window.initCookieBanner = initCookieBanner;
 
     function initCookieBanner() {
-        const mount = document.querySelector("[data-policy-banner]");
+        const mount = document.querySelector("[data-cookie-banner], [data-policy-banner]");
         if (!mount || !config.cookieBanner) return;
 
         const bannerConfig = config.cookieBanner;

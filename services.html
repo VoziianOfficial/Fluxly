@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
-    <title>Fluxly Services | Electrical Provider Matching Paths</title>
-    <meta name="description"
-        content="Explore Fluxly electrical provider matching paths for panel upgrades, wiring and rewiring, EV charger installation, and lighting installation.">
+    <title>Electrical Service Categories</title>
+    <meta name="description" content="">
 
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -45,10 +44,10 @@
                         Pick the right electrical route before comparing providers.
                     </h1>
 
-                    <p class="lead">
-                        Fluxly helps homeowners organize electrical project details by service type before comparing
-                        independent local provider options.
-                    </p>
+	                <p class="lead">
+	                        <span data-company-name></span> helps homeowners organize electrical project details by service type before comparing
+	                        independent local provider options.
+	                    </p>
 
                     <div class="hero-actions" aria-label="Services page actions">
                         <a class="btn btn-primary" href="contact.html">
@@ -63,7 +62,7 @@
                     </div>
                 </div>
 
-                <aside class="services-live-meter reveal-scale" aria-label="Fluxly service matching preview">
+	                <aside class="services-live-meter reveal-scale" aria-label="Service matching preview">
                     <div class="services-meter-bulb">
                         <span aria-hidden="true"></span>
                         <i data-lucide="lightbulb" aria-hidden="true"></i>
@@ -74,7 +73,7 @@
                         <h2>Four focused categories. One cleaner request flow.</h2>
                     </div>
 
-                    <div class="services-meter-lines" aria-label="Electrical matching categories">
+	                    <div class="services-meter-lines" aria-label="Electrical matching categories">
                         <span>Panel capacity</span>
                         <span>Wiring route</span>
                         <span>EV charging</span>
@@ -119,158 +118,33 @@
             </p>
         </div>
 
-        <div class="services-equal-grid-list" aria-label="Electrical service category routes">
-            <a class="services-equal-card reveal-up" href="panel-upgrades.html">
-                <img src="assets/images/panel-upgrades.jpg" alt="Electrical panel upgrade matching path" loading="lazy">
-
-                <span class="services-equal-overlay"></span>
-                <span class="services-equal-current" aria-hidden="true"></span>
-
-                <span class="services-equal-top">
-                    <span>01</span>
-                    <i data-lucide="gauge" aria-hidden="true"></i>
-                </span>
-
-                <span class="services-equal-copy">
-                    <strong>Panel Upgrades</strong>
-                    <em>Panel capacity, added load, breaker concerns, and quote clarity.</em>
-                </span>
-
-                <span class="services-equal-link">
-                    View path
-                    <i data-lucide="arrow-up-right" aria-hidden="true"></i>
-                </span>
-            </a>
-
-            <a class="services-equal-card reveal-up" href="wiring-rewiring.html">
-                <img src="assets/images/wiring-rewiring.jpg" alt="Wiring and rewiring matching path" loading="lazy">
-
-                <span class="services-equal-overlay"></span>
-                <span class="services-equal-current" aria-hidden="true"></span>
-
-                <span class="services-equal-top">
-                    <span>02</span>
-                    <i data-lucide="cable" aria-hidden="true"></i>
-                </span>
-
-                <span class="services-equal-copy">
-                    <strong>Wiring & Rewiring</strong>
-                    <em>Rooms, circuits, access areas, older wiring notes, and timing.</em>
-                </span>
-
-                <span class="services-equal-link">
-                    View path
-                    <i data-lucide="arrow-up-right" aria-hidden="true"></i>
-                </span>
-            </a>
-
-            <a class="services-equal-card reveal-up" href="ev-charger-installation.html">
-                <img src="assets/images/ev-charger.jpg" alt="EV charger installation matching path" loading="lazy">
-
-                <span class="services-equal-overlay"></span>
-                <span class="services-equal-current" aria-hidden="true"></span>
-
-                <span class="services-equal-top">
-                    <span>03</span>
-                    <i data-lucide="battery-charging" aria-hidden="true"></i>
-                </span>
-
-                <span class="services-equal-copy">
-                    <strong>EV Charger Installation</strong>
-                    <em>Charger location, parking setup, panel distance, and wiring route.</em>
-                </span>
-
-                <span class="services-equal-link">
-                    View path
-                    <i data-lucide="arrow-up-right" aria-hidden="true"></i>
-                </span>
-            </a>
-
-            <a class="services-equal-card reveal-up" href="lighting-installation.html">
-                <img src="assets/images/lighting-installation.jpg" alt="Lighting installation matching path"
-                    loading="lazy">
-
-                <span class="services-equal-overlay"></span>
-                <span class="services-equal-current" aria-hidden="true"></span>
-
-                <span class="services-equal-top">
-                    <span>04</span>
-                    <i data-lucide="lightbulb" aria-hidden="true"></i>
-                </span>
-
-                <span class="services-equal-copy">
-                    <strong>Lighting Installation</strong>
-                    <em>Fixture type, placement notes, controls, exterior areas, and timing.</em>
-                </span>
-
-                <span class="services-equal-link">
-                    View path
-                    <i data-lucide="arrow-up-right" aria-hidden="true"></i>
-                </span>
-            </a>
-        </div>
-    </div>
-</section>
+	        <div class="services-equal-grid-list" aria-label="Electrical service category routes" data-service-cards data-variant="services-equal"></div>
+	    </div>
+	</section>
 
     <!-- ==================================================
          MATCHING FLOW — COMPACT LIVE GRID
          ================================================== -->
     <section class="services-flow services-flow-compact section-sm" aria-labelledby="servicesFlowTitle">
         <div class="container-wide services-flow-compact-layout">
-            <div class="services-flow-compact-copy reveal-up">
+	            <div class="services-flow-compact-copy reveal-up">
                 <p class="section-kicker">Matching flow</p>
     
                 <h2 id="servicesFlowTitle">
                     A cleaner route from request details to provider comparison.
                 </h2>
     
-                <p>
-                    Fluxly helps homeowners turn project notes into a clearer electrical request before continuing with
-                    independent local provider options.
-                </p>
-            </div>
-    
-            <div class="services-flow-compact-board reveal-scale" aria-label="Fluxly matching process">
-                <span class="services-flow-board-line" aria-hidden="true"></span>
-    
-                <article class="services-flow-step">
-                    <span class="services-flow-step-number">01</span>
-                    <span class="services-flow-step-icon">
-                        <i data-lucide="clipboard-check" aria-hidden="true"></i>
-                    </span>
-                    <strong>Prepare the request</strong>
-                    <p>Choose the service path and add project details to the request.</p>
-                </article>
-    
-                <article class="services-flow-step">
-                    <span class="services-flow-step-number">02</span>
-                    <span class="services-flow-step-icon">
-                        <i data-lucide="workflow" aria-hidden="true"></i>
-                    </span>
-                    <strong>Route by category</strong>
-                    <p>The request is organized around the correct electrical topic.</p>
-                </article>
-    
-                <article class="services-flow-step">
-                    <span class="services-flow-step-number">03</span>
-                    <span class="services-flow-step-icon">
-                        <i data-lucide="radio-tower" aria-hidden="true"></i>
-                    </span>
-                    <strong>Compare options</strong>
-                    <p>Review independent provider options when available in the area.</p>
-                </article>
-    
-                <article class="services-flow-step">
-                    <span class="services-flow-step-number">04</span>
-                    <span class="services-flow-step-icon">
-                        <i data-lucide="phone-call" aria-hidden="true"></i>
-                    </span>
-                    <strong>Continue directly</strong>
-                    <p>Discuss quote, scope, permits, timing, and terms with providers.</p>
-                </article>
-            </div>
-        </div>
-    </section>
+	                <p>
+	                    <span data-company-name></span> helps homeowners turn project notes into a clearer electrical request before continuing with
+	                    independent local provider options.
+	                </p>
+	            </div>
+	    
+	            <div class="services-flow-compact-board reveal-scale" aria-label="Matching process" data-matching-steps>
+	                <span class="services-flow-board-line" aria-hidden="true"></span>
+	            </div>
+	        </div>
+	    </section>
 
         <!-- ==================================================
              PROVIDER CHECKLIST
@@ -360,7 +234,7 @@
                             </a>
 
                             <a class="btn btn-secondary" href="about.html">
-                                <span>How Fluxly works</span>
+                                <span>How <span data-company-name></span> works</span>
                                 <i data-lucide="arrow-up-right" aria-hidden="true"></i>
                             </a>
                         </div>
@@ -382,7 +256,7 @@
                     </h2>
 
                     <p>
-                        Helpful answers about Fluxly’s electrical service categories and independent provider matching
+                        Helpful answers about <span data-company-name></span>’s electrical service categories and independent provider matching
                         model.
                     </p>
                 </div>
@@ -395,7 +269,7 @@
     </main>
 
     <div data-site-footer></div>
-    <div data-policy-banner></div>
+    <div data-cookie-banner></div>
 
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
     <script src="js/config.js" defer></script>

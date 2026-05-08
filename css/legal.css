@@ -41,8 +41,8 @@
     background:
         radial-gradient(circle at 15% 28%, rgba(255, 215, 106, 0.20), transparent 23rem),
         radial-gradient(circle at 54% 34%, rgba(82, 241, 255, 0.14), transparent 27rem),
-        linear-gradient(90deg, rgba(2, 5, 10, 0.98) 0%, rgba(5, 12, 22, 0.90) 46%, rgba(5, 12, 22, 0.56) 76%, rgba(2, 5, 10, 0.78) 100%),
-        linear-gradient(180deg, rgba(2, 5, 10, 0.10), rgba(2, 5, 10, 0.92));
+        linear-gradient(90deg, rgba(0, 0, 0, 0.98) 0%, rgba(10, 10, 12, 0.90) 46%, rgba(10, 10, 12, 0.56) 76%, rgba(0, 0, 0, 0.78) 100%),
+        linear-gradient(180deg, rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.92));
     pointer-events: none;
 }
 
@@ -148,7 +148,7 @@
     background:
         radial-gradient(circle at 18% 0%, rgba(255, 215, 106, 0.13), transparent 18rem),
         radial-gradient(circle at 88% 8%, rgba(82, 241, 255, 0.10), transparent 18rem),
-        linear-gradient(180deg, rgba(13, 28, 50, 0.82), rgba(2, 5, 10, 0.72));
+        linear-gradient(180deg, rgba(15, 15, 18, 0.82), rgba(0, 0, 0, 0.72));
     box-shadow:
         0 30px 78px rgba(0, 0, 0, 0.32),
         0 0 38px rgba(255, 215, 106, 0.07),
@@ -240,7 +240,7 @@
     border-radius: 17px;
     background:
         linear-gradient(180deg, rgba(255, 255, 255, 0.030), rgba(255, 255, 255, 0.010)),
-        rgba(2, 5, 10, 0.34);
+        rgba(0, 0, 0, 0.34);
     color: rgba(248, 251, 255, 0.84);
     font-size: 0.84rem;
     font-weight: 850;
@@ -333,7 +333,7 @@
     background:
         radial-gradient(circle at 12% 0%, rgba(255, 215, 106, 0.07), transparent 19rem),
         radial-gradient(circle at 88% 0%, rgba(82, 241, 255, 0.055), transparent 19rem),
-        linear-gradient(180deg, rgba(13, 28, 50, 0.62), rgba(2, 5, 10, 0.52));
+        linear-gradient(180deg, rgba(15, 15, 18, 0.62), rgba(0, 0, 0, 0.52));
     box-shadow: var(--shadow-panel);
 }
 
@@ -441,7 +441,7 @@
     background:
         radial-gradient(circle at 16% 0%, rgba(255, 215, 106, 0.10), transparent 18rem),
         radial-gradient(circle at 90% 0%, rgba(82, 241, 255, 0.07), transparent 18rem),
-        rgba(2, 5, 10, 0.46);
+        rgba(0, 0, 0, 0.46);
 }
 
 .legal-notice-box::before {
@@ -474,7 +474,7 @@
 .legal-disclaimer {
     padding-block: 1rem;
     border-top: 1px solid rgba(255, 255, 255, 0.07);
-    background: rgba(2, 5, 10, 0.78);
+    background: rgba(0, 0, 0, 0.78);
 }
 
 .legal-disclaimer p {
@@ -539,7 +539,7 @@
         background:
             radial-gradient(circle at 18% 28%, rgba(255, 215, 106, 0.18), transparent 22rem),
             radial-gradient(circle at 62% 34%, rgba(82, 241, 255, 0.12), transparent 24rem),
-            linear-gradient(180deg, rgba(2, 5, 10, 0.96) 0%, rgba(5, 12, 22, 0.76) 62%, rgba(2, 5, 10, 0.94) 100%);
+            linear-gradient(180deg, rgba(0, 0, 0, 0.96) 0%, rgba(10, 10, 12, 0.76) 62%, rgba(0, 0, 0, 0.94) 100%);
     }
 
     .legal-summary-panel {

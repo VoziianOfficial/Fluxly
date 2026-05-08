@@ -728,7 +728,7 @@ p {
     background:
         radial-gradient(circle at 8% 0%, rgba(255, 215, 106, 0.12), transparent 17rem),
         radial-gradient(circle at 94% 0%, rgba(82, 241, 255, 0.11), transparent 20rem),
-        linear-gradient(180deg, rgba(11, 24, 42, 0.86), rgba(5, 12, 22, 0.76));
+        linear-gradient(180deg, rgba(15, 15, 18, 0.86), rgba(10, 10, 12, 0.76));
     box-shadow:
         0 18px 44px rgba(0, 0, 0, 0.26),
         inset 0 0 0 1px rgba(255, 255, 255, 0.018);
@@ -955,7 +955,7 @@ p {
     background:
         radial-gradient(circle at 14% 0%, rgba(255, 215, 106, 0.13), transparent 17rem),
         radial-gradient(circle at 92% 0%, rgba(82, 241, 255, 0.11), transparent 17rem),
-        linear-gradient(180deg, rgba(8, 20, 36, 0.98), rgba(3, 7, 13, 0.98));
+        linear-gradient(180deg, rgba(15, 15, 18, 0.98), rgba(0, 0, 0, 0.98));
     box-shadow:
         0 26px 70px rgba(0, 0, 0, 0.36),
         0 0 34px rgba(255, 215, 106, 0.06),
@@ -1150,7 +1150,7 @@ p {
     border-radius: var(--radius-pill);
     background:
         radial-gradient(circle at 18% 0%, rgba(82, 241, 255, 0.08), transparent 66%),
-        rgba(7, 17, 29, 0.62);
+        rgba(15, 15, 18, 0.62);
     color: var(--color-heading);
     font-size: 0.84rem;
     font-weight: 850;
@@ -1209,7 +1209,7 @@ p {
     border-radius: 50%;
     background:
         radial-gradient(circle at 30% 20%, rgba(255, 215, 106, 0.10), transparent 66%),
-        rgba(7, 17, 29, 0.66);
+        rgba(15, 15, 18, 0.66);
     color: var(--color-heading);
     transition:
         transform 220ms var(--ease),
@@ -1252,7 +1252,7 @@ p {
     background:
         radial-gradient(circle at 18% 0%, rgba(255, 215, 106, 0.10), transparent 24rem),
         radial-gradient(circle at 82% 0%, rgba(82, 241, 255, 0.10), transparent 24rem),
-        rgba(2, 5, 10, 0.78);
+        rgba(0, 0, 0, 0.78);
     opacity: 0;
     backdrop-filter: blur(10px);
     transition: opacity 260ms var(--ease);
@@ -1271,7 +1271,7 @@ p {
     background:
         radial-gradient(circle at 14% 0%, rgba(255, 215, 106, 0.13), transparent 18rem),
         radial-gradient(circle at 94% 4%, rgba(82, 241, 255, 0.12), transparent 18rem),
-        linear-gradient(180deg, rgba(8, 20, 36, 0.98), rgba(3, 7, 13, 0.98));
+        linear-gradient(180deg, rgba(15, 15, 18, 0.98), rgba(0, 0, 0, 0.98));
     box-shadow: -26px 0 70px rgba(0, 0, 0, 0.38);
     transform: translateX(104%);
     transition: transform 340ms var(--ease-soft);
@@ -1497,7 +1497,7 @@ p {
         radial-gradient(circle at 14% 0%, rgba(255, 215, 106, 0.07), transparent 16rem),
         radial-gradient(circle at 90% 0%, rgba(82, 241, 255, 0.055), transparent 16rem),
         linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.012)),
-        rgba(13, 28, 50, 0.72);
+        rgba(15, 15, 18, 0.72);
     box-shadow: var(--shadow-soft);
     transition:
         transform 220ms var(--ease),
@@ -1608,7 +1608,7 @@ p {
     background:
         radial-gradient(circle at 20% 10%, rgba(255, 215, 106, 0.16), transparent 18rem),
         radial-gradient(circle at 82% 14%, rgba(82, 241, 255, 0.13), transparent 18rem),
-        linear-gradient(180deg, rgba(7, 17, 29, 0.18), rgba(7, 17, 29, 0.92));
+        linear-gradient(180deg, rgba(15, 15, 18, 0.18), rgba(15, 15, 18, 0.92));
     content: "";
 }
 
@@ -1974,7 +1974,7 @@ p {
     background:
         radial-gradient(circle at 16% 0%, rgba(255, 215, 106, 0.085), transparent 23rem),
         radial-gradient(circle at 84% 0%, rgba(82, 241, 255, 0.07), transparent 24rem),
-        linear-gradient(180deg, rgba(8, 20, 36, 0.86), rgba(3, 7, 13, 0.98));
+        linear-gradient(180deg, rgba(15, 15, 18, 0.86), rgba(0, 0, 0, 0.98));
 }
 
 .site-footer::before {
@@ -2415,5 +2415,290 @@ p {
         animation-duration: 0.001ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.001ms !important;
+    }
+}
+/* ==========================================================
+   HEADER NAV ALIGNMENT FIX
+   Fix primary-nav / electric-route-nav vertical alignment
+   ========================================================== */
+
+.header-shell {
+    align-items: center;
+}
+
+.primary-nav,
+.primary-nav.electric-route-nav {
+    height: 100%;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+
+@media (max-width: 1080px) {
+
+    .primary-nav,
+    .primary-nav.electric-route-nav {
+        display: none !important;
+    }
+
+    .menu-toggle {
+        display: grid !important;
+    }
+
+    .header-actions {
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .header-phone {
+        display: inline-flex;
+    }
+
+    .header-request {
+        display: none;
+    }
+}
+
+@media (min-width: 1081px) {
+
+    .primary-nav,
+    .primary-nav.electric-route-nav {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+}
+
+.electric-route-nav .nav-list {
+    display: inline-flex;
+    height: 52px;
+    align-items: center;
+    justify-content: center;
+}
+
+.electric-route-nav .nav-item {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.electric-route-nav .nav-link,
+.electric-route-nav .nav-dropdown-trigger {
+    display: inline-flex;
+    height: 44px;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    vertical-align: middle;
+}
+
+.electric-route-nav .nav-dropdown-trigger {
+    gap: 0.44rem;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.electric-route-nav .nav-label,
+.electric-route-nav .nav-index,
+.electric-route-nav .nav-spark {
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+}
+
+.electric-route-nav .nav-dropdown-trigger svg,
+.electric-route-nav .nav-dropdown-trigger i {
+    align-self: center;
+    flex: 0 0 auto;
+}
+
+/* ==========================================================
+   GLOBAL BODY BACKGROUND — GRAPHITE + COPPER
+   Без синевы, только тёмная база и медные линии
+   ========================================================== */
+
+:root {
+    --color-copper: #c9833f;
+    --color-copper-strong: #e0a15e;
+    --color-copper-soft: rgba(201, 131, 63, 0.16);
+    --color-copper-line: rgba(201, 131, 63, 0.08);
+    --color-copper-faint: rgba(201, 131, 63, 0.04);
+    --color-copper-glow: rgba(224, 161, 94, 0.12);
+}
+
+/* base body */
+body {
+    background:
+        radial-gradient(circle at 12% -4%, rgba(224, 161, 94, 0.08), transparent 26rem),
+        radial-gradient(circle at 82% 0%, rgba(201, 131, 63, 0.06), transparent 28rem),
+        radial-gradient(circle at 52% 112%, rgba(224, 161, 94, 0.05), transparent 34rem),
+        linear-gradient(180deg, #050505 0%, #0b0b0c 38%, #111214 70%, #070707 100%);
+}
+
+/* subtle copper grid */
+body::before {
+    position: fixed;
+    inset: 0;
+    z-index: -5;
+    pointer-events: none;
+    content: "";
+    background-image:
+        linear-gradient(rgba(201, 131, 63, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(201, 131, 63, 0.03) 1px, transparent 1px);
+    background-size: 72px 72px;
+    opacity: 0.4;
+    mask-image:
+        radial-gradient(circle at 50% 20%, black, transparent 78%),
+        linear-gradient(180deg, black, transparent 94%);
+}
+
+/* copper wire traces */
+body::after {
+    position: fixed;
+    inset: 0;
+    z-index: -4;
+    pointer-events: none;
+    content: "";
+    background:
+        linear-gradient(118deg,
+            transparent 0 16%,
+            rgba(201, 131, 63, 0.09) 16.18%,
+            rgba(224, 161, 94, 0.06) 16.34%,
+            transparent 16.7% 100%),
+        linear-gradient(62deg,
+            transparent 0 66%,
+            rgba(201, 131, 63, 0.08) 66.14%,
+            rgba(224, 161, 94, 0.05) 66.28%,
+            transparent 66.6% 100%),
+        linear-gradient(90deg,
+            transparent 0 8%,
+            rgba(201, 131, 63, 0.045) 8.12%,
+            transparent 8.24% 100%),
+        linear-gradient(0deg,
+            transparent 0 74%,
+            rgba(201, 131, 63, 0.04) 74.08%,
+            transparent 74.2% 100%),
+        radial-gradient(circle at 18% 26%, rgba(224, 161, 94, 0.06), transparent 20rem),
+        radial-gradient(circle at 78% 32%, rgba(201, 131, 63, 0.05), transparent 24rem);
+    opacity: 0.82;
+}
+
+/* sections that should merge into body */
+.home-platform-light,
+.home-provider-beam {
+    background:
+        radial-gradient(circle at 16% 0%, rgba(224, 161, 94, 0.035), transparent 24rem),
+        radial-gradient(circle at 82% 20%, rgba(201, 131, 63, 0.03), transparent 24rem) !important;
+}
+
+/* photo overlays — black/copper only */
+.hero-photo-bg::before,
+.provider-beam-bg::before,
+.live-switch-bg::before,
+.current-photo-bg span,
+.lamp-cta-overlay,
+.live-hero-overlay {
+    background:
+        radial-gradient(circle at 18% 28%, rgba(224, 161, 94, 0.12), transparent 24rem),
+        radial-gradient(circle at 72% 38%, rgba(201, 131, 63, 0.08), transparent 28rem),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.97), rgba(10, 10, 10, 0.82) 54%, rgba(0, 0, 0, 0.58)),
+        linear-gradient(180deg, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.9)) !important;
+}
+
+/* panels/cards — darker and warmer, no blue cast */
+.card,
+.faq-item,
+.policy-banner,
+.form-panel,
+.info-panel,
+.compact-panel,
+.live-switchboard,
+.live-power-panel,
+.current-status-line,
+.header-shell,
+.nav-list {
+    background:
+        radial-gradient(circle at 14% 0%, rgba(224, 161, 94, 0.055), transparent 16rem),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.025), rgba(255, 255, 255, 0.008)),
+        rgba(14, 14, 15, 0.82) !important;
+}
+
+/* all electric lines more copper, no cyan */
+.electric-line,
+.hero-current,
+.provider-beam-current span,
+.switchboard-current,
+.lamp-route-line,
+.platform-line,
+.live-wire {
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(201, 131, 63, 0.38),
+            rgba(224, 161, 94, 0.82),
+            rgba(201, 131, 63, 0.38),
+            transparent) !important;
+    box-shadow:
+        0 0 12px rgba(201, 131, 63, 0.14),
+        0 0 18px rgba(224, 161, 94, 0.1) !important;
+}
+
+.electric-line::after,
+.hero-current::after,
+.provider-beam-current span::after,
+.lamp-route-line::after,
+.platform-line::after,
+.live-wire::after {
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 244, 222, 0.92),
+            rgba(224, 161, 94, 0.95),
+            transparent) !important;
+    box-shadow:
+        0 0 14px rgba(224, 161, 94, 0.18) !important;
+}
+
+/* sparks / glowing dots — warm only */
+.spark-dot,
+.spark-dot.is-blue {
+    background: var(--color-copper-strong) !important;
+    box-shadow:
+        0 0 14px rgba(224, 161, 94, 0.42),
+        0 0 28px rgba(201, 131, 63, 0.18) !important;
+}
+
+/* icons/glows */
+.icon-pill,
+.nav-service-icon,
+.lamp-route-icon,
+.power-bulb,
+.platform-bulb-glow {
+    box-shadow:
+        0 0 18px rgba(224, 161, 94, 0.08) !important;
+}
+
+/* mobile softer */
+@media (max-width: 768px) {
+    body::before {
+        background-size: 58px 58px;
+        opacity: 0.28;
+    }
+
+    body::after {
+        opacity: 0.58;
+    }
+}
+
+@media (max-width: 480px) {
+    body::before {
+        opacity: 0.22;
+    }
+
+    body::after {
+        opacity: 0.44;
     }
 }

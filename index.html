@@ -18,324 +18,162 @@
     <div data-site-header></div>
 
     <main id="mainContent">
-        <!-- ==================================================
-             HERO — LIVE ELECTRIC LIGHT
-             ================================================== -->
-        <section class="home-live-hero" aria-labelledby="homeHeroTitle">
-            <div class="live-hero-media" aria-hidden="true">
-                <img src="assets/images/hero-electrical.jpg" alt="">
-                <span class="live-hero-overlay"></span>
-                <span class="live-hero-warm-light"></span>
-                <span class="circuit-bg"></span>
+<!-- ==================================================
+     HERO — PHOTO CURRENT / NO SIDE CARD
+     ================================================== -->
+<section class="home-live-hero hero-photo-current" aria-labelledby="homeHeroTitle">
+    <div class="hero-photo-bg" aria-hidden="true">
+        <img src="assets/images/hero-electrical.jpg" alt="">
+    </div>
 
-                <span class="electric-line live-wire live-wire-one"></span>
-                <span class="electric-line live-wire live-wire-two"></span>
-                <span class="electric-line live-wire live-wire-three"></span>
-                <span class="electric-line live-wire live-wire-four"></span>
+    <div class="hero-current-lines" aria-hidden="true">
+        <span class="hero-current hero-current-one"></span>
+        <span class="hero-current hero-current-two"></span>
+        <span class="hero-current hero-current-three"></span>
+        <span class="hero-light-orb"></span>
+    </div>
 
-                <span class="spark-dot live-spark live-spark-one"></span>
-                <span class="spark-dot is-blue live-spark live-spark-two"></span>
-                <span class="spark-dot live-spark live-spark-three"></span>
-                <span class="spark-dot is-blue live-spark live-spark-four"></span>
+    <div class="container-wide hero-photo-content">
+        <div class="hero-photo-copy reveal-up">
+            <p class="kicker">⚡ Electrical provider matching</p>
+
+            <h1 id="homeHeroTitle">
+                Compare local electrical provider options with a brighter request flow.
+            </h1>
+
+            <p class="lead">
+                Fluxly helps homeowners prepare project details and compare independent local electrical provider
+                options for panel upgrades, wiring projects, EV charger installation, and lighting work.
+            </p>
+
+            <div class="hero-actions" aria-label="Primary actions">
+                <a class="btn btn-primary" href="contact.html">
+                    <span>Start matching request</span>
+                    <i data-lucide="zap" aria-hidden="true"></i>
+                </a>
+
+                <a class="btn btn-secondary" href="services.html">
+                    <span>Explore service paths</span>
+                    <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                </a>
             </div>
 
-            <div class="container-wide live-hero-layout">
-                <div class="live-hero-copy reveal-up">
-                    <p class="kicker">⚡ Electrical provider matching</p>
+            <p class="hero-photo-note">
+                Fluxly is an independent matching platform and does not perform electrical work directly.
+                Homeowners should verify license, insurance, permits, quote details, and terms before hiring.
+            </p>
+        </div>
 
-                    <h1 id="homeHeroTitle">
-                        Compare electrical provider options with a cleaner power path.
-                    </h1>
+        <nav class="hero-service-rail reveal-up" aria-label="Electrical service paths">
+            <a href="panel-upgrades.html">
+                <i data-lucide="gauge" aria-hidden="true"></i>
+                <span>Panel upgrades</span>
+            </a>
 
-                    <p class="lead">
-                        Fluxly helps homeowners prepare project details and compare independent local electrical
-                        provider options for panel upgrades, wiring projects, EV charger installation, and lighting
-                        work.
-                    </p>
+            <a href="wiring-rewiring.html">
+                <i data-lucide="cable" aria-hidden="true"></i>
+                <span>Wiring & rewiring</span>
+            </a>
 
-                    <div class="hero-actions" aria-label="Primary actions">
-                        <a class="btn btn-primary" href="contact.html">
-                            <span>Start matching request</span>
-                            <i data-lucide="zap" aria-hidden="true"></i>
-                        </a>
+            <a href="ev-charger-installation.html">
+                <i data-lucide="battery-charging" aria-hidden="true"></i>
+                <span>EV chargers</span>
+            </a>
 
-                        <a class="btn btn-secondary" href="services.html">
-                            <span>Explore service paths</span>
-                            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
-                        </a>
-                    </div>
+            <a href="lighting-installation.html">
+                <i data-lucide="lightbulb" aria-hidden="true"></i>
+                <span>Lighting</span>
+            </a>
+        </nav>
+    </div>
+</section>
 
-                    <div class="live-hero-trust" aria-label="Fluxly platform notes">
-                        <span>
-                            <i data-lucide="shield-check" aria-hidden="true"></i>
-                            Independent platform
-                        </span>
+<!-- ==================================================
+     PROVIDER CHECK — LIGHT BEAM SECTION
+     ================================================== -->
+<section class="home-provider-beam section-sm" aria-labelledby="providerBeamTitle">
+    <div class="provider-beam-bg" aria-hidden="true">
+    </div>
 
-                        <span>
-                            <i data-lucide="lightbulb" aria-hidden="true"></i>
-                            Request-first matching
-                        </span>
+    <div class="provider-beam-current" aria-hidden="true">
+        <span></span>
+        <span></span>
+    </div>
 
-                        <span>
-                            <i data-lucide="badge-check" aria-hidden="true"></i>
-                            Verify before hiring
-                        </span>
-                    </div>
-                </div>
+    <div class="container-wide provider-beam-inner">
+        <div class="provider-beam-copy reveal-up">
+            <p class="section-kicker">Before choosing</p>
 
-                <aside class="live-power-panel reveal-scale" aria-label="Electrical request flow preview">
-                    <div class="power-panel-top">
-                        <div class="power-bulb">
-                            <span class="power-bulb-glow" aria-hidden="true"></span>
-                            <i data-lucide="lightbulb" aria-hidden="true"></i>
-                        </div>
+            <h2 id="providerBeamTitle">
+                Electrical provider comparison should feel clear before the first quote.
+            </h2>
 
-                        <div>
-                            <p>Live request circuit</p>
-                            <h2>From project notes to provider comparison.</h2>
-                        </div>
-                    </div>
+            <p>
+                Electrical projects can involve permits, panel capacity, wiring routes, fixture placement,
+                charger location, access conditions, timing, and warranty terms. Fluxly helps homeowners prepare
+                the right details before comparing independent local provider options.
+            </p>
 
-                    <div class="power-panel-flow" aria-label="Request route steps">
-                        <article>
-                            <span>01</span>
-                            <strong>Service path</strong>
-                            <p>Choose panel, wiring, EV charging, or lighting.</p>
-                        </article>
+            <a class="provider-beam-link" href="contact.html">
+                <span>Start a clearer request</span>
+                <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+            </a>
+        </div>
 
-                        <article>
-                            <span>02</span>
-                            <strong>Project signal</strong>
-                            <p>Add ZIP code, timing, photos, and project notes.</p>
-                        </article>
-
-                        <article>
-                            <span>03</span>
-                            <strong>Provider options</strong>
-                            <p>Compare independent local electrical companies when available.</p>
-                        </article>
-                    </div>
-
-                    <div class="power-panel-meter" aria-hidden="true">
-                        <span></span>
-                    </div>
-
-                    <p class="power-panel-note">
-                        Fluxly does not perform electrical work directly. Homeowners should verify license, insurance,
-                        permits, quote details, and terms before hiring.
-                    </p>
-                </aside>
+        <div class="provider-beam-visual reveal-scale" aria-label="Provider comparison reminders">
+            <div class="beam-bulb">
+                <span class="beam-bulb-glow" aria-hidden="true"></span>
+                <i data-lucide="lightbulb" aria-hidden="true"></i>
             </div>
-        </section>
 
-        <!-- ==================================================
-             CURRENT STATUS — KEEP
-             ================================================== -->
-        <section class="home-current-status" aria-label="Electrical matching highlights">
-            <div class="container-wide">
-                <div class="current-status-line reveal-up">
-                    <span>⚡ Request matching</span>
-                    <span>💡 Lighting path</span>
-                    <span>🔌 EV charger planning</span>
-                    <span>🧰 Provider comparison</span>
-                    <span>🛡️ Verify before hiring</span>
-                </div>
-            </div>
-        </section>
+            <ul class="beam-checks">
+                <li>
+                    <i data-lucide="badge-check" aria-hidden="true"></i>
+                    <span>License</span>
+                </li>
 
-        <!-- ==================================================
-             SERVICE LAMP WALL
-             ================================================== -->
-        <section class="home-lamp-wall section" aria-labelledby="lampWallTitle">
-            <div class="container-wide">
-                <div class="lamp-wall-head reveal-up">
-                    <p class="section-kicker">Service paths</p>
+                <li>
+                    <i data-lucide="shield-check" aria-hidden="true"></i>
+                    <span>Insurance</span>
+                </li>
 
-                    <h2 id="lampWallTitle">
-                        Four electrical routes, shown like a live panel — not a basic card grid.
-                    </h2>
+                <li>
+                    <i data-lucide="file-check" aria-hidden="true"></i>
+                    <span>Permits</span>
+                </li>
 
-                    <p>
-                        Fluxly keeps the request focused so homeowners can compare independent provider options around
-                        the right type of electrical project.
-                    </p>
-                </div>
+                <li>
+                    <i data-lucide="list-checks" aria-hidden="true"></i>
+                    <span>Scope</span>
+                </li>
 
-                <div class="lamp-wall" aria-label="Electrical service categories">
-                    <a class="lamp-route lamp-route-large reveal-up" href="panel-upgrades.html">
-                        <img src="assets/images/panel-upgrades.jpg"
-                            alt="Electrical panel upgrade provider matching category" loading="lazy">
+                <li>
+                    <i data-lucide="clock-3" aria-hidden="true"></i>
+                    <span>Timing</span>
+                </li>
 
-                        <span class="lamp-route-overlay"></span>
-                        <span class="electric-line lamp-route-line"></span>
+                <li>
+                    <i data-lucide="clipboard-check" aria-hidden="true"></i>
+                    <span>Warranty terms</span>
+                </li>
+            </ul>
 
-                        <span class="lamp-route-index">01</span>
-
-                        <span class="lamp-route-icon">
-                            <i data-lucide="gauge" aria-hidden="true"></i>
-                        </span>
-
-                        <span class="lamp-route-copy">
-                            <strong>Panel Upgrades</strong>
-                            <em>Capacity questions, breaker panels, upgrade planning, and provider quote
-                                comparison.</em>
-                        </span>
-
-                        <span class="lamp-route-cta">
-                            View path
-                            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
-                        </span>
-                    </a>
-
-                    <a class="lamp-route reveal-up" href="wiring-rewiring.html">
-                        <img src="assets/images/wiring-rewiring.jpg"
-                            alt="Wiring and rewiring provider matching category" loading="lazy">
-
-                        <span class="lamp-route-overlay"></span>
-                        <span class="electric-line lamp-route-line"></span>
-
-                        <span class="lamp-route-index">02</span>
-
-                        <span class="lamp-route-icon">
-                            <i data-lucide="cable" aria-hidden="true"></i>
-                        </span>
-
-                        <span class="lamp-route-copy">
-                            <strong>Wiring & Rewiring</strong>
-                            <em>Older wiring concerns, circuit updates, room changes, and request preparation.</em>
-                        </span>
-
-                        <span class="lamp-route-cta">
-                            View path
-                            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
-                        </span>
-                    </a>
-
-                    <a class="lamp-route reveal-up" href="ev-charger-installation.html">
-                        <img src="assets/images/ev-charger.jpg" alt="EV charger installation provider matching category"
-                            loading="lazy">
-
-                        <span class="lamp-route-overlay"></span>
-                        <span class="electric-line lamp-route-line"></span>
-
-                        <span class="lamp-route-index">03</span>
-
-                        <span class="lamp-route-icon">
-                            <i data-lucide="battery-charging" aria-hidden="true"></i>
-                        </span>
-
-                        <span class="lamp-route-copy">
-                            <strong>EV Charger Installation</strong>
-                            <em>Home charger location, panel capacity, wiring route, and provider comparison.</em>
-                        </span>
-
-                        <span class="lamp-route-cta">
-                            View path
-                            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
-                        </span>
-                    </a>
-
-                    <a class="lamp-route lamp-route-wide reveal-up" href="lighting-installation.html">
-                        <img src="assets/images/lighting-installation.jpg"
-                            alt="Lighting installation provider matching category" loading="lazy">
-
-                        <span class="lamp-route-overlay"></span>
-                        <span class="electric-line lamp-route-line"></span>
-
-                        <span class="lamp-route-index">04</span>
-
-                        <span class="lamp-route-icon">
-                            <i data-lucide="lightbulb" aria-hidden="true"></i>
-                        </span>
-
-                        <span class="lamp-route-copy">
-                            <strong>Lighting Installation</strong>
-                            <em>Interior fixtures, exterior lighting, placement notes, and provider quote details.</em>
-                        </span>
-
-                        <span class="lamp-route-cta">
-                            View path
-                            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
-                        </span>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- ==================================================
-             ELECTRICIAN PHOTO / COMPARISON
-             ================================================== -->
-        <section class="home-electrician-split section-sm" aria-labelledby="electricianSplitTitle">
-            <div class="container-wide electrician-split-layout">
-                <div class="electrician-photo reveal-scale">
-                    <img src="assets/images/electrical-panel-detail.jpg"
-                        alt="Electrical provider reviewing an electrical panel for project planning" loading="lazy">
-
-                    <span class="electrician-photo-glow" aria-hidden="true"></span>
-                    <span class="electric-line electrician-photo-line electrician-photo-line-one"></span>
-                    <span class="electric-line electrician-photo-line electrician-photo-line-two"></span>
-
-                    <div class="electrician-photo-badge">
-                        <i data-lucide="zap" aria-hidden="true"></i>
-                        <div>
-                            <strong>Quote clarity matters</strong>
-                            <span>Ask what is included, excluded, and required before hiring.</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="electrician-split-copy reveal-up">
-                    <p class="section-kicker">Before choosing</p>
-
-                    <h2 id="electricianSplitTitle">
-                        Electrical projects need more than a quick price check.
-                    </h2>
-
-                    <p>
-                        Provider conversations may involve permits, materials, code requirements, inspections, panel
-                        capacity, wiring routes, fixture placement, or charger location. Fluxly helps homeowners prepare
-                        the request so comparison feels clearer.
-                    </p>
-
-                    <div class="electric-checkline" aria-label="Provider comparison reminders">
-                        <span>
-                            <i data-lucide="badge-check" aria-hidden="true"></i>
-                            License
-                        </span>
-
-                        <span>
-                            <i data-lucide="shield-check" aria-hidden="true"></i>
-                            Insurance
-                        </span>
-
-                        <span>
-                            <i data-lucide="file-check" aria-hidden="true"></i>
-                            Permits
-                        </span>
-
-                        <span>
-                            <i data-lucide="list-checks" aria-hidden="true"></i>
-                            Scope
-                        </span>
-
-                        <span>
-                            <i data-lucide="clock" aria-hidden="true"></i>
-                            Timing
-                        </span>
-
-                        <span>
-                            <i data-lucide="clipboard-check" aria-hidden="true"></i>
-                            Warranty terms
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </section>
+            <p class="beam-small-note">
+                Fluxly does not perform electrical work directly. Homeowners should verify provider details before
+                hiring.
+            </p>
+        </div>
+    </div>
+</section>
 
         <!-- ==================================================
              LIVE SWITCHBOARD
              ================================================== -->
         <section class="home-live-switch section" aria-labelledby="liveSwitchTitle">
+            <div class="live-switch-bg" aria-hidden="true">
+                <img src="assets/images/electrical-panel-detail.jpg" alt="">
+            </div>
+
             <div class="container-wide live-switch-layout">
                 <div class="live-switch-copy reveal-up">
                     <p class="section-kicker">Comparison switchboard</p>
@@ -384,57 +222,6 @@
                         <strong>Quote terms</strong>
                         <em>Review payment, warranty, and follow-up details.</em>
                     </button>
-                </div>
-            </div>
-        </section>
-
-        <!-- ==================================================
-             HOME CURRENT PHOTO STRIP
-             ================================================== -->
-        <section class="home-current-photo section-sm" aria-labelledby="currentPhotoTitle">
-            <div class="current-photo-bg" aria-hidden="true">
-                <img src="assets/images/wiring-detail.jpg" alt="">
-                <span></span>
-            </div>
-
-            <div class="container-wide current-photo-layout">
-                <div class="current-photo-copy reveal-up">
-                    <p class="section-kicker">Project signal</p>
-
-                    <h2 id="currentPhotoTitle">
-                        Stronger request details create a stronger provider conversation.
-                    </h2>
-
-                    <p>
-                        Homeowners do not need every technical answer before requesting options, but photos, timing, ZIP
-                        code, and project notes can help providers understand the request path.
-                    </p>
-                </div>
-
-                <div class="signal-list reveal-scale" aria-label="Useful request details">
-                    <div class="signal-item">
-                        <span>💡</span>
-                        <strong>Service type</strong>
-                        <p>Panel, wiring, EV charger, or lighting.</p>
-                    </div>
-
-                    <div class="signal-item">
-                        <span>📍</span>
-                        <strong>ZIP code</strong>
-                        <p>Provider availability may vary by location.</p>
-                    </div>
-
-                    <div class="signal-item">
-                        <span>📸</span>
-                        <strong>Photos</strong>
-                        <p>Panel area, wiring route, fixture location, or charger area.</p>
-                    </div>
-
-                    <div class="signal-item">
-                        <span>⚡</span>
-                        <strong>Timing</strong>
-                        <p>Urgent, this month, flexible, or planning ahead.</p>
-                    </div>
                 </div>
             </div>
         </section>
